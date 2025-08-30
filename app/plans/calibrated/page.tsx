@@ -299,17 +299,20 @@ export default function CalibratedDemoPage() {
                       const baseSize = 30;
                       const size = Math.max(baseSize / scale, 15);
                       
+                      // Calculate absolute pixel positions from percentages
+                      const xPos = (hotspot.x / 100) * 1200;
+                      const yPos = (hotspot.y / 100) * 857;
+                      
                       return (
                         <div
                           key={hotspot.id}
                           className="absolute flex items-center justify-center transition-all hover:z-50"
                           style={{
-                            left: `${hotspot.x}%`,
-                            top: `${hotspot.y}%`,
+                            left: `${xPos}px`,
+                            top: `${yPos}px`,
                             width: `${size}px`,
                             height: `${size * 0.7}px`,
-                            marginLeft: `-${size/2}px`,
-                            marginTop: `-${size * 0.35}px`,
+                            transform: `translate(-50%, -50%) ${isSelected ? 'scale(1.2)' : 'scale(1)'}`,
                             backgroundColor: isSelected 
                               ? 'rgba(59, 130, 246, 0.7)'
                               : `${HOTSPOT_COLORS[hotspot.status]}66`,
@@ -318,7 +321,6 @@ export default function CalibratedDemoPage() {
                             }`,
                             borderRadius: '3px',
                             cursor: 'pointer',
-                            transform: isSelected ? 'scale(1.2)' : 'scale(1)',
                           }}
                           onClick={(e) => handleHotspotClick(hotspot.id, e)}
                           title={`Sign ${hotspot.signNumber}${hotspot.isFieldLocate ? ' (FL)' : ''}`}
