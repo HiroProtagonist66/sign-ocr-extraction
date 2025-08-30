@@ -37,42 +37,29 @@ export default function CalibratedDemoPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
-  // Manual calibration for 10 test signs - carefully positioned based on visual inspection
+  // Manual calibration - testing with just sign 2001
+  // Looking at the screenshot, sign 2001 appears to be at approximately:
+  // x: 25% from left (middle-left of the building plan)
+  // y: 15% from top (upper portion of the plan)
   const manualCalibrations: { [key: string]: { x: number, y: number } } = {
-    // Top row - clearly visible signs
-    '2001': { x: 20, y: 11 },
-    '2001.1': { x: 30, y: 11 },
-    '2001.2': { x: 40, y: 11 },
-    
-    // Middle area - clearly visible
-    '2001.3': { x: 30, y: 23.5 },
-    '2002.1': { x: 18, y: 26 },
-    
-    // Bottom diagonal - starting points
-    '2004': { x: 15, y: 30 },
-    '2006': { x: 10, y: 38 },
-    '2008': { x: 18, y: 42 },
-    
-    // Right side of diagonal
-    '2010': { x: 35, y: 34 },
-    '2013': { x: 45, y: 38 },
+    '2001': { x: 25, y: 15 },
   };
 
   useEffect(() => {
-    // Load ONLY the calibrated signs we have positions for
-    const testSigns = ['2001', '2001.1', '2001.2', '2001.3', '2002.1', 
-                      '2004', '2006', '2008', '2010', '2013'];
+    // Load ONLY sign 2001 for testing
+    const testSigns = ['2001'];
     
     const newHotspots = calibratedData.extractedSigns
       .filter((sign: any) => testSigns.includes(sign.text))
       .map((sign: any, index: number) => {
         const calibration = manualCalibrations[sign.text];
         
+        // Use manual calibration if available, otherwise fall back to OCR coordinates
         return {
           id: `hotspot-${index}`,
           signNumber: sign.text,
-          x: calibration?.x || sign.boundingBox.x_percentage,
-          y: calibration?.y || sign.boundingBox.y_percentage,
+          x: calibration ? calibration.x : sign.boundingBox.x_percentage,
+          y: calibration ? calibration.y : sign.boundingBox.y_percentage,
           width: sign.boundingBox.width_percentage || 2,
           height: sign.boundingBox.height_percentage || 1,
           status: 'pending' as const,
@@ -80,6 +67,12 @@ export default function CalibratedDemoPage() {
           isFieldLocate: sign.isFieldLocate || false
         };
       });
+
+    console.log('Sign 2001 OCR coordinates:', {
+      x: calibratedData.extractedSigns.find((s: any) => s.text === '2001')?.boundingBox.x_percentage,
+      y: calibratedData.extractedSigns.find((s: any) => s.text === '2001')?.boundingBox.y_percentage
+    });
+    console.log('Sign 2001 manual coordinates:', manualCalibrations['2001']);
 
     setHotspots(newHotspots);
   }, []);
