@@ -1,0 +1,9 @@
+{
+  "totalPdfs": 3,
+  "totalPages": 3,
+  "totalSigns": 15,
+  "signTypes": {
+    "unknown": 15
+  },
+  "averageSignsPerPage": "5.00"
+}

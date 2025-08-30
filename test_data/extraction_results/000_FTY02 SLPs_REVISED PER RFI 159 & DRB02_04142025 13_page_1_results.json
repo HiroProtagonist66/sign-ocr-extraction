@@ -1,0 +1,160 @@
+{
+  "pdfFile": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf",
+  "pageNumber": 1,
+  "imageSize": {
+    "width": 6048,
+    "height": 4320
+  },
+  "extractedSigns": [
+    {
+      "text": "000",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 92.7579365079365,
+        "y_percentage": 50.16203703703703,
+        "width_percentage": 1.1739417989417988,
+        "height_percentage": 0.2777777777777778
+      },
+      "confidence": 0.95,
+      "vertices": [
+        {
+          "x": 5681,
+          "y": 2167
+        },
+        {
+          "x": 5681,
+          "y": 2179
+        },
+        {
+          "x": 5610,
+          "y": 2179
+        },
+        {
+          "x": 5610,
+          "y": 2167
+        }
+      ],
+      "rawBounds": {
+        "minX": 5610,
+        "maxX": 5681,
+        "minY": 2167,
+        "maxY": 2179,
+        "width": 71,
+        "height": 12
+      }
+    },
+    {
+      "text": "1033",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 92.44378306878306,
+        "y_percentage": 56.25,
+        "width_percentage": 0.4629629629629629,
+        "height_percentage": 0.20833333333333334
+      },
+      "confidence": 0.95,
+      "vertices": [
+        {
+          "x": 5619,
+          "y": 2439
+        },
+        {
+          "x": 5591,
+          "y": 2439
+        },
+        {
+          "x": 5591,
+          "y": 2430
+        },
+        {
+          "x": 5619,
+          "y": 2430
+        }
+      ],
+      "rawBounds": {
+        "minX": 5591,
+        "maxX": 5619,
+        "minY": 2430,
+        "maxY": 2439,
+        "width": 28,
+        "height": 9
+      }
+    },
+    {
+      "text": "0000",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 90.45965608465607,
+        "y_percentage": 27.939814814814817,
+        "width_percentage": 1.0582010582010581,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "vertices": [
+        {
+          "x": 5535,
+          "y": 1225
+        },
+        {
+          "x": 5471,
+          "y": 1225
+        },
+        {
+          "x": 5471,
+          "y": 1207
+        },
+        {
+          "x": 5535,
+          "y": 1207
+        }
+      ],
+      "rawBounds": {
+        "minX": 5471,
+        "maxX": 5535,
+        "minY": 1207,
+        "maxY": 1225,
+        "width": 64,
+        "height": 18
+      }
+    },
+    {
+      "text": "888",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 81.03505291005291,
+        "y_percentage": 13.680555555555557,
+        "width_percentage": 0.4629629629629629,
+        "height_percentage": 2.986111111111111
+      },
+      "confidence": 0.95,
+      "vertices": [
+        {
+          "x": 4903,
+          "y": 720
+        },
+        {
+          "x": 4901,
+          "y": 591
+        },
+        {
+          "x": 4928,
+          "y": 591
+        },
+        {
+          "x": 4929,
+          "y": 720
+        }
+      ],
+      "rawBounds": {
+        "minX": 4901,
+        "maxX": 4929,
+        "minY": 591,
+        "maxY": 720,
+        "width": 28,
+        "height": 129
+      }
+    }
+  ],
+  "timestamp": "2025-08-29T16:56:27.610Z",
+  "processingTime": 4829
+}

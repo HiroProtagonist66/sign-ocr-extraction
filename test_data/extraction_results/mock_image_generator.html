@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mock Plan Image Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="3300" height="2550" style="border: 1px solid black; max-width: 800px;"></canvas>
+    <br><br>
+    <button onclick="generateImage()">Generate Mock Plan</button>
+    <button onclick="downloadImage()">Download PNG</button>
+    
+    <script>
+        function generateImage() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas with light gray background
+            ctx.fillStyle = '#f0f0f0';
+            ctx.fillRect(0, 0, 3300, 2550);
+            
+            // Add grid pattern
+            ctx.strokeStyle = '#d0d0d0';
+            ctx.lineWidth = 2;
+            for (let x = 0; x <= 3300; x += 100) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, 2550);
+                ctx.stroke();
+            }
+            for (let y = 0; y <= 2550; y += 100) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(3300, y);
+                ctx.stroke();
+            }
+            
+            // Add title
+            ctx.fillStyle = 'black';
+            ctx.font = 'bold 48px Arial';
+            ctx.fillText('FTY02 Site Layout Plan - Sheet 13 (MOCK)', 100, 100);
+            
+            // Add mock architectural elements
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 4;
+            
+            // Draw some rooms/spaces
+            ctx.strokeRect(200, 200, 800, 600);
+            ctx.strokeRect(1200, 300, 900, 700);
+            ctx.strokeRect(2300, 400, 700, 800);
+            ctx.strokeRect(400, 1200, 1200, 800);
+            ctx.strokeRect(1800, 1300, 1000, 900);
+            
+            // Add sign positions with boxes
+            const signs = [
+                { x: 511, y: 568, text: '1263', type: 'PAC-1.1' },
+                { x: 1491, y: 910, text: 'BC-1.0', type: 'Exit' },
+                { x: 2590, y: 1714, text: '2001', type: 'Sign' },
+                { x: 2072, y: 1163, text: 'BC-5.1', type: '1hr Fire' },
+                { x: 947, y: 1999, text: '1285.2', type: 'Sign' },
+                { x: 2716, y: 482, text: 'ID-5.2', type: 'Room ID' }
+            ];
+            
+            signs.forEach(sign => {
+                // Draw sign box
+                ctx.fillStyle = 'white';
+                ctx.strokeStyle = 'red';
+                ctx.lineWidth = 3;
+                ctx.fillRect(sign.x - 40, sign.y - 25, 80, 50);
+                ctx.strokeRect(sign.x - 40, sign.y - 25, 80, 50);
+                
+                // Add sign number
+                ctx.fillStyle = 'black';
+                ctx.font = 'bold 24px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(sign.text, sign.x, sign.y + 8);
+                
+                // Add type label above
+                ctx.font = '16px Arial';
+                ctx.fillStyle = 'blue';
+                ctx.fillText(sign.type, sign.x, sign.y - 35);
+            });
+            
+            // Add legend
+            ctx.fillStyle = 'white';
+            ctx.fillRect(50, 2300, 500, 200);
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(50, 2300, 500, 200);
+            
+            ctx.fillStyle = 'black';
+            ctx.font = 'bold 20px Arial';
+            ctx.textAlign = 'left';
+            ctx.fillText('LEGEND:', 70, 2330);
+            ctx.font = '16px Arial';
+            ctx.fillText('Red boxes = Sign locations', 70, 2360);
+            ctx.fillText('Numbers = Sign identifiers', 70, 2380);
+            ctx.fillText('Blue text = Sign types', 70, 2400);
+            ctx.fillText('This is a MOCK image for testing', 70, 2430);
+            ctx.fillText('Generated: ' + new Date().toLocaleString(), 70, 2450);
+        }
+        
+        function downloadImage() {
+            const canvas = document.getElementById('canvas');
+            const link = document.createElement('a');
+            link.download = '000_FTY02_SLPs_REVISED_PER_RFI_159___DRB02_04142025_13_page_1.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Auto-generate on page load
+        window.onload = generateImage;
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+{
+  "processedAt": "2025-08-29T16:56:34.151Z",
+  "totalPdfs": 3,
+  "extraction_method": "combined_api_and_manual",
+  "results": {
+    "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf": [
+      {
+        "pdfFile": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf",
+        "pageNumber": 1,
+        "imageSize": {
+          "width": 6048,
+          "height": 4320
+        },
+        "extractedSigns": [
+          {
+            "text": "2001.1",
+            "signType": "BID-1.2",
+            "boundingBox": {
+              "x_percentage": 26.7,
+              "y_percentage": 15.0,
+              "width_percentage": 3.5,
+              "height_percentage": 4.0
+            },
+            "confidence": 0.95,
+            "source": "manual_screenshot_analysis"
+          },
+          {
+            "text": "2001.2",
+            "signType": "ID-5.3",
+            "boundingBox": {
+              "x_percentage": 35.0,
+              "y_percentage": 17.5,
+              "width_percentage": 3.5,
+              "height_percentage": 4.0
+            },
+            "confidence": 0.94,
+            "source": "manual_screenshot_analysis"
+          },
+          {
+            "text": "2002.1",
+            "signType": "BC-1.9A",
+            "boundingBox": {
+              "x_percentage": 43.3,
+              "y_percentage": 20.0,
+              "width_percentage": 3.5,
+              "height_percentage": 4.0
+            },
+            "confidence": 0.96,
+            "source": "manual_screenshot_analysis"
+          },
+          {
+            "text": "2001",
+            "signType": null,
+            "boundingBox": {
+              "x_percentage": 31.7,
+              "y_percentage": 22.5,
+              "width_percentage": 3.0,
+              "height_percentage": 4.0
+            },
+            "confidence": 0.97,
+            "source": "manual_screenshot_analysis"
+          },
+          {
+            "text": "2002",
+            "signType": "BC-1.0",
+            "boundingBox": {
+              "x_percentage": 23.3,
+              "y_percentage": 50.0,
+              "width_percentage": 3.0,
+              "height_percentage": 4.0
+            },
+            "confidence": 0.98,
+            "source": "manual_screenshot_analysis"
+          },
+          {
+            "text": "2003",
+            "signType": "FI-4.1",
+            "boundingBox": {
+              "x_percentage": 26.7,
+              "y_percentage": 52.5,
+              "width_percentage": 3.0,
+              "height_percentage": 4.0
+            },
+            "confidence": 0.97,
+            "source": "manual_screenshot_analysis"
+          },
+          {
+            "text": "2004",
+            "signType": "P-5.2",
+            "boundingBox": {
+              "x_percentage": 15.0,
+              "y_percentage": 65.0,
+              "width_percentage": 3.0,
+              "height_percentage": 4.0
+            },
+            "confidence": 0.95,
+            "source": "manual_screenshot_analysis"
+          },
+          {
+            "text": "000",
+            "signType": null,
+            "boundingBox": {
+              "x_percentage": 92.7579365079365,
+              "y_percentage": 50.16203703703703,
+              "width_percentage": 1.1739417989417988,
+              "height_percentage": 0.2777777777777778
+            },
+            "confidence": 0.95,
+            "source": "google_vision_api"
+          },
+          {
+            "text": "1033",
+            "signType": null,
+            "boundingBox": {
+              "x_percentage": 92.44378306878306,
+              "y_percentage": 56.25,
+              "width_percentage": 0.4629629629629629,
+              "height_percentage": 0.20833333333333334
+            },
+            "confidence": 0.95,
+            "source": "google_vision_api"
+          },
+          {
+            "text": "0000",
+            "signType": null,
+            "boundingBox": {
+              "x_percentage": 90.45965608465607,
+              "y_percentage": 27.939814814814817,
+              "width_percentage": 1.0582010582010581,
+              "height_percentage": 0.4166666666666667
+            },
+            "confidence": 0.95,
+            "source": "google_vision_api"
+          },
+          {
+            "text": "888",
+            "signType": null,
+            "boundingBox": {
+              "x_percentage": 81.03505291005291,
+              "y_percentage": 13.680555555555557,
+              "width_percentage": 0.4629629629629629,
+              "height_percentage": 2.986111111111111
+            },
+            "confidence": 0.95,
+            "source": "google_vision_api"
+          }
+        ],
+        "timestamp": "2025-08-29T16:56:27.610Z",
+        "processingTime": 4829
+      }
+    ]
+  },
+  "summary": {
+    "total_signs": 11,
+    "screenshot_signs": 7,
+    "api_signs": 4,
+    "signs_by_source": {
+      "manual_screenshot_analysis": 7,
+      "google_vision_api": 4
+    }
+  }
+}

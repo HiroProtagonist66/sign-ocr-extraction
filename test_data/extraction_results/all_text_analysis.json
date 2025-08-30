@@ -1,0 +1,1425 @@
+{
+  "timestamp": "2025-08-29T17:06:23.333Z",
+  "total_annotations": 79,
+  "potential_signs": [],
+  "all_text": [
+    {
+      "text": "☐",
+      "x_percentage": 96.62698412698413,
+      "y_percentage": 39.21296296296296,
+      "width_percentage": 0.1984126984126984,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.75,
+      "size_pixels": 192,
+      "raw_bounds": {
+        "minX": 5838,
+        "maxX": 5850,
+        "minY": 1686,
+        "maxY": 1702,
+        "width": 12,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 96.8501984126984,
+      "y_percentage": 39.21296296296296,
+      "width_percentage": 0.21494708994708994,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.8125,
+      "size_pixels": 208,
+      "raw_bounds": {
+        "minX": 5851,
+        "maxX": 5864,
+        "minY": 1686,
+        "maxY": 1702,
+        "width": 13,
+        "height": 16
+      }
+    },
+    {
+      "text": "பப",
+      "x_percentage": 96.75925925925925,
+      "y_percentage": 35.729166666666664,
+      "width_percentage": 0.4629629629629629,
+      "height_percentage": 0.3935185185185185,
+      "aspect_ratio": 1.6470588235294117,
+      "size_pixels": 476,
+      "raw_bounds": {
+        "minX": 5838,
+        "maxX": 5866,
+        "minY": 1535,
+        "maxY": 1552,
+        "width": 28,
+        "height": 17
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 97.36276455026454,
+      "y_percentage": 77.33796296296296,
+      "width_percentage": 0.28108465608465605,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 2.125,
+      "size_pixels": 136,
+      "raw_bounds": {
+        "minX": 5880,
+        "maxX": 5897,
+        "minY": 3337,
+        "maxY": 3345,
+        "width": 17,
+        "height": 8
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 95.8994708994709,
+      "y_percentage": 77.34953703703704,
+      "width_percentage": 0.2976190476190476,
+      "height_percentage": 0.16203703703703703,
+      "aspect_ratio": 2.5714285714285716,
+      "size_pixels": 126,
+      "raw_bounds": {
+        "minX": 5791,
+        "maxX": 5809,
+        "minY": 3338,
+        "maxY": 3345,
+        "width": 18,
+        "height": 7
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 95.1140873015873,
+      "y_percentage": 77.33796296296296,
+      "width_percentage": 0.31415343915343913,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 2.375,
+      "size_pixels": 152,
+      "raw_bounds": {
+        "minX": 5743,
+        "maxX": 5762,
+        "minY": 3337,
+        "maxY": 3345,
+        "width": 19,
+        "height": 8
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 94.42791005291006,
+      "y_percentage": 77.33796296296296,
+      "width_percentage": 0.26455026455026454,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 2,
+      "size_pixels": 128,
+      "raw_bounds": {
+        "minX": 5703,
+        "maxX": 5719,
+        "minY": 3337,
+        "maxY": 3345,
+        "width": 16,
+        "height": 8
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 93.66732804232805,
+      "y_percentage": 77.36111111111111,
+      "width_percentage": 0.2976190476190476,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 2.25,
+      "size_pixels": 144,
+      "raw_bounds": {
+        "minX": 5656,
+        "maxX": 5674,
+        "minY": 3338,
+        "maxY": 3346,
+        "width": 18,
+        "height": 8
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 93.01421957671958,
+      "y_percentage": 77.33796296296296,
+      "width_percentage": 0.28108465608465605,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 2.125,
+      "size_pixels": 136,
+      "raw_bounds": {
+        "minX": 5617,
+        "maxX": 5634,
+        "minY": 3337,
+        "maxY": 3345,
+        "width": 17,
+        "height": 8
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 92.2123015873016,
+      "y_percentage": 77.31481481481481,
+      "width_percentage": 0.26455026455026454,
+      "height_percentage": 0.1388888888888889,
+      "aspect_ratio": 2.6666666666666665,
+      "size_pixels": 96,
+      "raw_bounds": {
+        "minX": 5569,
+        "maxX": 5585,
+        "minY": 3337,
+        "maxY": 3343,
+        "width": 16,
+        "height": 6
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 91.55919312169311,
+      "y_percentage": 77.34953703703704,
+      "width_percentage": 0.248015873015873,
+      "height_percentage": 0.16203703703703703,
+      "aspect_ratio": 2.142857142857143,
+      "size_pixels": 105,
+      "raw_bounds": {
+        "minX": 5530,
+        "maxX": 5545,
+        "minY": 3338,
+        "maxY": 3345,
+        "width": 15,
+        "height": 7
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 96.56084656084656,
+      "y_percentage": 75.32407407407408,
+      "width_percentage": 0.2976190476190476,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 2.25,
+      "size_pixels": 144,
+      "raw_bounds": {
+        "minX": 5831,
+        "maxX": 5849,
+        "minY": 3250,
+        "maxY": 3258,
+        "width": 18,
+        "height": 8
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 95.9242724867725,
+      "y_percentage": 75.32407407407408,
+      "width_percentage": 0.28108465608465605,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 2.125,
+      "size_pixels": 136,
+      "raw_bounds": {
+        "minX": 5793,
+        "maxX": 5810,
+        "minY": 3250,
+        "maxY": 3258,
+        "width": 17,
+        "height": 8
+      }
+    },
+    {
+      "text": "ㅁㅁ",
+      "x_percentage": 93.28703703703704,
+      "y_percentage": 75.28935185185185,
+      "width_percentage": 1.0912698412698412,
+      "height_percentage": 0.30092592592592593,
+      "aspect_ratio": 5.076923076923077,
+      "size_pixels": 858,
+      "raw_bounds": {
+        "minX": 5609,
+        "maxX": 5675,
+        "minY": 3246,
+        "maxY": 3259,
+        "width": 66,
+        "height": 13
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 91.55092592592592,
+      "y_percentage": 75.3125,
+      "width_percentage": 0.2976190476190476,
+      "height_percentage": 0.16203703703703703,
+      "aspect_ratio": 2.5714285714285716,
+      "size_pixels": 126,
+      "raw_bounds": {
+        "minX": 5528,
+        "maxX": 5546,
+        "minY": 3250,
+        "maxY": 3257,
+        "width": 18,
+        "height": 7
+      }
+    },
+    {
+      "text": "□□□□□□□□□□□□□□□",
+      "x_percentage": 94.60978835978835,
+      "y_percentage": 52.87037037037037,
+      "width_percentage": 3.2076719576719577,
+      "height_percentage": 0.32407407407407407,
+      "aspect_ratio": 13.857142857142858,
+      "size_pixels": 2716,
+      "raw_bounds": {
+        "minX": 5625,
+        "maxX": 5819,
+        "minY": 2277,
+        "maxY": 2291,
+        "width": 194,
+        "height": 14
+      }
+    },
+    {
+      "text": "0000000000000",
+      "x_percentage": 95.22156084656085,
+      "y_percentage": 50.31250000000001,
+      "width_percentage": 2.4140211640211637,
+      "height_percentage": 0.30092592592592593,
+      "aspect_ratio": 11.23076923076923,
+      "size_pixels": 1898,
+      "raw_bounds": {
+        "minX": 5686,
+        "maxX": 5832,
+        "minY": 2167,
+        "maxY": 2180,
+        "width": 146,
+        "height": 13
+      }
+    },
+    {
+      "text": "000",
+      "x_percentage": 93.35317460317461,
+      "y_percentage": 50.300925925925924,
+      "width_percentage": 1.1904761904761905,
+      "height_percentage": 0.2777777777777778,
+      "aspect_ratio": 6,
+      "size_pixels": 864,
+      "raw_bounds": {
+        "minX": 5610,
+        "maxX": 5682,
+        "minY": 2167,
+        "maxY": 2179,
+        "width": 72,
+        "height": 12
+      }
+    },
+    {
+      "text": "1033",
+      "x_percentage": 92.67526455026454,
+      "y_percentage": 56.35416666666667,
+      "width_percentage": 0.4629629629629629,
+      "height_percentage": 0.20833333333333334,
+      "aspect_ratio": 3.111111111111111,
+      "size_pixels": 252,
+      "raw_bounds": {
+        "minX": 5591,
+        "maxX": 5619,
+        "minY": 2430,
+        "maxY": 2439,
+        "width": 28,
+        "height": 9
+      }
+    },
+    {
+      "text": "☐☐",
+      "x_percentage": 93.89054232804233,
+      "y_percentage": 30.451388888888886,
+      "width_percentage": 0.5125661375661376,
+      "height_percentage": 0.3935185185185185,
+      "aspect_ratio": 1.8235294117647058,
+      "size_pixels": 527,
+      "raw_bounds": {
+        "minX": 5663,
+        "maxX": 5694,
+        "minY": 1307,
+        "maxY": 1324,
+        "width": 31,
+        "height": 17
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 91.27810846560847,
+      "y_percentage": 30.462962962962965,
+      "width_percentage": 0.21494708994708994,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.8125,
+      "size_pixels": 208,
+      "raw_bounds": {
+        "minX": 5514,
+        "maxX": 5527,
+        "minY": 1308,
+        "maxY": 1324,
+        "width": 13,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 90.86474867724867,
+      "y_percentage": 30.439814814814813,
+      "width_percentage": 0.21494708994708994,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.8125,
+      "size_pixels": 208,
+      "raw_bounds": {
+        "minX": 5489,
+        "maxX": 5502,
+        "minY": 1307,
+        "maxY": 1323,
+        "width": 13,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 90.60846560846561,
+      "y_percentage": 30.439814814814813,
+      "width_percentage": 0.23148148148148145,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.875,
+      "size_pixels": 224,
+      "raw_bounds": {
+        "minX": 5473,
+        "maxX": 5487,
+        "minY": 1307,
+        "maxY": 1323,
+        "width": 14,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 94.05588624338624,
+      "y_percentage": 29.328703703703702,
+      "width_percentage": 0.21494708994708994,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.8125,
+      "size_pixels": 208,
+      "raw_bounds": {
+        "minX": 5682,
+        "maxX": 5695,
+        "minY": 1259,
+        "maxY": 1275,
+        "width": 13,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 93.79133597883597,
+      "y_percentage": 29.28240740740741,
+      "width_percentage": 0.21494708994708994,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.8125,
+      "size_pixels": 208,
+      "raw_bounds": {
+        "minX": 5666,
+        "maxX": 5679,
+        "minY": 1257,
+        "maxY": 1273,
+        "width": 13,
+        "height": 16
+      }
+    },
+    {
+      "text": "0000",
+      "x_percentage": 90.98875661375662,
+      "y_percentage": 28.14814814814815,
+      "width_percentage": 1.0582010582010581,
+      "height_percentage": 0.4166666666666667,
+      "aspect_ratio": 3.5555555555555554,
+      "size_pixels": 1152,
+      "raw_bounds": {
+        "minX": 5471,
+        "maxX": 5535,
+        "minY": 1207,
+        "maxY": 1225,
+        "width": 64,
+        "height": 18
+      }
+    },
+    {
+      "text": "XXXX",
+      "x_percentage": 91.90641534391534,
+      "y_percentage": 24.65277777777778,
+      "width_percentage": 1.4054232804232802,
+      "height_percentage": 0.6944444444444444,
+      "aspect_ratio": 2.8333333333333335,
+      "size_pixels": 2550,
+      "raw_bounds": {
+        "minX": 5516,
+        "maxX": 5601,
+        "minY": 1050,
+        "maxY": 1080,
+        "width": 85,
+        "height": 30
+      }
+    },
+    {
+      "text": "0000",
+      "x_percentage": 91.93948412698413,
+      "y_percentage": 23.46064814814815,
+      "width_percentage": 1.2731481481481481,
+      "height_percentage": 0.7175925925925926,
+      "aspect_ratio": 2.4838709677419355,
+      "size_pixels": 2387,
+      "raw_bounds": {
+        "minX": 5522,
+        "maxX": 5599,
+        "minY": 998,
+        "maxY": 1029,
+        "width": 77,
+        "height": 31
+      }
+    },
+    {
+      "text": "www.imgbuilds.com",
+      "x_percentage": 91.85681216931218,
+      "y_percentage": 8.472222222222223,
+      "width_percentage": 2.992724867724868,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 11.3125,
+      "size_pixels": 2896,
+      "raw_bounds": {
+        "minX": 5465,
+        "maxX": 5646,
+        "minY": 358,
+        "maxY": 374,
+        "width": 181,
+        "height": 16
+      }
+    },
+    {
+      "text": "ing",
+      "x_percentage": 92.84060846560847,
+      "y_percentage": 6.770833333333333,
+      "width_percentage": 5.39021164021164,
+      "height_percentage": 4.884259259259259,
+      "aspect_ratio": 1.5450236966824644,
+      "size_pixels": 68786,
+      "raw_bounds": {
+        "minX": 5452,
+        "maxX": 5778,
+        "minY": 187,
+        "maxY": 398,
+        "width": 326,
+        "height": 211
+      }
+    },
+    {
+      "text": "I",
+      "x_percentage": 89.12037037037037,
+      "y_percentage": 10.891203703703704,
+      "width_percentage": 0.16534391534391535,
+      "height_percentage": 0.30092592592592593,
+      "aspect_ratio": 0.7692307692307693,
+      "size_pixels": 130,
+      "raw_bounds": {
+        "minX": 5385,
+        "maxX": 5395,
+        "minY": 464,
+        "maxY": 477,
+        "width": 10,
+        "height": 13
+      }
+    },
+    {
+      "text": "J",
+      "x_percentage": 88.17791005291006,
+      "y_percentage": 27.002314814814817,
+      "width_percentage": 0.13227513227513227,
+      "height_percentage": 0.25462962962962965,
+      "aspect_ratio": 0.7272727272727273,
+      "size_pixels": 88,
+      "raw_bounds": {
+        "minX": 5329,
+        "maxX": 5337,
+        "minY": 1161,
+        "maxY": 1172,
+        "width": 8,
+        "height": 11
+      }
+    },
+    {
+      "text": "Jan",
+      "x_percentage": 88.6574074074074,
+      "y_percentage": 25.48611111111111,
+      "width_percentage": 0.3968253968253968,
+      "height_percentage": 0.32407407407407407,
+      "aspect_ratio": 1.7142857142857142,
+      "size_pixels": 336,
+      "raw_bounds": {
+        "minX": 5350,
+        "maxX": 5374,
+        "minY": 1094,
+        "maxY": 1108,
+        "width": 24,
+        "height": 14
+      }
+    },
+    {
+      "text": "-",
+      "x_percentage": 90.77380952380952,
+      "y_percentage": 77.33796296296296,
+      "width_percentage": 0.2976190476190476,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 2.25,
+      "size_pixels": 144,
+      "raw_bounds": {
+        "minX": 5481,
+        "maxX": 5499,
+        "minY": 3337,
+        "maxY": 3345,
+        "width": 18,
+        "height": 8
+      }
+    },
+    {
+      "text": "J",
+      "x_percentage": 88.71527777777779,
+      "y_percentage": 49.91898148148148,
+      "width_percentage": 0.11574074074074073,
+      "height_percentage": 0.25462962962962965,
+      "aspect_ratio": 0.6363636363636364,
+      "size_pixels": 77,
+      "raw_bounds": {
+        "minX": 5362,
+        "maxX": 5369,
+        "minY": 2151,
+        "maxY": 2162,
+        "width": 7,
+        "height": 11
+      }
+    },
+    {
+      "text": "J",
+      "x_percentage": 86.56580687830689,
+      "y_percentage": 36.041666666666664,
+      "width_percentage": 0.11574074074074073,
+      "height_percentage": 0.2777777777777778,
+      "aspect_ratio": 0.5833333333333334,
+      "size_pixels": 84,
+      "raw_bounds": {
+        "minX": 5232,
+        "maxX": 5239,
+        "minY": 1551,
+        "maxY": 1563,
+        "width": 7,
+        "height": 12
+      }
+    },
+    {
+      "text": "J",
+      "x_percentage": 85.48280423280423,
+      "y_percentage": 34.56018518518518,
+      "width_percentage": 0.13227513227513227,
+      "height_percentage": 0.2777777777777778,
+      "aspect_ratio": 0.6666666666666666,
+      "size_pixels": 96,
+      "raw_bounds": {
+        "minX": 5166,
+        "maxX": 5174,
+        "minY": 1487,
+        "maxY": 1499,
+        "width": 8,
+        "height": 12
+      }
+    },
+    {
+      "text": "Ja",
+      "x_percentage": 82.47354497354497,
+      "y_percentage": 6.886574074074074,
+      "width_percentage": 0.3637566137566137,
+      "height_percentage": 0.30092592592592593,
+      "aspect_ratio": 1.6923076923076923,
+      "size_pixels": 286,
+      "raw_bounds": {
+        "minX": 4977,
+        "maxX": 4999,
+        "minY": 291,
+        "maxY": 304,
+        "width": 22,
+        "height": 13
+      }
+    },
+    {
+      "text": "000000",
+      "x_percentage": 83.64748677248677,
+      "y_percentage": 55.21990740740741,
+      "width_percentage": 1.6865079365079365,
+      "height_percentage": 0.30092592592592593,
+      "aspect_ratio": 7.846153846153846,
+      "size_pixels": 1326,
+      "raw_bounds": {
+        "minX": 5008,
+        "maxX": 5110,
+        "minY": 2379,
+        "maxY": 2392,
+        "width": 102,
+        "height": 13
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 81.2251984126984,
+      "y_percentage": 20.96064814814815,
+      "width_percentage": 0.248015873015873,
+      "height_percentage": 0.25462962962962965,
+      "aspect_ratio": 1.3636363636363635,
+      "size_pixels": 165,
+      "raw_bounds": {
+        "minX": 4905,
+        "maxX": 4920,
+        "minY": 900,
+        "maxY": 911,
+        "width": 15,
+        "height": 11
+      }
+    },
+    {
+      "text": "目",
+      "x_percentage": 81.21693121693121,
+      "y_percentage": 18.912037037037038,
+      "width_percentage": 0.26455026455026454,
+      "height_percentage": 0.4166666666666667,
+      "aspect_ratio": 0.8888888888888888,
+      "size_pixels": 288,
+      "raw_bounds": {
+        "minX": 4904,
+        "maxX": 4920,
+        "minY": 808,
+        "maxY": 826,
+        "width": 16,
+        "height": 18
+      }
+    },
+    {
+      "text": "888",
+      "x_percentage": 81.26653439153439,
+      "y_percentage": 15.17361111111111,
+      "width_percentage": 0.4629629629629629,
+      "height_percentage": 2.986111111111111,
+      "aspect_ratio": 0.21705426356589147,
+      "size_pixels": 3612,
+      "raw_bounds": {
+        "minX": 4901,
+        "maxX": 4929,
+        "minY": 591,
+        "maxY": 720,
+        "width": 28,
+        "height": 129
+      }
+    },
+    {
+      "text": "88",
+      "x_percentage": 81.23346560846561,
+      "y_percentage": 11.13425925925926,
+      "width_percentage": 0.4298941798941799,
+      "height_percentage": 0.9259259259259258,
+      "aspect_ratio": 0.65,
+      "size_pixels": 1040,
+      "raw_bounds": {
+        "minX": 4900,
+        "maxX": 4926,
+        "minY": 461,
+        "maxY": 501,
+        "width": 26,
+        "height": 40
+      }
+    },
+    {
+      "text": "8",
+      "x_percentage": 81.23346560846561,
+      "y_percentage": 9.351851851851851,
+      "width_percentage": 0.4298941798941799,
+      "height_percentage": 0.4629629629629629,
+      "aspect_ratio": 1.3,
+      "size_pixels": 520,
+      "raw_bounds": {
+        "minX": 4900,
+        "maxX": 4926,
+        "minY": 394,
+        "maxY": 414,
+        "width": 26,
+        "height": 20
+      }
+    },
+    {
+      "text": "8",
+      "x_percentage": 81.25,
+      "y_percentage": 7.881944444444445,
+      "width_percentage": 0.4298941798941799,
+      "height_percentage": 0.4861111111111111,
+      "aspect_ratio": 1.2380952380952381,
+      "size_pixels": 546,
+      "raw_bounds": {
+        "minX": 4901,
+        "maxX": 4927,
+        "minY": 330,
+        "maxY": 351,
+        "width": 26,
+        "height": 21
+      }
+    },
+    {
+      "text": "日",
+      "x_percentage": 81.2582671957672,
+      "y_percentage": 25.497685185185187,
+      "width_percentage": 0.3802910052910053,
+      "height_percentage": 0.3472222222222222,
+      "aspect_ratio": 1.5333333333333334,
+      "size_pixels": 345,
+      "raw_bounds": {
+        "minX": 4903,
+        "maxX": 4926,
+        "minY": 1094,
+        "maxY": 1109,
+        "width": 23,
+        "height": 15
+      }
+    },
+    {
+      "text": "88",
+      "x_percentage": 81.29133597883597,
+      "y_percentage": 34.29398148148148,
+      "width_percentage": 0.4464285714285714,
+      "height_percentage": 1.9675925925925926,
+      "aspect_ratio": 0.3176470588235294,
+      "size_pixels": 2295,
+      "raw_bounds": {
+        "minX": 4903,
+        "maxX": 4930,
+        "minY": 1439,
+        "maxY": 1524,
+        "width": 27,
+        "height": 85
+      }
+    },
+    {
+      "text": "Amm",
+      "x_percentage": 80.91104497354497,
+      "y_percentage": 56.90972222222223,
+      "width_percentage": 1.669973544973545,
+      "height_percentage": 0.7638888888888888,
+      "aspect_ratio": 3.0606060606060606,
+      "size_pixels": 3333,
+      "raw_bounds": {
+        "minX": 4843,
+        "maxX": 4944,
+        "minY": 2442,
+        "maxY": 2475,
+        "width": 101,
+        "height": 33
+      }
+    },
+    {
+      "text": "☐☐",
+      "x_percentage": 67.91501322751323,
+      "y_percentage": 86.23842592592592,
+      "width_percentage": 0.4464285714285714,
+      "height_percentage": 0.3472222222222222,
+      "aspect_ratio": 1.8,
+      "size_pixels": 405,
+      "raw_bounds": {
+        "minX": 4094,
+        "maxX": 4121,
+        "minY": 3718,
+        "maxY": 3733,
+        "width": 27,
+        "height": 15
+      }
+    },
+    {
+      "text": "目",
+      "x_percentage": 62.40906084656085,
+      "y_percentage": 31.59722222222222,
+      "width_percentage": 0.3472222222222222,
+      "height_percentage": 0.32407407407407407,
+      "aspect_ratio": 1.5,
+      "size_pixels": 294,
+      "raw_bounds": {
+        "minX": 3764,
+        "maxX": 3785,
+        "minY": 1358,
+        "maxY": 1372,
+        "width": 21,
+        "height": 14
+      }
+    },
+    {
+      "text": "T",
+      "x_percentage": 60.706018518518526,
+      "y_percentage": 48.61111111111111,
+      "width_percentage": 0.31415343915343913,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 1.1875,
+      "size_pixels": 304,
+      "raw_bounds": {
+        "minX": 3662,
+        "maxX": 3681,
+        "minY": 2092,
+        "maxY": 2108,
+        "width": 19,
+        "height": 16
+      }
+    },
+    {
+      "text": "A",
+      "x_percentage": 59.176587301587304,
+      "y_percentage": 80.68287037037038,
+      "width_percentage": 0.3306878306878307,
+      "height_percentage": 0.3472222222222222,
+      "aspect_ratio": 1.3333333333333333,
+      "size_pixels": 300,
+      "raw_bounds": {
+        "minX": 3569,
+        "maxX": 3589,
+        "minY": 3478,
+        "maxY": 3493,
+        "width": 20,
+        "height": 15
+      }
+    },
+    {
+      "text": "பயப",
+      "x_percentage": 57.01058201058201,
+      "y_percentage": 87.53472222222223,
+      "width_percentage": 1.0582010582010581,
+      "height_percentage": 0.20833333333333334,
+      "aspect_ratio": 7.111111111111111,
+      "size_pixels": 576,
+      "raw_bounds": {
+        "minX": 3416,
+        "maxX": 3480,
+        "minY": 3777,
+        "maxY": 3786,
+        "width": 64,
+        "height": 9
+      }
+    },
+    {
+      "text": "பபப",
+      "x_percentage": 55.82010582010582,
+      "y_percentage": 87.52314814814814,
+      "width_percentage": 0.9259259259259258,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 7,
+      "size_pixels": 448,
+      "raw_bounds": {
+        "minX": 3348,
+        "maxX": 3404,
+        "minY": 3777,
+        "maxY": 3785,
+        "width": 56,
+        "height": 8
+      }
+    },
+    {
+      "text": "பபப",
+      "x_percentage": 54.65443121693122,
+      "y_percentage": 87.52314814814814,
+      "width_percentage": 0.9424603174603174,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 7.125,
+      "size_pixels": 456,
+      "raw_bounds": {
+        "minX": 3277,
+        "maxX": 3334,
+        "minY": 3777,
+        "maxY": 3785,
+        "width": 57,
+        "height": 8
+      }
+    },
+    {
+      "text": "பபப",
+      "x_percentage": 53.43915343915344,
+      "y_percentage": 87.52314814814814,
+      "width_percentage": 1.0912698412698412,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 8.25,
+      "size_pixels": 528,
+      "raw_bounds": {
+        "minX": 3199,
+        "maxX": 3265,
+        "minY": 3777,
+        "maxY": 3785,
+        "width": 66,
+        "height": 8
+      }
+    },
+    {
+      "text": "☐☐☐☐",
+      "x_percentage": 46.89980158730159,
+      "y_percentage": 26.400462962962962,
+      "width_percentage": 1.1078042328042328,
+      "height_percentage": 0.3935185185185185,
+      "aspect_ratio": 3.9411764705882355,
+      "size_pixels": 1139,
+      "raw_bounds": {
+        "minX": 2803,
+        "maxX": 2870,
+        "minY": 1132,
+        "maxY": 1149,
+        "width": 67,
+        "height": 17
+      }
+    },
+    {
+      "text": "000000",
+      "x_percentage": 46.99074074074074,
+      "y_percentage": 25.752314814814813,
+      "width_percentage": 1.8518518518518516,
+      "height_percentage": 0.4398148148148148,
+      "aspect_ratio": 5.894736842105263,
+      "size_pixels": 2128,
+      "raw_bounds": {
+        "minX": 2786,
+        "maxX": 2898,
+        "minY": 1103,
+        "maxY": 1122,
+        "width": 112,
+        "height": 19
+      }
+    },
+    {
+      "text": "ப",
+      "x_percentage": 47.74305555555556,
+      "y_percentage": 69.0625,
+      "width_percentage": 0.18187830687830686,
+      "height_percentage": 0.20833333333333334,
+      "aspect_ratio": 1.2222222222222223,
+      "size_pixels": 99,
+      "raw_bounds": {
+        "minX": 2882,
+        "maxX": 2893,
+        "minY": 2979,
+        "maxY": 2988,
+        "width": 11,
+        "height": 9
+      }
+    },
+    {
+      "text": "000000000",
+      "x_percentage": 43.295304232804234,
+      "y_percentage": 79.375,
+      "width_percentage": 2.761243386243386,
+      "height_percentage": 0.5092592592592593,
+      "aspect_ratio": 7.590909090909091,
+      "size_pixels": 3674,
+      "raw_bounds": {
+        "minX": 2535,
+        "maxX": 2702,
+        "minY": 3418,
+        "maxY": 3440,
+        "width": 167,
+        "height": 22
+      }
+    },
+    {
+      "text": "L",
+      "x_percentage": 38.36805555555556,
+      "y_percentage": 66.2962962962963,
+      "width_percentage": 0.31415343915343913,
+      "height_percentage": 0.2777777777777778,
+      "aspect_ratio": 1.5833333333333333,
+      "size_pixels": 228,
+      "raw_bounds": {
+        "minX": 2311,
+        "maxX": 2330,
+        "minY": 2858,
+        "maxY": 2870,
+        "width": 19,
+        "height": 12
+      }
+    },
+    {
+      "text": "J",
+      "x_percentage": 37.71494708994709,
+      "y_percentage": 66.35416666666667,
+      "width_percentage": 0.16534391534391535,
+      "height_percentage": 0.30092592592592593,
+      "aspect_ratio": 0.7692307692307693,
+      "size_pixels": 130,
+      "raw_bounds": {
+        "minX": 2276,
+        "maxX": 2286,
+        "minY": 2860,
+        "maxY": 2873,
+        "width": 10,
+        "height": 13
+      }
+    },
+    {
+      "text": "Ja",
+      "x_percentage": 37.36772486772487,
+      "y_percentage": 42.77777777777778,
+      "width_percentage": 0.7936507936507936,
+      "height_percentage": 0.32407407407407407,
+      "aspect_ratio": 3.4285714285714284,
+      "size_pixels": 672,
+      "raw_bounds": {
+        "minX": 2236,
+        "maxX": 2284,
+        "minY": 1841,
+        "maxY": 1855,
+        "width": 48,
+        "height": 14
+      }
+    },
+    {
+      "text": "ma",
+      "x_percentage": 36.648478835978835,
+      "y_percentage": 42.7662037037037,
+      "width_percentage": 0.4464285714285714,
+      "height_percentage": 0.30092592592592593,
+      "aspect_ratio": 2.076923076923077,
+      "size_pixels": 351,
+      "raw_bounds": {
+        "minX": 2203,
+        "maxX": 2230,
+        "minY": 1841,
+        "maxY": 1854,
+        "width": 27,
+        "height": 13
+      }
+    },
+    {
+      "text": "00",
+      "x_percentage": 35.83829365079365,
+      "y_percentage": 84.16666666666667,
+      "width_percentage": 0.6117724867724867,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 2.3125,
+      "size_pixels": 592,
+      "raw_bounds": {
+        "minX": 2149,
+        "maxX": 2186,
+        "minY": 3628,
+        "maxY": 3644,
+        "width": 37,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 21.999007936507937,
+      "y_percentage": 52.56944444444444,
+      "width_percentage": 0.21494708994708994,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.8125,
+      "size_pixels": 208,
+      "raw_bounds": {
+        "minX": 1324,
+        "maxX": 1337,
+        "minY": 2263,
+        "maxY": 2279,
+        "width": 13,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 22.2718253968254,
+      "y_percentage": 52.54629629629629,
+      "width_percentage": 0.1984126984126984,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.75,
+      "size_pixels": 192,
+      "raw_bounds": {
+        "minX": 1341,
+        "maxX": 1353,
+        "minY": 2262,
+        "maxY": 2278,
+        "width": 12,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 22.83399470899471,
+      "y_percentage": 52.54629629629629,
+      "width_percentage": 0.23148148148148145,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.875,
+      "size_pixels": 224,
+      "raw_bounds": {
+        "minX": 1374,
+        "maxX": 1388,
+        "minY": 2262,
+        "maxY": 2278,
+        "width": 14,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 23.28042328042328,
+      "y_percentage": 52.54629629629629,
+      "width_percentage": 0.23148148148148145,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.875,
+      "size_pixels": 224,
+      "raw_bounds": {
+        "minX": 1401,
+        "maxX": 1415,
+        "minY": 2262,
+        "maxY": 2278,
+        "width": 14,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 23.619378306878307,
+      "y_percentage": 52.54629629629629,
+      "width_percentage": 0.21494708994708994,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.8125,
+      "size_pixels": 208,
+      "raw_bounds": {
+        "minX": 1422,
+        "maxX": 1435,
+        "minY": 2262,
+        "maxY": 2278,
+        "width": 13,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 17.948082010582013,
+      "y_percentage": 38.425925925925924,
+      "width_percentage": 0.21494708994708994,
+      "height_percentage": 0.3703703703703704,
+      "aspect_ratio": 0.8125,
+      "size_pixels": 208,
+      "raw_bounds": {
+        "minX": 1079,
+        "maxX": 1092,
+        "minY": 1652,
+        "maxY": 1668,
+        "width": 13,
+        "height": 16
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 19.287367724867725,
+      "y_percentage": 69.61805555555556,
+      "width_percentage": 0.18187830687830686,
+      "height_percentage": 0.20833333333333334,
+      "aspect_ratio": 1.2222222222222223,
+      "size_pixels": 99,
+      "raw_bounds": {
+        "minX": 1161,
+        "maxX": 1172,
+        "minY": 3003,
+        "maxY": 3012,
+        "width": 11,
+        "height": 9
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 17.088293650793652,
+      "y_percentage": 69.07407407407408,
+      "width_percentage": 0.18187830687830686,
+      "height_percentage": 0.1851851851851852,
+      "aspect_ratio": 1.375,
+      "size_pixels": 88,
+      "raw_bounds": {
+        "minX": 1028,
+        "maxX": 1039,
+        "minY": 2980,
+        "maxY": 2988,
+        "width": 11,
+        "height": 8
+      }
+    },
+    {
+      "text": "0000",
+      "x_percentage": 14.20304232804233,
+      "y_percentage": 81.40046296296296,
+      "width_percentage": 1.3558201058201058,
+      "height_percentage": 0.4398148148148148,
+      "aspect_ratio": 4.315789473684211,
+      "size_pixels": 1558,
+      "raw_bounds": {
+        "minX": 818,
+        "maxX": 900,
+        "minY": 3507,
+        "maxY": 3526,
+        "width": 82,
+        "height": 19
+      }
+    },
+    {
+      "text": "0000",
+      "x_percentage": 14.773478835978837,
+      "y_percentage": 80.64814814814815,
+      "width_percentage": 2.496693121693122,
+      "height_percentage": 0.4629629629629629,
+      "aspect_ratio": 7.55,
+      "size_pixels": 3020,
+      "raw_bounds": {
+        "minX": 818,
+        "maxX": 969,
+        "minY": 3474,
+        "maxY": 3494,
+        "width": 151,
+        "height": 20
+      }
+    },
+    {
+      "text": "☐",
+      "x_percentage": 11.276455026455027,
+      "y_percentage": 42.916666666666664,
+      "width_percentage": 0.16534391534391535,
+      "height_percentage": 0.23148148148148145,
+      "aspect_ratio": 1,
+      "size_pixels": 100,
+      "raw_bounds": {
+        "minX": 677,
+        "maxX": 687,
+        "minY": 1849,
+        "maxY": 1859,
+        "width": 10,
+        "height": 10
+      }
+    },
+    {
+      "text": "םננשום",
+      "x_percentage": 11.79728835978836,
+      "y_percentage": 76.23842592592592,
+      "width_percentage": 0.8763227513227513,
+      "height_percentage": 0.3472222222222222,
+      "aspect_ratio": 3.533333333333333,
+      "size_pixels": 795,
+      "raw_bounds": {
+        "minX": 687,
+        "maxX": 740,
+        "minY": 3286,
+        "maxY": 3301,
+        "width": 53,
+        "height": 15
+      }
+    },
+    {
+      "text": "!",
+      "x_percentage": 12.260251322751323,
+      "y_percentage": 76.26157407407408,
+      "width_percentage": 0.0496031746031746,
+      "height_percentage": 0.3472222222222222,
+      "aspect_ratio": 0.2,
+      "size_pixels": 45,
+      "raw_bounds": {
+        "minX": 740,
+        "maxX": 743,
+        "minY": 3287,
+        "maxY": 3302,
+        "width": 3,
+        "height": 15
+      }
+    }
+  ],
+  "analysis": {
+    "total_text": 78,
+    "main_plan_text": 30,
+    "legend_text": 48,
+    "potential_signs": 0,
+    "text_by_area": {
+      "main_plan_examples": [
+        {
+          "text": "☐☐",
+          "x": "67.9"
+        },
+        {
+          "text": "目",
+          "x": "62.4"
+        },
+        {
+          "text": "T",
+          "x": "60.7"
+        },
+        {
+          "text": "A",
+          "x": "59.2"
+        },
+        {
+          "text": "பயப",
+          "x": "57.0"
+        },
+        {
+          "text": "பபப",
+          "x": "55.8"
+        },
+        {
+          "text": "பபப",
+          "x": "54.7"
+        },
+        {
+          "text": "பபப",
+          "x": "53.4"
+        },
+        {
+          "text": "☐☐☐☐",
+          "x": "46.9"
+        },
+        {
+          "text": "000000",
+          "x": "47.0"
+        }
+      ],
+      "legend_examples": [
+        {
+          "text": "☐",
+          "x": "96.6"
+        },
+        {
+          "text": "☐",
+          "x": "96.9"
+        },
+        {
+          "text": "பப",
+          "x": "96.8"
+        },
+        {
+          "text": "-",
+          "x": "97.4"
+        },
+        {
+          "text": "-",
+          "x": "95.9"
+        },
+        {
+          "text": "-",
+          "x": "95.1"
+        },
+        {
+          "text": "-",
+          "x": "94.4"
+        },
+        {
+          "text": "-",
+          "x": "93.7"
+        },
+        {
+          "text": "-",
+          "x": "93.0"
+        },
+        {
+          "text": "-",
+          "x": "92.2"
+        }
+      ]
+    }
+  }
+}

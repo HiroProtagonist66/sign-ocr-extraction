@@ -1,0 +1,192 @@
+{
+  "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf": [
+    {
+      "pdfFile": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf",
+      "pageNumber": 1,
+      "imageSize": {
+        "width": 6048,
+        "height": 4320
+      },
+      "extractedSigns": [
+        {
+          "text": "0000000000000",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 95.22156084656085,
+            "y_percentage": 50.31250000000001,
+            "width_percentage": 2.4140211640211637,
+            "height_percentage": 0.30092592592592593
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "000",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 93.35317460317461,
+            "y_percentage": 50.300925925925924,
+            "width_percentage": 1.1904761904761905,
+            "height_percentage": 0.2777777777777778
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "1033",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 92.67526455026454,
+            "y_percentage": 56.35416666666667,
+            "width_percentage": 0.4629629629629629,
+            "height_percentage": 0.20833333333333334
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "0000",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 90.98875661375662,
+            "y_percentage": 28.14814814814815,
+            "width_percentage": 1.0582010582010581,
+            "height_percentage": 0.4166666666666667
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "0000",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 91.93948412698413,
+            "y_percentage": 23.46064814814815,
+            "width_percentage": 1.2731481481481481,
+            "height_percentage": 0.7175925925925926
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "000000",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 83.64748677248677,
+            "y_percentage": 55.21990740740741,
+            "width_percentage": 1.6865079365079365,
+            "height_percentage": 0.30092592592592593
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "88",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 81.29133597883597,
+            "y_percentage": 34.29398148148148,
+            "width_percentage": 0.4464285714285714,
+            "height_percentage": 1.9675925925925926
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "888",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 81.26653439153439,
+            "y_percentage": 15.17361111111111,
+            "width_percentage": 0.4629629629629629,
+            "height_percentage": 2.986111111111111
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "88",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 81.23346560846561,
+            "y_percentage": 11.13425925925926,
+            "width_percentage": 0.4298941798941799,
+            "height_percentage": 0.9259259259259258
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "8",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 81.23346560846561,
+            "y_percentage": 9.351851851851851,
+            "width_percentage": 0.4298941798941799,
+            "height_percentage": 0.4629629629629629
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "8",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 81.25,
+            "y_percentage": 7.881944444444445,
+            "width_percentage": 0.4298941798941799,
+            "height_percentage": 0.4861111111111111
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "000000",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 46.99074074074074,
+            "y_percentage": 25.752314814814813,
+            "width_percentage": 1.8518518518518516,
+            "height_percentage": 0.4398148148148148
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "000000000",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 43.295304232804234,
+            "y_percentage": 79.375,
+            "width_percentage": 2.761243386243386,
+            "height_percentage": 0.5092592592592593
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "00",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 35.83829365079365,
+            "y_percentage": 84.16666666666667,
+            "width_percentage": 0.6117724867724867,
+            "height_percentage": 0.3703703703703704
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "0000",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 14.20304232804233,
+            "y_percentage": 81.40046296296296,
+            "width_percentage": 1.3558201058201058,
+            "height_percentage": 0.4398148148148148
+          },
+          "confidence": 0.95
+        },
+        {
+          "text": "0000",
+          "signType": null,
+          "boundingBox": {
+            "x_percentage": 14.773478835978837,
+            "y_percentage": 80.64814814814815,
+            "width_percentage": 2.496693121693122,
+            "height_percentage": 0.4629629629629629
+          },
+          "confidence": 0.95
+        }
+      ],
+      "timestamp": "2025-08-29T17:20:48.534Z",
+      "processingTime": 2100
+    }
+  ]
+}

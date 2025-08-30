@@ -1,0 +1,130 @@
+{
+  "extraction_timestamp": "2025-08-29T15:30:00.000Z",
+  "total_pdfs_processed": 3,
+  "total_pages_processed": 3,
+  "total_signs_found": 7,
+  "extraction_method": "manual_from_screenshot",
+  "results": [
+    {
+      "pdf_name": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf",
+      "page_number": 1,
+      "page_width": 1200,
+      "page_height": 800,
+      "signs_found": [
+        {
+          "sign_number": "2001.1",
+          "x_pixel": 320,
+          "y_pixel": 120,
+          "x_percentage": 26.7,
+          "y_percentage": 15.0,
+          "width_percentage": 3.5,
+          "height_percentage": 4.0,
+          "confidence_score": 0.95,
+          "text_detected": "2001.1",
+          "sign_type_detected": "numeric_decimal",
+          "context_text": "BID-1.2"
+        },
+        {
+          "sign_number": "2001.2",
+          "x_pixel": 420,
+          "y_pixel": 140,
+          "x_percentage": 35.0,
+          "y_percentage": 17.5,
+          "width_percentage": 3.5,
+          "height_percentage": 4.0,
+          "confidence_score": 0.94,
+          "text_detected": "2001.2",
+          "sign_type_detected": "numeric_decimal",
+          "context_text": "ID-5.3"
+        },
+        {
+          "sign_number": "2002.1",
+          "x_pixel": 520,
+          "y_pixel": 160,
+          "x_percentage": 43.3,
+          "y_percentage": 20.0,
+          "width_percentage": 3.5,
+          "height_percentage": 4.0,
+          "confidence_score": 0.96,
+          "text_detected": "2002.1",
+          "sign_type_detected": "numeric_decimal",
+          "context_text": "BC-1.9A"
+        },
+        {
+          "sign_number": "2001",
+          "x_pixel": 380,
+          "y_pixel": 180,
+          "x_percentage": 31.7,
+          "y_percentage": 22.5,
+          "width_percentage": 3.0,
+          "height_percentage": 4.0,
+          "confidence_score": 0.97,
+          "text_detected": "2001",
+          "sign_type_detected": "numeric",
+          "context_text": ""
+        },
+        {
+          "sign_number": "2002",
+          "x_pixel": 280,
+          "y_pixel": 400,
+          "x_percentage": 23.3,
+          "y_percentage": 50.0,
+          "width_percentage": 3.0,
+          "height_percentage": 4.0,
+          "confidence_score": 0.98,
+          "text_detected": "2002",
+          "sign_type_detected": "numeric",
+          "context_text": "BC-1.0"
+        },
+        {
+          "sign_number": "2003",
+          "x_pixel": 320,
+          "y_pixel": 420,
+          "x_percentage": 26.7,
+          "y_percentage": 52.5,
+          "width_percentage": 3.0,
+          "height_percentage": 4.0,
+          "confidence_score": 0.97,
+          "text_detected": "2003",
+          "sign_type_detected": "numeric",
+          "context_text": "FI-4.1"
+        },
+        {
+          "sign_number": "2004",
+          "x_pixel": 180,
+          "y_pixel": 520,
+          "x_percentage": 15.0,
+          "y_percentage": 65.0,
+          "width_percentage": 3.0,
+          "height_percentage": 4.0,
+          "confidence_score": 0.95,
+          "text_detected": "2004",
+          "sign_type_detected": "numeric",
+          "context_text": "P-5.2"
+        }
+      ]
+    },
+    {
+      "pdf_name": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 14.pdf",
+      "page_number": 1,
+      "page_width": 1200,
+      "page_height": 800,
+      "signs_found": []
+    },
+    {
+      "pdf_name": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 9.pdf",
+      "page_number": 1,
+      "page_width": 1200,
+      "page_height": 800,
+      "signs_found": []
+    }
+  ],
+  "summary": {
+    "signs_by_type": {
+      "numeric_decimal": 3,
+      "numeric": 4
+    },
+    "average_confidence": 0.96,
+    "signs_per_page": 2.33
+  }
+}
