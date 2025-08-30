@@ -27,7 +27,7 @@ export default function ColorExtractionPage() {
 
   useEffect(() => {
     // Calculate stats
-    const detected = 99; // From color detection
+    const detected = 116; // From color detection (including stacked splits)
     const extracted = extractionResults.total_signs_detected;
     const accuracy = detected > 0 ? (extracted / detected) * 100 : 0;
     
@@ -75,14 +75,16 @@ export default function ColorExtractionPage() {
         
         {/* Status Banner */}
         <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-6">
-          <p className="font-bold">Extraction Pipeline Status</p>
-          <p>Color detection is working! OCR needs tuning to extract sign numbers from detected boxes.</p>
+          <p className="font-bold">Extraction Pipeline Status - IMPROVED!</p>
+          <p>✅ Multi-color detection working (orange, blue, teal, green)</p>
+          <p>✅ Stacked box detection implemented (+17 boxes)</p>
+          <p>⚠️ OCR still needs tuning - testing multiple PSM modes</p>
         </div>
 
         {/* Statistics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow-md p-4">
-            <div className="text-2xl font-bold text-green-600">99</div>
+            <div className="text-2xl font-bold text-green-600">116</div>
             <div className="text-sm text-gray-600">Color Boxes Detected</div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4">
@@ -225,15 +227,24 @@ export default function ColorExtractionPage() {
 
             {/* Color Range Settings */}
             <div className="bg-white rounded-lg shadow-md p-4">
-              <h2 className="text-lg font-semibold mb-3">HSV Color Range</h2>
-              <div className="space-y-2 text-sm font-mono">
-                <div className="p-2 bg-gray-100 rounded">
-                  <div className="text-green-600">Lower: [8, 80, 80]</div>
-                  <div className="text-red-600">Upper: [25, 255, 220]</div>
+              <h2 className="text-lg font-semibold mb-3">HSV Color Ranges</h2>
+              <div className="space-y-2 text-sm">
+                <div className="p-2 bg-orange-50 rounded">
+                  <div className="font-semibold text-orange-700">Orange/Brown</div>
+                  <div className="font-mono text-xs">H: 8-25, S: 80-255, V: 80-220</div>
                 </div>
-                <p className="text-xs text-gray-500">
-                  Targeting orange/brown sign boxes
-                </p>
+                <div className="p-2 bg-blue-50 rounded">
+                  <div className="font-semibold text-blue-700">Blue</div>
+                  <div className="font-mono text-xs">H: 100-130, S: 50-255, V: 50-255</div>
+                </div>
+                <div className="p-2 bg-teal-50 rounded">
+                  <div className="font-semibold text-teal-700">Teal/Cyan</div>
+                  <div className="font-mono text-xs">H: 160-190, S: 50-255, V: 50-255</div>
+                </div>
+                <div className="p-2 bg-green-50 rounded">
+                  <div className="font-semibold text-green-700">Green</div>
+                  <div className="font-mono text-xs">H: 45-75, S: 50-255, V: 50-255</div>
+                </div>
               </div>
             </div>
 

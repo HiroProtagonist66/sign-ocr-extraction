@@ -38,17 +38,8 @@ def process_png_image():
     output_dir = Path(__file__).parent / "output"
     output_dir.mkdir(exist_ok=True)
     
-    # Custom HSV ranges for orange/brown sign boxes
-    # These values target the orange/brown boxes on the floor plan
-    hsv_lower = np.array([8, 80, 80])
-    hsv_upper = np.array([25, 255, 220])
-    
-    # Create extractor
-    extractor = ColorBasedSignExtractor(
-        hsv_lower=hsv_lower,
-        hsv_upper=hsv_upper,
-        debug=True
-    )
+    # Create extractor (now handles multiple colors internally)
+    extractor = ColorBasedSignExtractor(debug=True)
     
     # Process the image
     detections, boxes = extractor.process_image(image, page_num=1)

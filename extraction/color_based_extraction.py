@@ -20,14 +20,29 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # ============= CONFIGURATION =============
-# HSV color ranges for orange/brown sign boxes
-# Orange/brown typically: H(10-25), S(100-255), V(100-200)
-HSV_LOWER_BOUND = np.array([8, 80, 80])    # Lower HSV threshold
-HSV_UPPER_BOUND = np.array([25, 255, 220])  # Upper HSV threshold
+# HSV color ranges for different colored sign boxes
+# Orange/brown outlines
+HSV_ORANGE_LOWER = np.array([8, 80, 80])
+HSV_ORANGE_UPPER = np.array([25, 255, 220])
 
-# Alternative color range for darker browns
-HSV_LOWER_BOUND_ALT = np.array([5, 50, 50])
-HSV_UPPER_BOUND_ALT = np.array([30, 200, 200])
+# Alternative darker browns
+HSV_BROWN_LOWER = np.array([5, 50, 50])
+HSV_BROWN_UPPER = np.array([30, 200, 200])
+
+# Blue outlines
+HSV_BLUE_LOWER = np.array([100, 50, 50])
+HSV_BLUE_UPPER = np.array([130, 255, 255])
+
+# Teal/cyan outlines
+HSV_TEAL_LOWER = np.array([160, 50, 50])
+HSV_TEAL_UPPER = np.array([190, 255, 255])
+
+# Green outlines
+HSV_GREEN_LOWER = np.array([45, 50, 50])
+HSV_GREEN_UPPER = np.array([75, 255, 255])
+
+# Standard sign box height for stacked detection (in pixels at 400 DPI)
+STANDARD_SIGN_HEIGHT_PIXELS = 40
 
 # Box size constraints (as percentage of image dimensions)
 MIN_BOX_WIDTH_PERCENT = 0.3   # Minimum width: 0.3% of image width
@@ -77,12 +92,7 @@ class SignDetection:
 class ColorBasedSignExtractor:
     """Main class for color-based sign detection and extraction"""
     
-    def __init__(self, 
-                 hsv_lower=HSV_LOWER_BOUND, 
-                 hsv_upper=HSV_UPPER_BOUND,
-                 debug=True):
-        self.hsv_lower = hsv_lower
-        self.hsv_upper = hsv_upper
+    def __init__(self, debug=True):
         self.debug = debug
         self.detections = []
         
@@ -111,20 +121,25 @@ class ColorBasedSignExtractor:
             raise
             
     def detect_color_boxes(self, image: np.ndarray) -> List[Tuple[int, int, int, int]]:
-        """Detect orange/brown colored boxes in the image"""
+        """Detect colored boxes in the image (orange, brown, blue, teal, green)"""
         height, width = image.shape[:2]
         
         # Convert BGR to HSV
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
         
-        # Create mask for the color range
-        mask1 = cv2.inRange(hsv, self.hsv_lower, self.hsv_upper)
+        # Create masks for all color ranges
+        mask_orange = cv2.inRange(hsv, HSV_ORANGE_LOWER, HSV_ORANGE_UPPER)
+        mask_brown = cv2.inRange(hsv, HSV_BROWN_LOWER, HSV_BROWN_UPPER)
+        mask_blue = cv2.inRange(hsv, HSV_BLUE_LOWER, HSV_BLUE_UPPER)
+        mask_teal = cv2.inRange(hsv, HSV_TEAL_LOWER, HSV_TEAL_UPPER)
+        mask_green = cv2.inRange(hsv, HSV_GREEN_LOWER, HSV_GREEN_UPPER)
         
-        # Also try alternative color range
-        mask2 = cv2.inRange(hsv, HSV_LOWER_BOUND_ALT, HSV_UPPER_BOUND_ALT)
+        # Combine all masks
+        mask = mask_orange | mask_brown | mask_blue | mask_teal | mask_green
         
-        # Combine masks
-        mask = cv2.bitwise_or(mask1, mask2)
+        if self.debug:
+            logger.info(f"Color mask stats - Orange: {np.sum(mask_orange > 0)}, Blue: {np.sum(mask_blue > 0)}, "
+                       f"Teal: {np.sum(mask_teal > 0)}, Green: {np.sum(mask_green > 0)}")
         
         # Apply morphological operations to clean up the mask
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, MORPH_KERNEL_SIZE)
@@ -152,9 +167,39 @@ class ColorBasedSignExtractor:
                 aspect_ratio = w / h if h > 0 else 0
                 if MIN_ASPECT_RATIO <= aspect_ratio <= MAX_ASPECT_RATIO:
                     valid_boxes.append((x, y, w, h))
+        
+        # Process stacked boxes
+        final_boxes = []
+        for box in valid_boxes:
+            split_boxes = self.detect_stacked_boxes(box)
+            final_boxes.extend(split_boxes)
                     
-        logger.info(f"Detected {len(valid_boxes)} valid color boxes")
-        return valid_boxes
+        logger.info(f"Detected {len(final_boxes)} total boxes (including split stacks)")
+        return final_boxes
+    
+    def detect_stacked_boxes(self, box: Tuple[int, int, int, int], 
+                            standard_height: int = STANDARD_SIGN_HEIGHT_PIXELS) -> List[Tuple[int, int, int, int]]:
+        """Detect if a box contains multiple stacked signs and split them"""
+        x, y, w, h = box
+        
+        # Check if height suggests stacking (more than 1.5x standard height)
+        if h > standard_height * 1.5:
+            stack_count = round(h / standard_height)
+            if stack_count > 1:
+                boxes = []
+                # Split into individual boxes
+                individual_height = h / stack_count
+                for i in range(stack_count):
+                    new_y = int(y + (i * individual_height))
+                    new_h = int(individual_height)
+                    boxes.append((x, new_y, w, new_h))
+                
+                if self.debug:
+                    logger.info(f"Split stacked box at ({x}, {y}) into {stack_count} boxes")
+                return boxes
+        
+        # Not a stack, return original box
+        return [box]
         
     def extract_sign_number(self, image: np.ndarray, bbox: Tuple[int, int, int, int]) -> Optional[Dict]:
         """Extract sign number from a detected box using OCR"""
@@ -182,30 +227,34 @@ class ColorBasedSignExtractor:
         # Threshold to get binary image
         _, binary = cv2.threshold(denoised, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         
-        # Try both normal and inverted image
+        # Try both normal and inverted image with different PSM modes
         results = []
+        psm_modes = [6, 7, 8, 11]  # Different OCR modes to try
+        
         for img in [binary, cv2.bitwise_not(binary)]:
-            try:
-                # Perform OCR with custom config
-                custom_config = f'--psm 8 -c tessedit_char_whitelist={OCR_WHITELIST}'
-                ocr_data = pytesseract.image_to_data(img, config=custom_config, output_type=pytesseract.Output.DICT)
-                
-                # Extract text with confidence
-                for i in range(len(ocr_data['text'])):
-                    text = ocr_data['text'][i].strip()
-                    confidence = float(ocr_data['conf'][i])
+            for psm in psm_modes:
+                try:
+                    # Perform OCR with custom config
+                    custom_config = f'--psm {psm} -c tessedit_char_whitelist={OCR_WHITELIST}'
+                    ocr_data = pytesseract.image_to_data(img, config=custom_config, output_type=pytesseract.Output.DICT)
                     
-                    if text and confidence > OCR_CONFIDENCE_THRESHOLD:
-                        # Clean up the text (remove dots that aren't decimals)
-                        text = self._clean_sign_number(text)
-                        if text:  # If still valid after cleaning
-                            results.append({
-                                'text': text,
-                                'confidence': confidence
-                            })
-                            
-            except Exception as e:
-                logger.debug(f"OCR error: {e}")
+                    # Extract text with confidence
+                    for i in range(len(ocr_data['text'])):
+                        text = ocr_data['text'][i].strip()
+                        confidence = float(ocr_data['conf'][i])
+                        
+                        if text and confidence > OCR_CONFIDENCE_THRESHOLD:
+                            # Clean up the text (remove dots that aren't decimals)
+                            text = self._clean_sign_number(text)
+                            if text:  # If still valid after cleaning
+                                results.append({
+                                    'text': text,
+                                    'confidence': confidence,
+                                    'psm': psm
+                                })
+                                
+                except Exception as e:
+                    logger.debug(f"OCR error with PSM {psm}: {e}")
                 
         # Return the best result
         if results:
@@ -381,12 +430,12 @@ def test_color_range(image_path: str, test_region: Tuple[int, int, int, int] = N
         pass
     
     cv2.namedWindow('Color Range Tuning', cv2.WINDOW_NORMAL)
-    cv2.createTrackbar('H Min', 'Color Range Tuning', HSV_LOWER_BOUND[0], 180, nothing)
-    cv2.createTrackbar('S Min', 'Color Range Tuning', HSV_LOWER_BOUND[1], 255, nothing)
-    cv2.createTrackbar('V Min', 'Color Range Tuning', HSV_LOWER_BOUND[2], 255, nothing)
-    cv2.createTrackbar('H Max', 'Color Range Tuning', HSV_UPPER_BOUND[0], 180, nothing)
-    cv2.createTrackbar('S Max', 'Color Range Tuning', HSV_UPPER_BOUND[1], 255, nothing)
-    cv2.createTrackbar('V Max', 'Color Range Tuning', HSV_UPPER_BOUND[2], 255, nothing)
+    cv2.createTrackbar('H Min', 'Color Range Tuning', HSV_ORANGE_LOWER[0], 180, nothing)
+    cv2.createTrackbar('S Min', 'Color Range Tuning', HSV_ORANGE_LOWER[1], 255, nothing)
+    cv2.createTrackbar('V Min', 'Color Range Tuning', HSV_ORANGE_LOWER[2], 255, nothing)
+    cv2.createTrackbar('H Max', 'Color Range Tuning', HSV_ORANGE_UPPER[0], 180, nothing)
+    cv2.createTrackbar('S Max', 'Color Range Tuning', HSV_ORANGE_UPPER[1], 255, nothing)
+    cv2.createTrackbar('V Max', 'Color Range Tuning', HSV_ORANGE_UPPER[2], 255, nothing)
     
     print("Adjust trackbars to tune color detection. Press 'q' to quit.")
     print("Press 's' to save current values.")
