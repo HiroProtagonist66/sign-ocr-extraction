@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, WheelEvent, MouseEvent } from 'react';
 import extractionResults from '../../../public/extraction/image_extraction_results.json';
 
 interface ExtractionStats {
@@ -16,6 +16,14 @@ export default function ColorExtractionPage() {
     accuracy: 0
   });
   const [showOriginal, setShowOriginal] = useState(false);
+  
+  // Zoom and pan state
+  const [scale, setScale] = useState(1);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const containerRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Calculate stats
@@ -25,6 +33,38 @@ export default function ColorExtractionPage() {
     
     setStats({ detected, extracted, accuracy });
   }, []);
+
+  // Zoom controls
+  const handleZoomIn = () => setScale(prev => Math.min(prev * 1.2, 5));
+  const handleZoomOut = () => setScale(prev => Math.max(prev / 1.2, 0.5));
+  const resetZoom = () => {
+    setScale(1);
+    setPosition({ x: 0, y: 0 });
+  };
+
+  const handleWheel = (e: WheelEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? 0.9 : 1.1;
+    setScale(prev => Math.min(Math.max(prev * delta, 0.5), 5));
+  };
+
+  const handleMouseDown = (e: MouseEvent<HTMLDivElement>) => {
+    if (e.button === 0) {
+      setIsDragging(true);
+      setDragStart({ x: e.clientX - position.x, y: e.clientY - position.y });
+    }
+  };
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (isDragging) {
+      setPosition({
+        x: e.clientX - dragStart.x,
+        y: e.clientY - dragStart.y
+      });
+    }
+  };
+
+  const handleMouseUp = () => setIsDragging(false);
 
   return (
     <div className="min-h-screen bg-gray-50 p-4">
@@ -54,8 +94,8 @@ export default function ColorExtractionPage() {
             <div className="text-sm text-gray-600">Extraction Rate</div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4">
-            <div className="text-2xl font-bold text-purple-600">400</div>
-            <div className="text-sm text-gray-600">DPI Resolution</div>
+            <div className="text-2xl font-bold text-purple-600">{(scale * 100).toFixed(0)}%</div>
+            <div className="text-sm text-gray-600">Current Zoom</div>
           </div>
         </div>
 
@@ -68,32 +108,93 @@ export default function ColorExtractionPage() {
                 <h2 className="text-lg font-semibold">
                   {showOriginal ? 'Original Plan' : 'Detection Visualization'}
                 </h2>
-                <button
-                  onClick={() => setShowOriginal(!showOriginal)}
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                >
-                  {showOriginal ? 'Show Detection' : 'Show Original'}
-                </button>
-              </div>
-              
-              <div className="relative overflow-auto max-h-[700px] border rounded">
-                <img 
-                  src={showOriginal 
-                    ? "/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13_page_1.png"
-                    : "/extraction/detected_signs.jpg"
-                  }
-                  alt={showOriginal ? "Original floor plan" : "Detected signs visualization"}
-                  className="max-w-none"
-                  style={{ width: '100%', height: 'auto' }}
-                />
-              </div>
-              
-              {!showOriginal && (
-                <div className="mt-2 text-sm text-gray-600">
-                  <p>🟩 Green boxes indicate detected sign locations</p>
-                  <p>📝 Labels show extracted sign numbers (when OCR succeeds)</p>
+                <div className="flex gap-2 items-center">
+                  {/* Zoom Controls */}
+                  <div className="flex gap-1 items-center bg-gray-100 rounded px-2">
+                    <button
+                      onClick={handleZoomOut}
+                      className="px-2 py-1 hover:bg-gray-200 rounded"
+                      title="Zoom Out (-)">
+                      ➖
+                    </button>
+                    <span className="min-w-[50px] text-center text-sm font-medium">
+                      {(scale * 100).toFixed(0)}%
+                    </span>
+                    <button
+                      onClick={handleZoomIn}
+                      className="px-2 py-1 hover:bg-gray-200 rounded"
+                      title="Zoom In (+)">
+                      ➕
+                    </button>
+                    <button
+                      onClick={resetZoom}
+                      className="px-2 py-1 hover:bg-gray-200 rounded"
+                      title="Reset">
+                      🔄
+                    </button>
+                  </div>
+                  
+                  <button
+                    onClick={() => setShowOriginal(!showOriginal)}
+                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                  >
+                    {showOriginal ? 'Show Detection' : 'Show Original'}
+                  </button>
                 </div>
-              )}
+              </div>
+              
+              <div 
+                ref={containerRef}
+                className="relative overflow-hidden border rounded bg-gray-100 cursor-move"
+                style={{ height: '700px' }}
+                onWheel={handleWheel}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseUp}
+              >
+                <div
+                  ref={imageRef}
+                  className="absolute"
+                  style={{
+                    transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
+                    transformOrigin: '0 0',
+                    transition: isDragging ? 'none' : 'transform 0.1s',
+                    cursor: isDragging ? 'grabbing' : 'grab'
+                  }}
+                >
+                  <img 
+                    src={showOriginal 
+                      ? "/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13_page_1.png"
+                      : "/extraction/detected_signs.jpg"
+                    }
+                    alt={showOriginal ? "Original floor plan" : "Detected signs visualization"}
+                    className="select-none"
+                    style={{ 
+                      width: '1200px',
+                      height: 'auto',
+                      pointerEvents: 'none'
+                    }}
+                    draggable={false}
+                  />
+                </div>
+              </div>
+              
+              <div className="mt-2 flex justify-between items-center">
+                <div className="text-sm text-gray-600">
+                  {!showOriginal ? (
+                    <>
+                      <span>🟩 Green boxes: {stats.detected} detected locations</span>
+                      <span className="ml-4">📝 OCR extracted: {stats.extracted} signs</span>
+                    </>
+                  ) : (
+                    <span>Original floor plan view</span>
+                  )}
+                </div>
+                <div className="text-sm text-gray-500">
+                  🖱️ Drag to pan • Scroll to zoom • Click signs for details
+                </div>
+              </div>
             </div>
           </div>
 
