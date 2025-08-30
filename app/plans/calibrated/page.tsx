@@ -143,7 +143,7 @@ export default function CalibratedDemoPage() {
     return matchesSearch && matchesFilter;
   });
 
-  const stats = calibratedData.stats || {};
+  const stats = (calibratedData as any).stats || { mainAreaSigns: 0, fieldLocateSigns: 0, calibratedSigns: 0 };
 
   return (
     <div className="min-h-screen bg-gray-50 p-4">
@@ -225,7 +225,7 @@ export default function CalibratedDemoPage() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
           <div className="bg-white rounded-lg shadow-md p-4">
             <div className="text-2xl font-bold text-green-600">
-              {calibratedData.totalSignsFound || 157}
+              {(calibratedData as any).totalSignsFound || 157}
             </div>
             <div className="text-sm text-gray-600">Total Found</div>
           </div>
