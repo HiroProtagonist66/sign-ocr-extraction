@@ -227,7 +227,7 @@ class ColorBasedSignExtractor:
                 
         return ""
         
-    def process_image(self, image: np.ndarray, page_num: int = 1) -> List[SignDetection]:
+    def process_image(self, image: np.ndarray, page_num: int = 1) -> Tuple[List[SignDetection], List[Tuple[int, int, int, int]]]:
         """Process a single image to detect and extract signs"""
         height, width = image.shape[:2]
         logger.info(f"Processing image: {width}x{height}")
@@ -259,14 +259,21 @@ class ColorBasedSignExtractor:
                 detections.append(detection)
                 logger.info(f"Detected sign: {detection.sign_number} at ({detection.x_percentage:.1f}%, {detection.y_percentage:.1f}%)")
                 
-        return detections
+        return detections, boxes
         
     def visualize_detections(self, image: np.ndarray, detections: List[SignDetection], 
-                            output_path: str = None) -> np.ndarray:
+                            output_path: str = None, boxes: List[Tuple[int, int, int, int]] = None) -> np.ndarray:
         """Create visualization with detected boxes and labels"""
         vis_image = image.copy()
         height, width = image.shape[:2]
         
+        # First draw ALL detected boxes in light green
+        if boxes:
+            for box in boxes:
+                x, y, w, h = box
+                cv2.rectangle(vis_image, (x, y), (x + w, y + h), (0, 200, 0), 3)
+        
+        # Then draw successful OCR detections in bright green
         for detection in detections:
             # Convert percentages back to pixels
             x_center = int((detection.x_percentage / 100) * width)
@@ -277,12 +284,12 @@ class ColorBasedSignExtractor:
             x = int(x_center - w/2)
             y = int(y_center - h/2)
             
-            # Draw rectangle
-            cv2.rectangle(vis_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            # Draw rectangle with thicker line for visibility
+            cv2.rectangle(vis_image, (x, y), (x + w, y + h), (0, 255, 0), 4)
             
             # Add label
             label = f"{detection.sign_number} ({detection.confidence:.0f}%)"
-            label_size, _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
+            label_size, _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 1.0, 2)
             
             # Draw label background
             cv2.rectangle(vis_image, 
@@ -324,12 +331,12 @@ class ColorBasedSignExtractor:
             logger.info(f"\nProcessing page {page_num}...")
             
             # Detect signs
-            detections = self.process_image(image, page_num)
+            detections, boxes = self.process_image(image, page_num)
             
             # Save visualization if in debug mode
             if self.debug:
                 vis_path = output_dir / f"page_{page_num}_annotated.jpg"
-                self.visualize_detections(image, detections, str(vis_path))
+                self.visualize_detections(image, detections, str(vis_path), boxes=boxes)
                 
                 # Also save original for comparison
                 orig_path = output_dir / f"page_{page_num}_original.jpg"

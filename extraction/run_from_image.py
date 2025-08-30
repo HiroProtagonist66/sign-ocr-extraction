@@ -51,11 +51,13 @@ def process_png_image():
     )
     
     # Process the image
-    detections = extractor.process_image(image, page_num=1)
+    detections, boxes = extractor.process_image(image, page_num=1)
     
     # Create visualization
     vis_path = output_dir / "detected_signs.jpg"
-    extractor.visualize_detections(image, detections, str(vis_path))
+    extractor.visualize_detections(image, detections, str(vis_path), boxes=boxes)
+    
+    logger.info(f"Created visualization with {len(boxes)} boxes and {len(detections)} OCR results")
     
     # Save results as JSON
     results = {
