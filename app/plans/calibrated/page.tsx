@@ -37,19 +37,77 @@ export default function CalibratedDemoPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
+  // Manual calibration corrections for specific signs based on visual inspection
+  const manualCalibrations: { [key: string]: { x: number, y: number } } = {
+    // Main entrance signs (2000 series) - upper left area
+    '2001': { x: 15, y: 9.5 },
+    '2001.1': { x: 18.5, y: 9.5 },
+    '2001.2': { x: 22, y: 9.5 },
+    '2001.3': { x: 42, y: 33.5 },
+    
+    // Left side entrance
+    '2002': { x: 15, y: 17 },
+    '2002.1': { x: 11.5, y: 17 },
+    '2003': { x: 15, y: 24.5 },
+    
+    // Center-bottom area (diagonal line of signs)
+    '2004': { x: 20, y: 53 },
+    '2004.1': { x: 42, y: 44 },
+    '2004.2': { x: 24, y: 54.5 },
+    '2004.3': { x: 28, y: 56 },
+    '2004.4': { x: 32, y: 57.5 },
+    '2004.5': { x: 36, y: 59 },
+    '2004.6': { x: 40, y: 60.5 },
+    '2004.7': { x: 44, y: 62 },
+    '2004.8': { x: 48, y: 63.5 },
+    
+    // Right side signs
+    '2010': { x: 44, y: 55 },
+    '2010.1': { x: 48, y: 56.5 },
+    '2011': { x: 52, y: 58 },
+    '2012': { x: 56, y: 59.5 },
+    '2013': { x: 60, y: 61 },
+    '2014': { x: 64, y: 62.5 },
+    '2015': { x: 68, y: 64 },
+    '2016': { x: 72, y: 65.5 },
+    '2017': { x: 76, y: 67 },
+    '2017.1': { x: 80, y: 68.5 },
+    '2018': { x: 84, y: 70 },
+    '2019': { x: 88, y: 71.5 },
+    '2020': { x: 92, y: 73 },
+    '2021': { x: 96, y: 74.5 },
+    '2022': { x: 100, y: 76 },
+    '2023': { x: 104, y: 77.5 },
+    
+    // Bottom-left corner signs
+    '2006': { x: 10, y: 70 },
+    '2007': { x: 14, y: 72 },
+    '2007.1': { x: 18, y: 73.5 },
+    '2008': { x: 22, y: 75 },
+    '2009': { x: 34, y: 80 },
+    '2009.1': { x: 26, y: 76.5 },
+    '2009.2': { x: 30, y: 78 },
+    '2009.3': { x: 34, y: 79.5 },
+    '2009.4': { x: 38, y: 81 },
+  };
+
   useEffect(() => {
     // Load calibrated hotspots
-    const newHotspots = calibratedData.extractedSigns.map((sign: any, index: number) => ({
-      id: `hotspot-${index}`,
-      signNumber: sign.text,
-      x: sign.boundingBox.x_percentage,
-      y: sign.boundingBox.y_percentage,
-      width: sign.boundingBox.width_percentage || 2,
-      height: sign.boundingBox.height_percentage || 1,
-      status: 'pending' as const,
-      confidence: sign.confidence || 0.95,
-      isFieldLocate: sign.isFieldLocate || false
-    }));
+    const newHotspots = calibratedData.extractedSigns.map((sign: any, index: number) => {
+      const calibration = manualCalibrations[sign.text];
+      
+      return {
+        id: `hotspot-${index}`,
+        signNumber: sign.text,
+        x: calibration?.x || sign.boundingBox.x_percentage,
+        y: calibration?.y || sign.boundingBox.y_percentage,
+        width: sign.boundingBox.width_percentage || 2,
+        height: sign.boundingBox.height_percentage || 1,
+        status: 'pending' as const,
+        confidence: sign.confidence || 0.95,
+        isFieldLocate: sign.isFieldLocate || false
+      };
+    });
 
     setHotspots(newHotspots);
   }, []);
