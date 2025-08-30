@@ -38,12 +38,12 @@ export default function CalibratedDemoPage() {
   const imageRef = useRef<HTMLDivElement>(null);
 
   // Manual calibration - testing with just sign 2001
-  // From the screenshot, sign 2001 is located:
-  // - Above the left building outline
-  // - In the upper-center area of the plan
-  // - Approximately centered over the left building section
+  // From visual inspection of the actual plan:
+  // - Sign 2001 is centered above the left building outline
+  // - Located in the upper portion of the plan
+  // - Approximately 35% from left, 27% from top
   const manualCalibrations: { [key: string]: { x: number, y: number } } = {
-    '2001': { x: 34, y: 20 },
+    '2001': { x: 35, y: 27 },
   };
 
   useEffect(() => {
