@@ -118,7 +118,7 @@ sign-ocr-extraction/
 
 ### Environment Variables
 ```env
-GOOGLE_VISION_API_KEY=[REDACTED]
+GOOGLE_VISION_API_KEY=[REDACTED - DO NOT COMMIT ACTUAL KEYS]
 ```
 
 ## 📊 Performance Metrics
