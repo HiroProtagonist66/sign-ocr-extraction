@@ -1,432 +1,237 @@
-# Sign Inventory Management System - Claude.md
+# Claude.md - Project Assistant Instructions
 
-## Project Vision
-A comprehensive Progressive Web App for managing sign inventory at Microsoft data center construction sites. The core innovation is interactive site plans with hotspot overlays, enabling field installers to visually track sign installations directly on architectural drawings, with robust offline capabilities for areas without network connectivity.
+## Project Overview
+Sign OCR Extraction System for detecting and extracting sign numbers from architectural floor plans. The system needs to handle 13,000+ signs across 7 different projects with high accuracy.
 
-## Current Implementation Status
+## Current State (August 30, 2025)
+- **Detected:** 99 sign boxes using color-based detection
+- **Extracted:** 0 signs via OCR (needs tuning)
+- **Total Signs:** 157 expected on COLO 2 plan
+- **Deployment:** Live at https://sign-ocr-extraction.vercel.app
 
-### ✅ Completed Features
-- User authentication with role-based access (Manager/Installer)
-- Site and area selection hierarchy
-- Sign inventory tracking with status recording (Present/Missing/Damaged)
-- Sign type filtering and sorting
-- Offline data persistence with IndexedDB
-- PWA installation on mobile devices
-- Manager dashboard with analytics and charts
-- CSV export functionality
-- Background sync for offline→online data transfer
-- Row Level Security (RLS) on all database tables
+## Color Detection Testing Plan
 
-### 🚧 Planned Core Feature: Interactive Site Plans
-- Interactive hotspots overlaid on architectural drawings
-- Visual sign tracking directly on floor plans
-- Offline map downloading and caching
-- Touch-optimized interaction for mobile devices
-- Persistent offline state management
+### Phase 1: Expand Color Detection Coverage
+**Objective:** Detect ALL sign boxes regardless of outline color
 
-## Architecture Overview
+#### Current Detection
+- HSV Range: [8,80,80] to [25,255,220] (orange/brown)
+- Detecting: 99 boxes
+- Missing: Blue, teal, and green outlined boxes
 
-### Data Hierarchy
-```
-Sites (Buildings) → FTY02, SAT80, CC006, ATL06, FTY01
-  └── Areas → Admin, Colo 1, Colo 2, Colo 3, Site, Guardhouse
-      └── Cells (for Colos) → CE1, CE2, CE3, CE4
-          └── Signs → Individual sign placements with unique numbers
-```
+#### Testing Steps
+1. **Identify all outline colors:**
+   ```python
+   # Run tune_colors.py on different box types
+   python3 extraction/tune_colors.py
+   ```
+   - Document HSV ranges for each color
+   - Green outlines: H(45-75)
+   - Blue outlines: H(100-130)  
+   - Teal outlines: H(160-190)
 
-### Sign Numbering Convention
-Signs follow a hierarchical naming pattern:
-- **Simple Format**: Sequential numbers (e.g., "1263", "2001")
-- **Area Context**: Stored in `project_sign_catalog.original_csv_level_no`
-- **Location Reference**: Areas like "COLO 2" marked on plans
+2. **Implement multi-color detection:**
+   ```python
+   # Create multiple masks
+   mask_orange = cv2.inRange(hsv, orange_lower, orange_upper)
+   mask_blue = cv2.inRange(hsv, blue_lower, blue_upper)
+   mask_teal = cv2.inRange(hsv, teal_lower, teal_upper)
+   
+   # Combine masks
+   final_mask = mask_orange | mask_blue | mask_teal
+   ```
 
-### Sign Type Classification
-```
-BC = Building Code signs
-  - BC-1.0: Exit signs
-  - BC-1.14: Special exit variants
-  - BC-5.1: 1 Hour Fire Barrier
-  - BC-5.2: 2 Hour Fire Barrier
-  - BC-6.1: Equipment identification
-  
-PAC = Project-specific signs
-  - PAC-1.1: Project-specific markers
-  
-BID = Bidirectional signs
-  - BID-1.2: Two-way directional
-  
-ID = Identification signs
-  - ID-5.2: Room/area identification
-```
+3. **Test each color independently:**
+   - Run extraction with single color
+   - Count detected boxes
+   - Verify no false positives
 
-## Database Schema Design
+### Phase 2: Stacked Box Detection
+**Objective:** Correctly count stacked signs as multiple units
 
-### Core Tables
-
-#### Site Management
-```sql
-sites                    -- Physical buildings/data centers
-project_areas           -- Logical divisions (Admin, Colos, etc.)
-slp_areas              -- Site Layout Plan areas for mapping
-slp_pages              -- Individual architectural drawing pages
-```
-
-#### Sign Catalog
-```sql
-sign_descriptions       -- Master list of sign types (BC-1.0, etc.)
-project_sign_catalog   -- All signs for each site with metadata
-  - sign_number        -- Unique identifier per sign
-  - sign_description_id -- Links to sign type
-  - side_a_message     -- Custom text for side A
-  - side_b_message     -- Custom text for side B
-  - original_csv_level_no -- Area designation from import
-```
-
-#### Hotspot System (Interactive Maps)
-```sql
-hotspots
-  - slp_page_id        -- Links to specific architectural drawing
-  - x_percentage       -- Horizontal position (0-100%)
-  - y_percentage       -- Vertical position (0-100%)
-  - width_percentage   -- Hotspot width as % of drawing
-  - height_percentage  -- Hotspot height as % of drawing
-  - sign_number        -- Links to project_sign_catalog
-  - inventory_status   -- Not_Inventoried_Yet|Present|Missing|Issue
-  - install_status     -- Pending_Install|Installed|Issue
-  - bbox              -- JSON bounding box data
-```
-
-#### Inventory Tracking
-```sql
-inventory_sessions     -- Groups inventory activities by session
-inventory_log         -- Individual sign status records
-  - inventory_type    -- Present|Missing|Damaged
-  - quantity         -- Number of signs checked
-  - notes           -- Field notes
-```
-
-#### User Management
-```sql
-user_profiles         -- User accounts with roles
-user_site_assignments -- Maps users to accessible sites
-```
-
-#### Future: Installation Verification
-```sql
-installation_photos   -- Photo evidence of installations
-  - ocr_extracted_sign_number  -- Future OCR capability
-  - ocr_confidence             -- OCR accuracy score
-  - status                    -- pending_ocr|processed|verified
-```
-
-## Critical Offline Requirements
-
-### Data Persistence Strategy
-1. **IndexedDB Primary Storage**: All site data, plans, and inventory cached locally
-2. **Service Worker Caching**: Static assets and PWA shell
-3. **Session Storage**: Active session state and filters
-4. **Sync Queue**: Pending changes awaiting network connection
-
-### Offline Capabilities Must-Haves
-- ✅ **Complete Offline Navigation**: Every screen accessible without network
-- ✅ **Data Loss Prevention**: Survives browser crashes and phone restarts
-- ✅ **Selective Download**: Download specific areas/maps when online
-- ✅ **Visual Feedback**: Clear offline/online status indicators
-- ✅ **Conflict Resolution**: Handle multiple offline sessions gracefully
-
-### Offline Data Flow
-```
-1. While Online:
-   - Download site plans for assigned areas
-   - Cache hotspot overlays and sign catalog
-   - Store in IndexedDB with versioning
-
-2. Going Offline:
-   - Seamlessly switch to cached data
-   - Queue all changes locally
-   - Maintain full app functionality
-
-3. During Offline Work:
-   - Update hotspot statuses
-   - Record inventory changes
-   - Add notes and observations
-   - All data persisted to IndexedDB
-
-4. Returning Online:
-   - Background sync activates
-   - Queue processed in order
-   - Conflicts resolved by timestamp
-   - User notified of sync status
-```
-
-## Interactive Site Plans Feature
-
-### Implementation Architecture
-```javascript
-// Hotspot interaction flow
-1. Load site plan image as base layer
-2. Overlay hotspots from database
-3. Enable pan/zoom for navigation
-4. Tap hotspot to show sign details
-5. Quick actions: Mark as Installed/Issue/Missing
-6. Changes saved to IndexedDB immediately
-7. Sync queue updated for later upload
-```
-
-### Hotspot Rendering Strategy
-- Use percentage-based positioning for responsive scaling
-- SVG overlays for crisp rendering at any zoom level
-- Touch-optimized hit targets (minimum 44x44px)
-- Visual states: Pending (gray), Installed (green), Issue (yellow), Missing (red)
-
-### Plan Navigation Features
-- Pinch-to-zoom on mobile devices
-- Double-tap to zoom to specific area
-- Mini-map for orientation on large plans
-- Search by sign number with visual highlighting
-- Filter hotspots by status or sign type
-
-## Technical Implementation Details
-
-### Tech Stack
-```
-Frontend:
-  - Next.js 15.5.2 (App Router)
-  - React 19
-  - TypeScript
-  - Tailwind CSS
-  
-Backend:
-  - Supabase (PostgreSQL)
-  - Row Level Security (RLS)
-  - Realtime subscriptions (future)
-  
-Offline:
-  - Service Worker (v3)
-  - IndexedDB via Dexie.js (recommended)
-  - Background Sync API
-  
-Deployment:
-  - Vercel
-  - GitHub CI/CD
-```
-
-### File Structure
-```
-/sign-inventory/
-├── src/
-│   ├── app/                    # Next.js pages
-│   │   ├── inventory/          # Main inventory interface
-│   │   ├── plans/             # [FUTURE] Interactive site plans
-│   │   ├── dashboard/         # Manager analytics
-│   │   └── manager/           # User management
-│   ├── components/
-│   │   ├── Hotspot/          # [FUTURE] Hotspot components
-│   │   ├── PlanViewer/       # [FUTURE] Site plan viewer
-│   │   └── InventoryList/    # Current list view
-│   └── lib/
-│       ├── offline/          # Offline storage logic
-│       ├── sync/             # Sync queue management
-│       └── supabase/         # Database queries
-├── public/
-│   ├── plans/               # [FUTURE] Cached site plans
-│   ├── manifest.json        # PWA manifest
-│   └── sw.js               # Service worker
-└── chat_summaries/         # Development documentation
-```
-
-## Development Workflow
-
-### Local Development
-```bash
-cd /Users/benjaminbegner/Documents/sign_app_supabase_directory/sign-inventory
-npm run dev
-
-# Access URLs
-Desktop: http://localhost:3000
-Mobile: http://192.168.50.96:3000 (same network)
-Production: https://sign-inventory-app-one.vercel.app
-```
-
-### Environment Variables
-```env
-NEXT_PUBLIC_SUPABASE_URL=https://odlzqhqvlqqcaivsohda.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
-```
-
-## Key Implementation Patterns
-
-### Offline-First Data Access
-```typescript
-// Always try local first, fallback to network
-async function getSignData(siteId: string) {
-  // 1. Check IndexedDB
-  const localData = await db.signs.where('siteId').equals(siteId).toArray();
-  
-  if (localData.length && !isStale(localData)) {
-    return localData;
-  }
-  
-  // 2. If online, fetch and cache
-  if (navigator.onLine) {
-    const freshData = await supabase
-      .from('project_sign_catalog')
-      .select('*')
-      .eq('site_id', siteId);
+#### Algorithm
+```python
+def detect_stacked_boxes(box, standard_height=40):
+    """
+    Detect if a box contains multiple stacked signs
+    Standard sign height is approximately 40 pixels at 400 DPI
+    """
+    x, y, w, h = box
     
-    await db.signs.bulkPut(freshData);
-    return freshData;
+    # Check if height suggests stacking
+    if h > standard_height * 1.5:
+        stack_count = round(h / standard_height)
+        boxes = []
+        
+        # Split into individual boxes
+        for i in range(stack_count):
+            new_y = y + (i * standard_height)
+            boxes.append((x, new_y, w, standard_height))
+        
+        return boxes
+    
+    return [box]
+```
+
+#### Testing Steps
+1. Identify all stacked boxes in visualization
+2. Measure typical single box height
+3. Test splitting algorithm on known stacks
+4. Verify OCR on individual segments
+
+### Phase 3: OCR Optimization
+**Objective:** Extract sign numbers from detected boxes
+
+#### Current Issues
+- 0% extraction rate
+- Possible causes: resolution, preprocessing, PSM mode
+
+#### Testing Matrix
+| PSM Mode | Preprocessing | Whitelist | Expected Use Case |
+|----------|--------------|-----------|-------------------|
+| 6 | Threshold | 0-9.- | Uniform blocks |
+| 7 | Adaptive | 0-9 | Single lines |
+| 8 | Denoise | Numeric | Single words |
+| 11 | Contrast | 0-9.- | Sparse text |
+| 13 | All combined | Alphanumeric | Raw lines |
+
+#### Testing Steps
+1. **Extract sample boxes:**
+   ```python
+   # Save individual box images for testing
+   for i, box in enumerate(boxes[:10]):
+       x, y, w, h = box
+       roi = image[y:y+h, x:x+w]
+       cv2.imwrite(f'test_box_{i}.jpg', roi)
+   ```
+
+2. **Test OCR configurations:**
+   ```python
+   configs = [
+       '--psm 6 -c tessedit_char_whitelist=0123456789.-',
+       '--psm 7 -c tessedit_char_whitelist=0123456789',
+       '--psm 8 -c tessedit_char_whitelist=0123456789.-',
+       '--psm 11 --oem 3',
+   ]
+   
+   for config in configs:
+       text = pytesseract.image_to_string(roi, config=config)
+       print(f"Config: {config} -> Result: {text}")
+   ```
+
+3. **Preprocessing experiments:**
+   - Resize image 2x, 3x, 4x
+   - Binary threshold variations
+   - Morphological operations
+   - Edge detection + flood fill
+
+### Phase 4: Validation & Metrics
+
+#### Success Criteria
+- [ ] Detect 150+ boxes (95% coverage)
+- [ ] Extract 140+ sign numbers (90% OCR success)
+- [ ] Process page in <15 seconds
+- [ ] Zero false positives
+
+#### Validation Dataset
+Create ground truth for 10 sample areas:
+```json
+{
+  "area_1": {
+    "bounds": [100, 100, 500, 500],
+    "expected_signs": ["2001", "2001.1", "2001.2"],
+    "box_count": 3
   }
-  
-  // 3. Return stale data if offline
-  return localData;
 }
 ```
 
-### Hotspot State Management
-```typescript
-interface HotspotState {
-  id: string;
-  signNumber: string;
-  status: 'Not_Inventoried_Yet' | 'Present' | 'Missing' | 'Issue';
-  installStatus: 'Pending_Install' | 'Installed' | 'Issue';
-  lastModified: Date;
-  syncStatus: 'synced' | 'pending' | 'error';
+#### Metrics Tracking
+```python
+metrics = {
+    "detection_rate": detected_boxes / expected_boxes,
+    "ocr_success_rate": extracted_signs / detected_boxes,
+    "false_positive_rate": false_positives / detected_boxes,
+    "processing_time": end_time - start_time
 }
 ```
 
-### Sync Queue Pattern
-```typescript
-// Queue changes for later sync
-async function updateHotspotStatus(hotspotId: string, status: string) {
-  // 1. Update local state immediately
-  await db.hotspots.update(hotspotId, { 
-    status, 
-    syncStatus: 'pending',
-    lastModified: new Date() 
-  });
-  
-  // 2. Add to sync queue
-  await db.syncQueue.add({
-    type: 'hotspot_update',
-    payload: { hotspotId, status },
-    timestamp: new Date(),
-    retries: 0
-  });
-  
-  // 3. Trigger sync if online
-  if (navigator.onLine) {
-    await processSync Queue();
-  }
-}
-```
+## Implementation Priority
 
-## Performance Considerations
+### Immediate (Today)
+1. ✅ Create session summary
+2. ⏳ Expand color ranges for all outline colors
+3. ⏳ Implement stacked box detection
+4. ⏳ Test OCR with PSM mode 7 and 8
 
-### Mobile Optimization
-- Lazy load site plans (progressive image loading)
-- Virtual scrolling for large sign lists
-- Debounced search and filter operations
-- Minimize re-renders with React.memo
-- Use CSS transforms for smooth pan/zoom
+### Short-term (This Week)
+1. Complete multi-color detection
+2. Achieve 90%+ detection rate
+3. Achieve 50%+ OCR extraction
+4. Process all COLO 2 pages
 
-### Data Management
-- Selective sync based on user's assigned sites
-- Compression for cached images
-- Periodic cleanup of old offline data
-- Efficient IndexedDB queries with proper indexes
-
-## Security Model
-
-### Row Level Security (RLS)
-- All database tables protected with RLS policies
-- Users can only see assigned sites (installers)
-- Managers have full visibility
-- Audit trail for all changes
-
-### Authentication Flow
-```
-1. Supabase Auth handles user management
-2. JWT tokens for session management
-3. Automatic profile creation on signup
-4. Role assignment (first user = manager)
-```
-
-## Future Enhancements
-
-### Phase 1: Interactive Plans (Priority)
-- [ ] Implement PlanViewer component
-- [ ] Add hotspot overlay system
-- [ ] Enable offline plan downloading
-- [ ] Build touch-optimized interactions
-
-### Phase 2: Enhanced Tracking
-- [ ] GPS location verification
-- [ ] Photo capture for installations
-- [ ] QR code scanning for signs
-- [ ] Time tracking per installation
-
-### Phase 3: Advanced Features
-- [ ] Real-time collaboration
-- [ ] OCR for automatic sign detection
-- [ ] AI-powered issue detection
-- [ ] Predictive inventory analytics
-
-### Phase 4: Enterprise Features
-- [ ] Multi-project management
-- [ ] Contractor portal
-- [ ] Compliance reporting
-- [ ] Integration with Microsoft systems
-
-## Testing Strategy
-
-### Offline Testing Checklist
-- [ ] Airplane mode functionality
-- [ ] Browser crash recovery
-- [ ] Phone restart persistence
-- [ ] Large dataset performance
-- [ ] Sync conflict resolution
-- [ ] Progressive download of plans
-
-### Device Testing Matrix
-- iPhone Safari (iOS 15+)
-- Android Chrome (Android 10+)
-- iPad Safari (landscape/portrait)
-- Desktop Chrome/Edge/Firefox
+### Medium-term (Next Week)
+1. Process all 7 projects
+2. Build correction interface
+3. Export to standardized format
+4. Create batch processing script
 
 ## Known Issues & Solutions
 
-### Current Issues
-1. **Mobile Cookie Handling**: Middleware disabled, using client-side auth
-2. **Browser Extensions**: Crypto wallets causing errors (suppressed)
-3. **TypeScript Complexity**: Complex Supabase query types
+### Issue 1: Blue/Teal Outlines Not Detected
+**Solution:** Add additional HSV ranges and combine masks
 
-### Mitigations
-- Client-side AuthGuard for route protection
-- GlobalErrorHandler for extension errors
-- Careful type definitions for database queries
+### Issue 2: Stacked Boxes Counted as One
+**Solution:** Implement height-based splitting algorithm
 
-## Support & Documentation
+### Issue 3: OCR Failing on Detected Boxes
+**Solution:** Test different PSM modes and preprocessing
 
-### Key Documentation Files
-- `PROJECT_SUMMARY_2025-08-28.md` - Complete system overview
-- `SESSION_***.md` - Development session logs
-- `USER_ROLES_SETUP.md` - Role configuration guide
-- `TROUBLESHOOTING.md` - Common issues and fixes
+### Issue 4: Some Signs Have No Boxes
+**Solution:** May need text-based detection as fallback
 
-### Contact & Resources
-- Production URL: https://sign-inventory-app-one.vercel.app
-- GitHub Repository: [Private]
-- Supabase Dashboard: [Project-specific URL]
+## Testing Commands
 
-## Development Principles
+```bash
+# Run color tuning interface
+python3 extraction/tune_colors.py
 
-1. **Offline-First**: Every feature must work offline
-2. **Mobile-Optimized**: Touch-first interface design
-3. **Data Integrity**: Never lose user's work
-4. **Progressive Enhancement**: Core features work everywhere
-5. **Performance**: Fast interactions even with large datasets
+# Process single image
+python3 extraction/run_from_image.py
+
+# Run full extraction
+python3 extraction/run_extraction.py
+
+# Start development server
+npm run dev
+
+# Deploy to Vercel
+git push origin main
+```
+
+## File Structure
+```
+/extraction
+  ├── color_based_extraction.py  # Main pipeline
+  ├── tune_colors.py             # HSV tuning tool
+  ├── run_from_image.py          # PNG processor
+  └── output/                    # Results directory
+
+/app/plans
+  ├── calibrated/page.tsx        # Fixed coordinates view
+  └── color-extraction/page.tsx  # Color detection view
+
+/test_data/extraction_results
+  ├── calibrated_extraction_results.json
+  └── fixed_coordinates.json
+```
+
+## Notes for Next Session
+1. Start with expanding color detection ranges
+2. Test stacked box detection on known examples
+3. Focus on OCR parameter tuning
+4. Consider hybrid approach (color + text detection)
+5. Build confidence scoring system
 
 ---
-
-*This document serves as the primary reference for Claude when working on the Sign Inventory Management System. It captures both the current implementation and the vision for the interactive site plan features that will revolutionize field inventory management.*
+*Last Updated: August 30, 2025*
+*Next Review: When detection rate reaches 95%*
