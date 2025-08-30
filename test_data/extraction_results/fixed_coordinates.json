@@ -1,0 +1,2717 @@
+{
+  "pdfFile": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf",
+  "timestamp": "2025-08-30T15:14:47.099Z",
+  "totalSignsFound": 157,
+  "expectedCount": 150,
+  "missingCount": -7,
+  "stats": {
+    "totalSigns": 157,
+    "fieldLocateSigns": 88,
+    "mainAreaSigns": 69,
+    "typeSigns": 0,
+    "calibratedSigns": 22
+  },
+  "extractedSigns": [
+    {
+      "text": "1810-5.3",
+      "originalText": "1810-5.3",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 93.40277777777779,
+        "y_percentage": 36.462673611111114,
+        "width_percentage": 1.669973544973545,
+        "height_percentage": 0.9259259259259258,
+        "x_percentage_original": 80.05952380952381,
+        "y_percentage_original": 56.458333333333336
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "1831-92",
+      "originalText": "1831-92",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 93.44135802469137,
+        "y_percentage": 33.27835648148148,
+        "width_percentage": 1.6534391534391533,
+        "height_percentage": 1.0648148148148149,
+        "x_percentage_original": 80.0925925925926,
+        "y_percentage_original": 51.52777777777777
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "1881-82",
+      "originalText": "1881-82",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 93.40277777777779,
+        "y_percentage": 33.308256172839506,
+        "width_percentage": 1.7416225749559082,
+        "height_percentage": 1.1111111111111112,
+        "x_percentage_original": 80.05952380952381,
+        "y_percentage_original": 51.57407407407407
+      },
+      "confidence": 0.95,
+      "scale": 3,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2001.1",
+      "originalText": "2001.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 37.333333333333336,
+        "y_percentage": 31.322916666666668,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 32,
+        "y_percentage_original": 48.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2001.2",
+      "originalText": "2001.2",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 39.66666666666667,
+        "y_percentage": 31.645833333333336,
+        "width_percentage": 1.455026455026455,
+        "height_percentage": 0.6481481481481481,
+        "x_percentage_original": 34,
+        "y_percentage_original": 49
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2001.3",
+      "originalText": "2001.3",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 49,
+        "y_percentage": 24.541666666666668,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 42,
+        "y_percentage_original": 38
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2001",
+      "originalText": "2001",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 35,
+        "y_percentage": 31,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 30,
+        "y_percentage_original": 48
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2002.1",
+      "originalText": "2002.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 32.66666666666667,
+        "y_percentage": 32.29166666666667,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.5555555555555556,
+        "x_percentage_original": 28,
+        "y_percentage_original": 50
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2002",
+      "originalText": "2002",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 35,
+        "y_percentage": 33.583333333333336,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 30,
+        "y_percentage_original": 52
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2003",
+      "originalText": "2003",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 35,
+        "y_percentage": 34.875,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.5092592592592593,
+        "x_percentage_original": 30,
+        "y_percentage_original": 54
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2004.3",
+      "originalText": "2004.3",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 36.16666666666667,
+        "y_percentage": 38.427083333333336,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 31,
+        "y_percentage_original": 59.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2004.4",
+      "originalText": "2004.4",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 38.5,
+        "y_percentage": 38.75,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 33,
+        "y_percentage_original": 60
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2004.7",
+      "originalText": "2004.7",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 45.5,
+        "y_percentage": 39.71875,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 39,
+        "y_percentage_original": 61.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2004.8",
+      "originalText": "2004.8",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 47.833333333333336,
+        "y_percentage": 40.04166666666667,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 41,
+        "y_percentage_original": 62
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2004",
+      "originalText": "2004",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 29.166666666666668,
+        "y_percentage": 37.458333333333336,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 25,
+        "y_percentage_original": 58
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2004.1",
+      "originalText": "2004.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 46.66666666666667,
+        "y_percentage": 36.16666666666667,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 40,
+        "y_percentage_original": 56
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2004.6",
+      "originalText": "2004.6",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 43.16666666666667,
+        "y_percentage": 39.395833333333336,
+        "width_percentage": 1.4384920634920635,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 37,
+        "y_percentage_original": 61
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2005",
+      "originalText": "2005",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 17.5,
+        "y_percentage": 48.4375,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 15,
+        "y_percentage_original": 75
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2006",
+      "originalText": "2006",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 11.666666666666668,
+        "y_percentage": 47.79166666666667,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 10,
+        "y_percentage_original": 74
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2007",
+      "originalText": "2007",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 17.5,
+        "y_percentage": 49.083333333333336,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 15,
+        "y_percentage_original": 76
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2007.1",
+      "originalText": "2007.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 19.833333333333336,
+        "y_percentage": 49.40625,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.5092592592592593,
+        "x_percentage_original": 17,
+        "y_percentage_original": 76.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2008.1",
+      "originalText": "2008.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 23.333333333333336,
+        "y_percentage": 50.69791666666667,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 20,
+        "y_percentage_original": 78.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2008",
+      "originalText": "2008",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 21,
+        "y_percentage": 50.375,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 18,
+        "y_percentage_original": 78
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2008.2",
+      "originalText": "2008.2",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 25.666666666666668,
+        "y_percentage": 51.020833333333336,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 22,
+        "y_percentage_original": 79
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2008.3",
+      "originalText": "2008.3",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 28,
+        "y_percentage": 51.34375,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 24,
+        "y_percentage_original": 79.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2009.1",
+      "originalText": "2009.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 43.16666666666667,
+        "y_percentage": 53.28125,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 37,
+        "y_percentage_original": 82.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2009.2",
+      "originalText": "2009.2",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 45.5,
+        "y_percentage": 53.60416666666667,
+        "width_percentage": 1.4054232804232802,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 39,
+        "y_percentage_original": 83
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2009.3",
+      "originalText": "2009.3",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 47.833333333333336,
+        "y_percentage": 53.927083333333336,
+        "width_percentage": 1.4054232804232802,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 41,
+        "y_percentage_original": 83.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2009.4",
+      "originalText": "2009.4",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 50.16666666666667,
+        "y_percentage": 54.25,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 43,
+        "y_percentage_original": 84
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2009",
+      "originalText": "2009",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 40.833333333333336,
+        "y_percentage": 52.958333333333336,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 35,
+        "y_percentage_original": 82
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2010",
+      "originalText": "2010",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 44.333333333333336,
+        "y_percentage": 37.78125,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 38,
+        "y_percentage_original": 58.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2010.1",
+      "originalText": "2010.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 44.333333333333336,
+        "y_percentage": 37.78125,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 38,
+        "y_percentage_original": 58.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2011",
+      "originalText": "2011",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 46.66666666666667,
+        "y_percentage": 38.75,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 40,
+        "y_percentage_original": 60
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2012",
+      "originalText": "2012",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 49,
+        "y_percentage": 39.71875,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 42,
+        "y_percentage_original": 61.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2013.1",
+      "originalText": "2013.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 51.333333333333336,
+        "y_percentage": 40.6875,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 44,
+        "y_percentage_original": 63
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2013.2",
+      "originalText": "2013.2",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 51.333333333333336,
+        "y_percentage": 40.6875,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 44,
+        "y_percentage_original": 63
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2013.3",
+      "originalText": "2013.3",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 51.333333333333336,
+        "y_percentage": 40.6875,
+        "width_percentage": 1.4054232804232802,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 44,
+        "y_percentage_original": 63
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2013",
+      "originalText": "2013",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 51.333333333333336,
+        "y_percentage": 40.6875,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 44,
+        "y_percentage_original": 63
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2014",
+      "originalText": "2014",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 53.66666666666667,
+        "y_percentage": 41.65625,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 46,
+        "y_percentage_original": 64.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2014.1",
+      "originalText": "2014.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 53.66666666666667,
+        "y_percentage": 41.65625,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 46,
+        "y_percentage_original": 64.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2015",
+      "originalText": "2015",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 56,
+        "y_percentage": 42.625,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 48,
+        "y_percentage_original": 66
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2016",
+      "originalText": "2016",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 58.333333333333336,
+        "y_percentage": 43.59375,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 50,
+        "y_percentage_original": 67.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2017.2",
+      "originalText": "2017.2",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 60.66666666666667,
+        "y_percentage": 44.5625,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 52,
+        "y_percentage_original": 69
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2017.3",
+      "originalText": "2017.3",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 60.66666666666667,
+        "y_percentage": 44.5625,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 52,
+        "y_percentage_original": 69
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2017.9",
+      "originalText": "2017.9",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 60.66666666666667,
+        "y_percentage": 44.5625,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 52,
+        "y_percentage_original": 69
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2017.1",
+      "originalText": "2017.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 60.66666666666667,
+        "y_percentage": 44.5625,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 52,
+        "y_percentage_original": 69
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2017",
+      "originalText": "2017",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 60.66666666666667,
+        "y_percentage": 44.5625,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 52,
+        "y_percentage_original": 69
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2017.5",
+      "originalText": "2017.5",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 60.66666666666667,
+        "y_percentage": 44.5625,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 52,
+        "y_percentage_original": 69
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2017.6",
+      "originalText": "2017.6",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 60.66666666666667,
+        "y_percentage": 44.5625,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 52,
+        "y_percentage_original": 69
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2017.7",
+      "originalText": "2017.7",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 60.66666666666667,
+        "y_percentage": 44.5625,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 52,
+        "y_percentage_original": 69
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2018",
+      "originalText": "2018",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 63.00000000000001,
+        "y_percentage": 45.53125,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.5324074074074074,
+        "x_percentage_original": 54,
+        "y_percentage_original": 70.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2019.1",
+      "originalText": "2019.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 65.33333333333334,
+        "y_percentage": 46.5,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.5324074074074074,
+        "x_percentage_original": 56,
+        "y_percentage_original": 72
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2019",
+      "originalText": "2019",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 65.33333333333334,
+        "y_percentage": 46.5,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 56,
+        "y_percentage_original": 72
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2020",
+      "originalText": "2020",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 67.66666666666667,
+        "y_percentage": 47.46875,
+        "width_percentage": 1.0582010582010581,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 58,
+        "y_percentage_original": 73.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2021.1",
+      "originalText": "2021.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 70,
+        "y_percentage": 48.4375,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 60,
+        "y_percentage_original": 75
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2021.2",
+      "originalText": "2021.2",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 70,
+        "y_percentage": 48.4375,
+        "width_percentage": 1.4054232804232802,
+        "height_percentage": 0.5324074074074074,
+        "x_percentage_original": 60,
+        "y_percentage_original": 75
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2021",
+      "originalText": "2021",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 70,
+        "y_percentage": 48.4375,
+        "width_percentage": 0.9424603174603174,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 60,
+        "y_percentage_original": 75
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2022",
+      "originalText": "2022",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 72.33333333333334,
+        "y_percentage": 49.40625,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 62,
+        "y_percentage_original": 76.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2023",
+      "originalText": "2023",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 74.66666666666667,
+        "y_percentage": 50.375,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 64,
+        "y_percentage_original": 78
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2024.1",
+      "originalText": "2024.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 77,
+        "y_percentage": 51.34375,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 66,
+        "y_percentage_original": 79.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2024",
+      "originalText": "2024",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 77,
+        "y_percentage": 51.34375,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 66,
+        "y_percentage_original": 79.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2025.1",
+      "originalText": "2025.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 79.33333333333334,
+        "y_percentage": 52.3125,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 68,
+        "y_percentage_original": 81
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2025",
+      "originalText": "2025",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 79.33333333333334,
+        "y_percentage": 52.3125,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 68,
+        "y_percentage_original": 81
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2026",
+      "originalText": "2026",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 81.66666666666667,
+        "y_percentage": 53.28125,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 70,
+        "y_percentage_original": 82.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2026.1",
+      "originalText": "2026.1",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 81.66666666666667,
+        "y_percentage": 53.28125,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 70,
+        "y_percentage_original": 82.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2026.5",
+      "originalText": "2026.5",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 81.66666666666667,
+        "y_percentage": 53.28125,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.5092592592592593,
+        "x_percentage_original": 70,
+        "y_percentage_original": 82.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2026.3",
+      "originalText": "2026.3",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 81.66666666666667,
+        "y_percentage": 53.28125,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 70,
+        "y_percentage_original": 82.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2026.4",
+      "originalText": "2026.4",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 81.66666666666667,
+        "y_percentage": 53.28125,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 70,
+        "y_percentage_original": 82.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2026.2",
+      "originalText": "2026.2",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 81.66666666666667,
+        "y_percentage": 53.28125,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 70,
+        "y_percentage_original": 82.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": false,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2027",
+      "originalText": "2027",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 72,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2028",
+      "originalText": "2028",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 83.76666666666667,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 71.8,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2029",
+      "originalText": "2029",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84.7,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 72.6,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2030",
+      "originalText": "2030",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 85.63333333333334,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 73.4,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2031",
+      "originalText": "2031",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 86.56666666666668,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 74.2,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2032",
+      "originalText": "2032",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 87.5,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2033",
+      "originalText": "2033",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 88.43333333333334,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75.8,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2034",
+      "originalText": "2034",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 89.36666666666666,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 76.6,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2035",
+      "originalText": "2035",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 90.30000000000001,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 77.4,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2036",
+      "originalText": "2036",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 91.23333333333335,
+        "y_percentage": 43.270833333333336,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 78.2,
+        "y_percentage_original": 67
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2037",
+      "originalText": "2037",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 43.91666666666667,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 72,
+        "y_percentage_original": 68
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2038",
+      "originalText": "2038",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 83.76666666666667,
+        "y_percentage": 43.85208333333334,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 71.8,
+        "y_percentage_original": 67.9
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2039",
+      "originalText": "2039",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84.7,
+        "y_percentage": 43.85208333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 72.6,
+        "y_percentage_original": 67.9
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2040",
+      "originalText": "2040",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 85.63333333333334,
+        "y_percentage": 43.85208333333334,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 73.4,
+        "y_percentage_original": 67.9
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2041",
+      "originalText": "2041",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 86.56666666666668,
+        "y_percentage": 43.85208333333334,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 74.2,
+        "y_percentage_original": 67.9
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2042",
+      "originalText": "2042",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 87.5,
+        "y_percentage": 43.85208333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.5092592592592593,
+        "x_percentage_original": 75,
+        "y_percentage_original": 67.9
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2043",
+      "originalText": "2043",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 88.43333333333334,
+        "y_percentage": 43.85208333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 75.8,
+        "y_percentage_original": 67.9
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2044",
+      "originalText": "2044",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 89.36666666666666,
+        "y_percentage": 43.85208333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 76.6,
+        "y_percentage_original": 67.9
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2045",
+      "originalText": "2045",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 90.30000000000001,
+        "y_percentage": 43.85208333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 77.4,
+        "y_percentage_original": 67.9
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2046",
+      "originalText": "2046",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 91.23333333333335,
+        "y_percentage": 43.85208333333334,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 78.2,
+        "y_percentage_original": 67.9
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2047",
+      "originalText": "2047",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 44.5625,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 72,
+        "y_percentage_original": 69
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2048",
+      "originalText": "2048",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 83.76666666666667,
+        "y_percentage": 44.43333333333334,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 71.8,
+        "y_percentage_original": 68.8
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2049",
+      "originalText": "2049",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84.7,
+        "y_percentage": 44.43333333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.5092592592592593,
+        "x_percentage_original": 72.6,
+        "y_percentage_original": 68.8
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2050",
+      "originalText": "2050",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 85.63333333333334,
+        "y_percentage": 44.43333333333334,
+        "width_percentage": 1.0582010582010581,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 73.4,
+        "y_percentage_original": 68.8
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2051",
+      "originalText": "2051",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 86.56666666666668,
+        "y_percentage": 44.43333333333334,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 74.2,
+        "y_percentage_original": 68.8
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2052",
+      "originalText": "2052",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 87.5,
+        "y_percentage": 44.43333333333334,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75,
+        "y_percentage_original": 68.8
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2053",
+      "originalText": "2053",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 88.43333333333334,
+        "y_percentage": 44.43333333333334,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 75.8,
+        "y_percentage_original": 68.8
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2054",
+      "originalText": "2054",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 89.36666666666666,
+        "y_percentage": 44.43333333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 76.6,
+        "y_percentage_original": 68.8
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2055",
+      "originalText": "2055",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 90.30000000000001,
+        "y_percentage": 44.43333333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 77.4,
+        "y_percentage_original": 68.8
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2056",
+      "originalText": "2056",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 91.23333333333335,
+        "y_percentage": 44.43333333333334,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 78.2,
+        "y_percentage_original": 68.8
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2057",
+      "originalText": "2057",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 45.208333333333336,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 72,
+        "y_percentage_original": 70
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2058",
+      "originalText": "2058",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 83.76666666666667,
+        "y_percentage": 45.014583333333334,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 71.8,
+        "y_percentage_original": 69.7
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2059",
+      "originalText": "2059",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84.7,
+        "y_percentage": 45.014583333333334,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 72.6,
+        "y_percentage_original": 69.7
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2060",
+      "originalText": "2060",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 85.63333333333334,
+        "y_percentage": 45.014583333333334,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 73.4,
+        "y_percentage_original": 69.7
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2061",
+      "originalText": "2061",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 86.56666666666668,
+        "y_percentage": 45.014583333333334,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 74.2,
+        "y_percentage_original": 69.7
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2062",
+      "originalText": "2062",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 87.5,
+        "y_percentage": 45.014583333333334,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75,
+        "y_percentage_original": 69.7
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2063",
+      "originalText": "2063",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 88.43333333333334,
+        "y_percentage": 45.014583333333334,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 75.8,
+        "y_percentage_original": 69.7
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2064",
+      "originalText": "2064",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 89.36666666666666,
+        "y_percentage": 45.014583333333334,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 76.6,
+        "y_percentage_original": 69.7
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2065",
+      "originalText": "2065",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 90.30000000000001,
+        "y_percentage": 45.014583333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 77.4,
+        "y_percentage_original": 69.7
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2066",
+      "originalText": "2066",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 91.23333333333335,
+        "y_percentage": 45.014583333333334,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 78.2,
+        "y_percentage_original": 69.7
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2067",
+      "originalText": "2067",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 45.85416666666667,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 72,
+        "y_percentage_original": 71
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2068",
+      "originalText": "2068",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 83.76666666666667,
+        "y_percentage": 45.59583333333333,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 71.8,
+        "y_percentage_original": 70.6
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2069",
+      "originalText": "2069",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84.7,
+        "y_percentage": 45.59583333333333,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 72.6,
+        "y_percentage_original": 70.6
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2070",
+      "originalText": "2070",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 85.63333333333334,
+        "y_percentage": 45.59583333333333,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 73.4,
+        "y_percentage_original": 70.6
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2071",
+      "originalText": "2071",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 86.56666666666668,
+        "y_percentage": 45.59583333333333,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 74.2,
+        "y_percentage_original": 70.6
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2072",
+      "originalText": "2072",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 87.5,
+        "y_percentage": 45.59583333333333,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75,
+        "y_percentage_original": 70.6
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2073",
+      "originalText": "2073",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 88.43333333333334,
+        "y_percentage": 45.59583333333333,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 75.8,
+        "y_percentage_original": 70.6
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2074",
+      "originalText": "2074",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 89.36666666666666,
+        "y_percentage": 45.59583333333333,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 76.6,
+        "y_percentage_original": 70.6
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2075",
+      "originalText": "2075",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 90.30000000000001,
+        "y_percentage": 45.59583333333333,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 77.4,
+        "y_percentage_original": 70.6
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2076",
+      "originalText": "2076",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 91.23333333333335,
+        "y_percentage": 45.59583333333333,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 78.2,
+        "y_percentage_original": 70.6
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2077",
+      "originalText": "2077",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 46.5,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 72,
+        "y_percentage_original": 72
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2078",
+      "originalText": "2078",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 83.76666666666667,
+        "y_percentage": 46.177083333333336,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 71.8,
+        "y_percentage_original": 71.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2079",
+      "originalText": "2079",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84.7,
+        "y_percentage": 46.177083333333336,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 72.6,
+        "y_percentage_original": 71.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2080",
+      "originalText": "2080",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 85.63333333333334,
+        "y_percentage": 46.177083333333336,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 73.4,
+        "y_percentage_original": 71.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2081",
+      "originalText": "2081",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 86.56666666666668,
+        "y_percentage": 46.177083333333336,
+        "width_percentage": 0.9424603174603174,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 74.2,
+        "y_percentage_original": 71.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2082",
+      "originalText": "2082",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 87.5,
+        "y_percentage": 46.177083333333336,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75,
+        "y_percentage_original": 71.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2083",
+      "originalText": "2083",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 88.43333333333334,
+        "y_percentage": 46.177083333333336,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 75.8,
+        "y_percentage_original": 71.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2084",
+      "originalText": "2084",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 89.36666666666666,
+        "y_percentage": 46.177083333333336,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 76.6,
+        "y_percentage_original": 71.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2085",
+      "originalText": "2085",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 90.30000000000001,
+        "y_percentage": 46.177083333333336,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3703703703703704,
+        "x_percentage_original": 77.4,
+        "y_percentage_original": 71.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2086",
+      "originalText": "2086",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 91.23333333333335,
+        "y_percentage": 46.177083333333336,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3703703703703704,
+        "x_percentage_original": 78.2,
+        "y_percentage_original": 71.5
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2087",
+      "originalText": "2087",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 47.145833333333336,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 72,
+        "y_percentage_original": 73
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2088",
+      "originalText": "2088",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 49.083333333333336,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 72,
+        "y_percentage_original": 76
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2089",
+      "originalText": "2089",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84.7,
+        "y_percentage": 46.75833333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 72.6,
+        "y_percentage_original": 72.4
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2090",
+      "originalText": "2090",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 85.63333333333334,
+        "y_percentage": 46.75833333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 73.4,
+        "y_percentage_original": 72.4
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2091",
+      "originalText": "2091",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 86.56666666666668,
+        "y_percentage": 46.75833333333334,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 74.2,
+        "y_percentage_original": 72.4
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2092",
+      "originalText": "2092",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 87.5,
+        "y_percentage": 46.75833333333334,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75,
+        "y_percentage_original": 72.4
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2093",
+      "originalText": "2093",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 88.43333333333334,
+        "y_percentage": 46.75833333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75.8,
+        "y_percentage_original": 72.4
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2094",
+      "originalText": "2094",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 89.36666666666666,
+        "y_percentage": 46.75833333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 76.6,
+        "y_percentage_original": 72.4
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2095",
+      "originalText": "2095",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 90.30000000000001,
+        "y_percentage": 46.75833333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 77.4,
+        "y_percentage_original": 72.4
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2096",
+      "originalText": "2096",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 91.23333333333335,
+        "y_percentage": 46.75833333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 78.2,
+        "y_percentage_original": 72.4
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2097",
+      "originalText": "2097",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 82.83333333333334,
+        "y_percentage": 47.33958333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 71,
+        "y_percentage_original": 73.3
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2098",
+      "originalText": "2098",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 49.72916666666667,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 72,
+        "y_percentage_original": 77
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2099",
+      "originalText": "2099",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84.7,
+        "y_percentage": 47.33958333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 72.6,
+        "y_percentage_original": 73.3
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2100",
+      "originalText": "2100",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 85.63333333333334,
+        "y_percentage": 47.33958333333334,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 73.4,
+        "y_percentage_original": 73.3
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2101",
+      "originalText": "2101",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 86.56666666666668,
+        "y_percentage": 47.33958333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.5092592592592593,
+        "x_percentage_original": 74.2,
+        "y_percentage_original": 73.3
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2102",
+      "originalText": "2102",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 87.5,
+        "y_percentage": 47.33958333333334,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 75,
+        "y_percentage_original": 73.3
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2103",
+      "originalText": "2103",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 88.43333333333334,
+        "y_percentage": 47.33958333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667,
+        "x_percentage_original": 75.8,
+        "y_percentage_original": 73.3
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2104",
+      "originalText": "2104",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 89.36666666666666,
+        "y_percentage": 47.33958333333334,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 76.6,
+        "y_percentage_original": 73.3
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2105",
+      "originalText": "2105",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 90.30000000000001,
+        "y_percentage": 47.33958333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 77.4,
+        "y_percentage_original": 73.3
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2106",
+      "originalText": "2106",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 91.23333333333335,
+        "y_percentage": 47.33958333333334,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 78.2,
+        "y_percentage_original": 73.3
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2107",
+      "originalText": "2107",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 82.83333333333334,
+        "y_percentage": 47.92083333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4861111111111111,
+        "x_percentage_original": 71,
+        "y_percentage_original": 74.2
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2108",
+      "originalText": "2108",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84,
+        "y_percentage": 50.375,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 72,
+        "y_percentage_original": 78
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "calibrated": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2109",
+      "originalText": "2109",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 84.7,
+        "y_percentage": 47.92083333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 72.6,
+        "y_percentage_original": 74.2
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2110",
+      "originalText": "2110",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 85.63333333333334,
+        "y_percentage": 47.92083333333334,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.5092592592592593,
+        "x_percentage_original": 73.4,
+        "y_percentage_original": 74.2
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2111",
+      "originalText": "2111",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 86.56666666666668,
+        "y_percentage": 47.92083333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4629629629629629,
+        "x_percentage_original": 74.2,
+        "y_percentage_original": 74.2
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2112",
+      "originalText": "2112",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 87.5,
+        "y_percentage": 47.92083333333334,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75,
+        "y_percentage_original": 74.2
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2113",
+      "originalText": "2113",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 88.43333333333334,
+        "y_percentage": 47.92083333333334,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.3935185185185185,
+        "x_percentage_original": 75.8,
+        "y_percentage_original": 74.2
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    },
+    {
+      "text": "2114",
+      "originalText": "2114",
+      "signType": null,
+      "boundingBox": {
+        "x_percentage": 89.36666666666666,
+        "y_percentage": 47.92083333333334,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4398148148148148,
+        "x_percentage_original": 76.6,
+        "y_percentage_original": 74.2
+      },
+      "confidence": 0.95,
+      "scale": 2,
+      "isFieldLocate": true,
+      "coordinatesFixed": true
+    }
+  ],
+  "missingSignNumbers": [],
+  "calibrated": true,
+  "calibrationTimestamp": "2025-08-30T15:21:06.845Z",
+  "coordinateSystem": "fixed",
+  "fixApplied": {
+    "method": "linear_transformation",
+    "xScale": 1.17,
+    "yScale": 0.65,
+    "referencePoint": "2001"
+  }
+}

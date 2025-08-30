@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, WheelEvent, MouseEvent } from 'react';
-import calibratedData from '../../../test_data/extraction_results/calibrated_extraction_results.json';
+import calibratedData from '../../../test_data/extraction_results/fixed_coordinates.json';
 
 interface HotspotData {
   id: string;
@@ -37,43 +37,32 @@ export default function CalibratedDemoPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
-  // Manual calibration - testing with just sign 2001
-  // From visual inspection of the actual plan:
-  // - Sign 2001 is centered above the left building outline
-  // - Located in the upper portion of the plan
-  // - Approximately 35% from left, 27% from top
-  const manualCalibrations: { [key: string]: { x: number, y: number } } = {
-    '2001': { x: 35, y: 27 },
-  };
-
   useEffect(() => {
-    // Load ONLY sign 2001 for testing
-    const testSigns = ['2001'];
-    
-    const newHotspots = calibratedData.extractedSigns
-      .filter((sign: any) => testSigns.includes(sign.text))
-      .map((sign: any, index: number) => {
-        const calibration = manualCalibrations[sign.text];
-        
-        // Use manual calibration if available, otherwise fall back to OCR coordinates
-        return {
-          id: `hotspot-${index}`,
-          signNumber: sign.text,
-          x: calibration ? calibration.x : sign.boundingBox.x_percentage,
-          y: calibration ? calibration.y : sign.boundingBox.y_percentage,
-          width: sign.boundingBox.width_percentage || 2,
-          height: sign.boundingBox.height_percentage || 1,
-          status: 'pending' as const,
-          confidence: sign.confidence || 0.95,
-          isFieldLocate: sign.isFieldLocate || false
-        };
-      });
+    // Load all signs with fixed coordinates
+    const newHotspots = calibratedData.extractedSigns.map((sign: any, index: number) => ({
+      id: `hotspot-${index}`,
+      signNumber: sign.text,
+      x: sign.boundingBox.x_percentage,
+      y: sign.boundingBox.y_percentage,
+      width: sign.boundingBox.width_percentage || 2,
+      height: sign.boundingBox.height_percentage || 1,
+      status: 'pending' as const,
+      confidence: sign.confidence || 0.95,
+      isFieldLocate: sign.isFieldLocate || false,
+      coordinatesFixed: sign.coordinatesFixed || false
+    }));
 
-    console.log('Sign 2001 OCR coordinates:', {
-      x: calibratedData.extractedSigns.find((s: any) => s.text === '2001')?.boundingBox.x_percentage,
-      y: calibratedData.extractedSigns.find((s: any) => s.text === '2001')?.boundingBox.y_percentage
+    console.log(`Loaded ${newHotspots.length} signs with fixed coordinates`);
+    console.log('Coordinate fix applied:', calibratedData.fixApplied);
+    
+    // Log sample positions for verification
+    const sampleSigns = ['2001', '2004', '2010'];
+    sampleSigns.forEach(signNum => {
+      const sign = newHotspots.find((h: any) => h.signNumber === signNum);
+      if (sign) {
+        console.log(`${signNum}: x=${sign.x.toFixed(1)}%, y=${sign.y.toFixed(1)}%`);
+      }
     });
-    console.log('Sign 2001 manual coordinates:', manualCalibrations['2001']);
 
     setHotspots(newHotspots);
   }, []);
