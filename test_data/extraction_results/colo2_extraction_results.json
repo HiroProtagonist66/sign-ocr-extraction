@@ -1,0 +1,1465 @@
+{
+  "pdfFile": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf",
+  "timestamp": "2025-08-30T14:36:29.266Z",
+  "totalTextFound": 1947,
+  "signsExtracted": 112,
+  "expectedSignsFound": 1,
+  "extractedSigns": [
+    {
+      "text": "2006",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 9.887566137566138,
+        "y_percentage": 74.23611111111111,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2004.3",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 12.185846560846562,
+        "y_percentage": 52.38425925925926,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "COLO 2"
+    },
+    {
+      "text": "2004.4",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 12.202380952380953,
+        "y_percentage": 53.101851851851855,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "COLO 2"
+    },
+    {
+      "text": "2004.7",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 10.79695767195767,
+        "y_percentage": 58.425925925925924,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "COLO 2"
+    },
+    {
+      "text": "2004.8",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 19.59325396825397,
+        "y_percentage": 75.23148148148148,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2007",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 12.913359788359788,
+        "y_percentage": 76.01851851851852,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2005",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 12.913359788359788,
+        "y_percentage": 76.7824074074074,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2008.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 10.598544973544973,
+        "y_percentage": 78.63425925925925,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2008",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 14.616402116402117,
+        "y_percentage": 78.05555555555556,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2007.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 14.401455026455027,
+        "y_percentage": 78.77314814814815,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.5092592592592593
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2008.2",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 10.615079365079366,
+        "y_percentage": 80.83333333333333,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2008.3",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 19.59325396825397,
+        "y_percentage": 80.41666666666667,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2004",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 9.937169312169312,
+        "y_percentage": 32.916666666666664,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "COLO 2"
+    },
+    {
+      "text": "2001.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 12.400793650793652,
+        "y_percentage": 26.25,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2001.2",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 12.334656084656084,
+        "y_percentage": 26.851851851851855,
+        "width_percentage": 1.455026455026455,
+        "height_percentage": 0.6481481481481481
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2001.3",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 21.23015873015873,
+        "y_percentage": 25.23148148148148,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2002.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 12.996031746031747,
+        "y_percentage": 28.055555555555557,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.5555555555555556
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2001",
+      "signType": null,
+      "isExpectedColo2Sign": true,
+      "boundingBox": {
+        "x_percentage": 13.310185185185187,
+        "y_percentage": 28.86574074074074,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2002",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 13.260582010582011,
+        "y_percentage": 30.578703703703702,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "COLO 2"
+    },
+    {
+      "text": "2003",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 13.293650793650794,
+        "y_percentage": 31.319444444444443,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.5092592592592593
+      },
+      "confidence": 0.95,
+      "area": "COLO 2"
+    },
+    {
+      "text": "2004.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 21.23015873015873,
+        "y_percentage": 32.15277777777778,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "COLO 2"
+    },
+    {
+      "text": "2004.6",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 28.290343915343914,
+        "y_percentage": 55.85648148148148,
+        "width_percentage": 1.4384920634920635,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "COLO 2"
+    },
+    {
+      "text": "2009.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 27.959656084656086,
+        "y_percentage": 80.97222222222223,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2009.2",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 27.959656084656086,
+        "y_percentage": 81.7824074074074,
+        "width_percentage": 1.4054232804232802,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2009.3",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 27.959656084656086,
+        "y_percentage": 82.5,
+        "width_percentage": 1.4054232804232802,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2009.4",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 34.72222222222222,
+        "y_percentage": 79.12037037037038,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2009",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 32.10978835978836,
+        "y_percentage": 85.41666666666666,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2026",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 39.41798941798942,
+        "y_percentage": 20.37037037037037,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2026.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 38.8723544973545,
+        "y_percentage": 24.305555555555554,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2026.5",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 33.7962962962963,
+        "y_percentage": 24.97685185185185,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.5092592592592593
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2026.3",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 35.10251322751323,
+        "y_percentage": 26.851851851851855,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2026.4",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 35.10251322751323,
+        "y_percentage": 27.61574074074074,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2017.2",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 40.85648148148148,
+        "y_percentage": 75.60185185185185,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2017.3",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 43.20436507936508,
+        "y_percentage": 55.85648148148148,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "COLO 2"
+    },
+    {
+      "text": "2026.2",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 42.32804232804233,
+        "y_percentage": 25.71759259259259,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2024.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 53.63756613756614,
+        "y_percentage": 25.462962962962965,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2017.9",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 50.28108465608465,
+        "y_percentage": 32.15277777777778,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2017.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 51.78571428571429,
+        "y_percentage": 75.16203703703704,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2013.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 51.78571428571429,
+        "y_percentage": 80.39351851851852,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2015",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.267195767195766,
+        "y_percentage": 75.83333333333333,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2016",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 61.98743386243386,
+        "y_percentage": 75.02314814814814,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2017",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.283730158730165,
+        "y_percentage": 76.59722222222223,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2017.5",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.87896825396825,
+        "y_percentage": 56.36574074074075,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2014",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.300264550264544,
+        "y_percentage": 77.80092592592592,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2014.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.08531746031746,
+        "y_percentage": 78.56481481481481,
+        "width_percentage": 1.3558201058201058,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2013.2",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 63.32671957671958,
+        "y_percentage": 78.93518518518519,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2013.3",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 59.85449735449735,
+        "y_percentage": 79.62962962962963,
+        "width_percentage": 1.4054232804232802,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2011",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.267195767195766,
+        "y_percentage": 80.97222222222223,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2012",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.267195767195766,
+        "y_percentage": 81.73611111111111,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2013",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.267195767195766,
+        "y_percentage": 82.5,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2010",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 59.93716931216932,
+        "y_percentage": 85.39351851851852,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2010.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 61.904761904761905,
+        "y_percentage": 85.41666666666666,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2025.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 61.68981481481482,
+        "y_percentage": 19.97685185185185,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2025",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 60.102513227513235,
+        "y_percentage": 21.99074074074074,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2022",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.53174603174603,
+        "y_percentage": 25.39351851851852,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2023",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 63.83928571428571,
+        "y_percentage": 25.74074074074074,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2021.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 54.77843915343915,
+        "y_percentage": 27.10648148148148,
+        "width_percentage": 1.3392857142857142,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2021.2",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 54.745370370370374,
+        "y_percentage": 27.800925925925924,
+        "width_percentage": 1.4054232804232802,
+        "height_percentage": 0.5324074074074074
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2019.1",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.333333333333336,
+        "y_percentage": 27.800925925925924,
+        "width_percentage": 1.3723544973544972,
+        "height_percentage": 0.5324074074074074
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2021",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.53174603174603,
+        "y_percentage": 28.541666666666664,
+        "width_percentage": 0.9424603174603174,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2024",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.53174603174603,
+        "y_percentage": 26.087962962962962,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2018",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.432539682539684,
+        "y_percentage": 30.949074074074073,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.5324074074074074
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2020",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 58.41600529100529,
+        "y_percentage": 31.75925925925926,
+        "width_percentage": 1.0582010582010581,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2019",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 62.21891534391535,
+        "y_percentage": 32.10648148148148,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2017.6",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 59.34193121693122,
+        "y_percentage": 52.361111111111114,
+        "width_percentage": 1.4219576719576719,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2017.7",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 59.34193121693122,
+        "y_percentage": 53.125,
+        "width_percentage": 1.3888888888888888,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2087",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.70965608465607,
+        "y_percentage": 72.66203703703704,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2027",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.6931216931217,
+        "y_percentage": 67.47685185185185,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2028",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 73.49537037037037,
+        "y_percentage": 67.47685185185185,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2029",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 75.28108465608466,
+        "y_percentage": 67.5,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2030",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 77.09986772486772,
+        "y_percentage": 67.45370370370371,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2031",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 78.86904761904762,
+        "y_percentage": 67.45370370370371,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2037",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.6931216931217,
+        "y_percentage": 68.35648148148148,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2038",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 73.47883597883597,
+        "y_percentage": 68.37962962962963,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2039",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 75.28108465608466,
+        "y_percentage": 68.35648148148148,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2040",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 77.06679894179894,
+        "y_percentage": 68.35648148148148,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2041",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 78.85251322751323,
+        "y_percentage": 68.35648148148148,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2047",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.6931216931217,
+        "y_percentage": 69.21296296296296,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2048",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 73.47883597883597,
+        "y_percentage": 69.21296296296296,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2049",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 75.28108465608466,
+        "y_percentage": 69.14351851851852,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.5092592592592593
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2050",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 77.06679894179894,
+        "y_percentage": 69.16666666666667,
+        "width_percentage": 1.0582010582010581,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2051",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 78.86904761904762,
+        "y_percentage": 69.18981481481481,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2057",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.6931216931217,
+        "y_percentage": 70.0925925925926,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2058",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 73.47883597883597,
+        "y_percentage": 70.0925925925926,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2059",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 75.28108465608466,
+        "y_percentage": 70.0925925925926,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2060",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 77.06679894179894,
+        "y_percentage": 70.06944444444444,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2061",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 78.85251322751323,
+        "y_percentage": 70.06944444444444,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2067",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.6931216931217,
+        "y_percentage": 70.87962962962962,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2068",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 73.47883597883597,
+        "y_percentage": 70.94907407407408,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2069",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 75.28108465608466,
+        "y_percentage": 70.94907407407408,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2070",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 77.06679894179894,
+        "y_percentage": 70.94907407407408,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2071",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 78.86904761904762,
+        "y_percentage": 70.94907407407408,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2077",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.70965608465607,
+        "y_percentage": 71.75925925925925,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2078",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 73.47883597883597,
+        "y_percentage": 71.7824074074074,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2079",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 75.28108465608466,
+        "y_percentage": 71.80555555555556,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2080",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 77.09986772486772,
+        "y_percentage": 71.7824074074074,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2081",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 78.86904761904762,
+        "y_percentage": 71.7824074074074,
+        "width_percentage": 0.9424603174603174,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2088",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.6931216931217,
+        "y_percentage": 76.55092592592592,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2098",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.6931216931217,
+        "y_percentage": 77.33796296296296,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2099",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 73.47883597883597,
+        "y_percentage": 77.38425925925925,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2100",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 75.28108465608466,
+        "y_percentage": 77.36111111111111,
+        "width_percentage": 1.0251322751322751,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2101",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 77.05026455026454,
+        "y_percentage": 77.33796296296296,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.5092592592592593
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2102",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 78.85251322751323,
+        "y_percentage": 77.33796296296296,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.4861111111111111
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2108",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 71.6931216931217,
+        "y_percentage": 78.26388888888889,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2109",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 73.47883597883597,
+        "y_percentage": 78.26388888888889,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2110",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 75.26455026455027,
+        "y_percentage": 78.2175925925926,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.5092592592592593
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2111",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 77.06679894179894,
+        "y_percentage": 78.2175925925926,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.4629629629629629
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2112",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 78.85251322751323,
+        "y_percentage": 78.26388888888889,
+        "width_percentage": 1.0416666666666665,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2089",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 73.47883597883597,
+        "y_percentage": 76.52777777777777,
+        "width_percentage": 1.0085978835978835,
+        "height_percentage": 0.4398148148148148
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2090",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 75.28108465608466,
+        "y_percentage": 76.55092592592592,
+        "width_percentage": 0.992063492063492,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2091",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 77.06679894179894,
+        "y_percentage": 76.52777777777777,
+        "width_percentage": 0.958994708994709,
+        "height_percentage": 0.4166666666666667
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    },
+    {
+      "text": "2092",
+      "signType": null,
+      "isExpectedColo2Sign": false,
+      "boundingBox": {
+        "x_percentage": 78.86904761904762,
+        "y_percentage": 76.55092592592592,
+        "width_percentage": 0.9755291005291005,
+        "height_percentage": 0.3935185185185185
+      },
+      "confidence": 0.95,
+      "area": "Other"
+    }
+  ]
+}

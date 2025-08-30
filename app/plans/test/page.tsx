@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { REAL_EXTRACTION_DATA } from './real-data';
 
 interface ExtractedSign {
   text: string;
@@ -45,59 +46,59 @@ const HOTSPOT_COLORS = {
   missing: '#EF4444',    // Red
 };
 
-// Real Google Vision API data - 16 actual numbers detected from PDF 13
-const REAL_EXTRACTION_DATA: { [key: string]: ExtractionResult[] } = {
+// Remove this old mock data - using real extraction from ./real-data.ts
+const OLD_MOCK_DATA_REMOVED: { [key: string]: ExtractionResult[] } = {
   '000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf': [{
     pdfFile: '000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf',
     pageNumber: 1,
     imageSize: { width: 6048, height: 4320 },
     extractedSigns: [
       {
-        text: '0000000000000',
+        text: '2006',
         signType: null,
         boundingBox: {
-          x_percentage: 95.2,
-          y_percentage: 50.3,
-          width_percentage: 2.0,
+          x_percentage: 9.9,
+          y_percentage: 74.2,
+          width_percentage: 1.0,
+          height_percentage: 0.5
+        },
+        confidence: 0.95
+      },
+      {
+        text: '2004.3',
+        signType: null,
+        boundingBox: {
+          x_percentage: 12.2,
+          y_percentage: 52.4,
+          width_percentage: 1.4,
           height_percentage: 0.4
         },
         confidence: 0.95
       },
       {
-        text: '000',
+        text: '2004.4',
         signType: null,
         boundingBox: {
-          x_percentage: 93.4,
-          y_percentage: 50.3,
-          width_percentage: 1.0,
-          height_percentage: 0.3
+          x_percentage: 12.2,
+          y_percentage: 53.1,
+          width_percentage: 1.4,
+          height_percentage: 0.5
         },
         confidence: 0.95
       },
       {
-        text: '1033',
+        text: '2004.7',
         signType: null,
         boundingBox: {
-          x_percentage: 92.7,
-          y_percentage: 56.4,
-          width_percentage: 0.8,
-          height_percentage: 0.3
+          x_percentage: 10.8,
+          y_percentage: 58.4,
+          width_percentage: 1.3,
+          height_percentage: 0.5
         },
         confidence: 0.95
       },
       {
-        text: '0000',
-        signType: null,
-        boundingBox: {
-          x_percentage: 91.0,
-          y_percentage: 28.1,
-          width_percentage: 1.0,
-          height_percentage: 0.4
-        },
-        confidence: 0.95
-      },
-      {
-        text: '0000',
+        text: '2004.8',
         signType: null,
         boundingBox: {
           x_percentage: 91.9,
