@@ -29,17 +29,21 @@ HSV_ORANGE_UPPER = np.array([25, 255, 220])
 HSV_BROWN_LOWER = np.array([5, 50, 50])
 HSV_BROWN_UPPER = np.array([30, 200, 200])
 
-# Blue outlines
-HSV_BLUE_LOWER = np.array([100, 50, 50])
-HSV_BLUE_UPPER = np.array([130, 255, 255])
+# Blue outlines (expanded range)
+HSV_BLUE_LOWER = np.array([90, 30, 30])
+HSV_BLUE_UPPER = np.array([140, 255, 255])
 
-# Teal/cyan outlines
-HSV_TEAL_LOWER = np.array([160, 50, 50])
-HSV_TEAL_UPPER = np.array([190, 255, 255])
+# Teal/cyan outlines (expanded range)
+HSV_TEAL_LOWER = np.array([150, 30, 30])
+HSV_TEAL_UPPER = np.array([200, 255, 255])
 
-# Green outlines
-HSV_GREEN_LOWER = np.array([45, 50, 50])
-HSV_GREEN_UPPER = np.array([75, 255, 255])
+# Green outlines (expanded range)
+HSV_GREEN_LOWER = np.array([35, 30, 30])
+HSV_GREEN_UPPER = np.array([85, 255, 255])
+
+# Purple/magenta outlines
+HSV_PURPLE_LOWER = np.array([140, 30, 30])
+HSV_PURPLE_UPPER = np.array([170, 255, 255])
 
 # Standard sign box height for stacked detection (in pixels at 400 DPI)
 STANDARD_SIGN_HEIGHT_PIXELS = 40
@@ -55,7 +59,7 @@ MIN_ASPECT_RATIO = 0.5  # Minimum width/height ratio
 MAX_ASPECT_RATIO = 3.0  # Maximum width/height ratio
 
 # OCR configuration
-OCR_CONFIDENCE_THRESHOLD = 60  # Minimum confidence for OCR results
+OCR_CONFIDENCE_THRESHOLD = 30  # Lowered confidence threshold for testing
 OCR_WHITELIST = '0123456789.-'  # Characters to recognize
 
 # PDF conversion settings
@@ -133,13 +137,14 @@ class ColorBasedSignExtractor:
         mask_blue = cv2.inRange(hsv, HSV_BLUE_LOWER, HSV_BLUE_UPPER)
         mask_teal = cv2.inRange(hsv, HSV_TEAL_LOWER, HSV_TEAL_UPPER)
         mask_green = cv2.inRange(hsv, HSV_GREEN_LOWER, HSV_GREEN_UPPER)
+        mask_purple = cv2.inRange(hsv, HSV_PURPLE_LOWER, HSV_PURPLE_UPPER)
         
         # Combine all masks
-        mask = mask_orange | mask_brown | mask_blue | mask_teal | mask_green
+        mask = mask_orange | mask_brown | mask_blue | mask_teal | mask_green | mask_purple
         
         if self.debug:
             logger.info(f"Color mask stats - Orange: {np.sum(mask_orange > 0)}, Blue: {np.sum(mask_blue > 0)}, "
-                       f"Teal: {np.sum(mask_teal > 0)}, Green: {np.sum(mask_green > 0)}")
+                       f"Teal: {np.sum(mask_teal > 0)}, Green: {np.sum(mask_green > 0)}, Purple: {np.sum(mask_purple > 0)}")
         
         # Apply morphological operations to clean up the mask
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, MORPH_KERNEL_SIZE)
@@ -202,64 +207,87 @@ class ColorBasedSignExtractor:
         return [box]
         
     def extract_sign_number(self, image: np.ndarray, bbox: Tuple[int, int, int, int]) -> Optional[Dict]:
-        """Extract sign number from a detected box using OCR"""
+        """Extract sign number from around a detected box using OCR"""
         x, y, w, h = bbox
         
-        # Add padding around the box
-        padding = 5
-        x_start = max(0, x - padding)
-        y_start = max(0, y - padding)
-        x_end = min(image.shape[1], x + w + padding)
-        y_end = min(image.shape[0], y + h + padding)
+        # Look for text ABOVE the box (sign numbers are typically above the boxes)
+        # Expand region significantly upward to capture text
+        vertical_padding = 50  # Look 50 pixels above the box
+        horizontal_padding = 20  # Some horizontal padding
         
-        # Crop the region
+        x_start = max(0, x - horizontal_padding)
+        y_start = max(0, y - vertical_padding)  # Extend upward
+        x_end = min(image.shape[1], x + w + horizontal_padding)
+        y_end = min(image.shape[0], y + h + 10)  # Include box top edge
+        
+        # Crop the region ABOVE the box
         roi = image[y_start:y_end, x_start:x_end]
         
-        # Preprocess for OCR
-        gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+        # Scale up the image for better OCR (2x size)
+        scale_factor = 2
+        scaled_roi = cv2.resize(roi, None, fx=scale_factor, fy=scale_factor, interpolation=cv2.INTER_CUBIC)
         
-        # Enhance contrast
-        enhanced = cv2.equalizeHist(gray)
+        # Convert to grayscale
+        gray = cv2.cvtColor(scaled_roi, cv2.COLOR_BGR2GRAY)
         
-        # Denoise
-        denoised = cv2.fastNlMeansDenoising(enhanced)
-        
-        # Threshold to get binary image
-        _, binary = cv2.threshold(denoised, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-        
-        # Try both normal and inverted image with different PSM modes
+        # Try multiple preprocessing approaches but more efficiently
         results = []
-        psm_modes = [6, 7, 8, 11]  # Different OCR modes to try
         
-        for img in [binary, cv2.bitwise_not(binary)]:
+        # Approach 1: OTSU threshold (usually works well)
+        _, thresh1 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        
+        # Approach 2: Enhanced contrast + threshold
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
+        enhanced = clahe.apply(gray)
+        _, thresh2 = cv2.threshold(enhanced, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        
+        # Only test the most promising combinations
+        preprocessed_images = [
+            (thresh1, "otsu"),
+            (cv2.bitwise_not(thresh1), "otsu_inv"),
+            (thresh2, "clahe"),
+            (cv2.bitwise_not(thresh2), "clahe_inv")
+        ]
+        
+        psm_modes = [8, 11]  # Focus on single word and sparse text modes
+        
+        for img, preprocess_name in preprocessed_images:
             for psm in psm_modes:
                 try:
-                    # Perform OCR with custom config
-                    custom_config = f'--psm {psm} -c tessedit_char_whitelist={OCR_WHITELIST}'
-                    ocr_data = pytesseract.image_to_data(img, config=custom_config, output_type=pytesseract.Output.DICT)
+                    # Try with whitelist
+                    custom_config = f'--psm {psm} -c tessedit_char_whitelist={OCR_WHITELIST} --oem 3'
+                    text = pytesseract.image_to_string(img, config=custom_config).strip()
                     
-                    # Extract text with confidence
-                    for i in range(len(ocr_data['text'])):
-                        text = ocr_data['text'][i].strip()
-                        confidence = float(ocr_data['conf'][i])
-                        
-                        if text and confidence > OCR_CONFIDENCE_THRESHOLD:
-                            # Clean up the text (remove dots that aren't decimals)
-                            text = self._clean_sign_number(text)
-                            if text:  # If still valid after cleaning
+                    if text:
+                        # Clean and validate
+                        text = self._clean_sign_number(text)
+                        if text and len(text) >= 3:  # Minimum sign number length
+                            # Get confidence
+                            data = pytesseract.image_to_data(img, config=custom_config, output_type=pytesseract.Output.DICT)
+                            confidences = [float(c) for c in data['conf'] if c != '-1']
+                            avg_conf = sum(confidences) / len(confidences) if confidences else 0
+                            
+                            if avg_conf > 30:  # Lower threshold for now
                                 results.append({
                                     'text': text,
-                                    'confidence': confidence,
-                                    'psm': psm
+                                    'confidence': avg_conf,
+                                    'psm': psm,
+                                    'preprocess': preprocess_name
                                 })
+                    
                                 
                 except Exception as e:
-                    logger.debug(f"OCR error with PSM {psm}: {e}")
-                
+                    logger.debug(f"OCR error with PSM {psm}, {preprocess_name}: {e}")
+        
         # Return the best result
         if results:
-            best_result = max(results, key=lambda x: x['confidence'])
+            # Sort by confidence and text length (prefer longer, more complete extractions)
+            best_result = max(results, key=lambda x: (x['confidence'], len(x['text'])))
+            if self.debug:
+                logger.info(f"OCR candidates for box at ({x},{y}): {len(results)} results")
+                logger.info(f"Best result: {best_result}")
             return best_result
+        
         return None
         
     def _clean_sign_number(self, text: str) -> str:

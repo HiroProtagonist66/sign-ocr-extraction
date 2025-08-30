@@ -3,14 +3,20 @@
 ## Project Overview
 Sign OCR Extraction System for detecting and extracting sign numbers from architectural floor plans. The system needs to handle 13,000+ signs across 7 different projects with high accuracy.
 
-## Current State (August 30, 2025 - Updated)
-- **Detected:** 116 sign boxes (improved from 99)
-  - ✅ Multi-color detection implemented (orange, blue, teal, green)
+## Current State (August 30, 2025 - Updated 6:25 PM)
+- **Detected:** 132 sign boxes (improved from 116)
+  - ✅ Multi-color detection expanded (orange, blue, teal, green, purple)
   - ✅ Stacked box detection working (12 stacks split into individual boxes)
-- **Extracted:** 0 signs via OCR (still needs tuning)
+  - ✅ Expanded HSV color ranges for better coverage
+- **Extracted:** 0 signs via OCR (identified issue: text is outside boxes)
 - **Total Signs:** 157 expected on COLO 2 plan
-- **Coverage:** 74% detection rate (116/157)
+- **Coverage:** 84% detection rate (132/157)
 - **Deployment:** Live at https://sign-ocr-extraction.vercel.app
+
+### Key Discovery
+- Sign numbers are NOT inside the colored boxes
+- Boxes are empty containers, text appears to be separate
+- Need different approach: detect boxes for location, then search nearby for text
 
 ## Color Detection Testing Plan
 
