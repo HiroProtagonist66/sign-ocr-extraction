@@ -37,84 +37,49 @@ export default function CalibratedDemoPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
-  // Manual calibration corrections for specific signs based on visual inspection
+  // Manual calibration for 10 test signs - carefully positioned based on visual inspection
   const manualCalibrations: { [key: string]: { x: number, y: number } } = {
-    // Top row signs (2001 series)
-    '2001': { x: 32.5, y: 14.5 },
-    '2001.1': { x: 43, y: 14.5 },
-    '2001.2': { x: 53.5, y: 14.5 },
-    '2001.3': { x: 42, y: 35.5 },
+    // Top row - clearly visible signs
+    '2001': { x: 20, y: 11 },
+    '2001.1': { x: 30, y: 11 },
+    '2001.2': { x: 40, y: 11 },
     
-    // Left side entrance signs
-    '2002': { x: 32.5, y: 46.5 },
-    '2002.1': { x: 24, y: 40.5 },
-    '2002.2': { x: 13.5, y: 25 },
-    '2003': { x: 32.5, y: 68.5 },
+    // Middle area - clearly visible
+    '2001.3': { x: 30, y: 23.5 },
+    '2002.1': { x: 18, y: 26 },
     
-    // Center diagonal line (main cluster)
-    '2004': { x: 23, y: 47 },
-    '2004.1': { x: 42, y: 42 },
-    '2004.2': { x: 27, y: 48.5 },
-    '2004.3': { x: 31, y: 50 },
-    '2004.4': { x: 35, y: 51.5 },
-    '2004.5': { x: 39, y: 53 },
-    '2004.6': { x: 43, y: 54.5 },
-    '2004.7': { x: 47, y: 56 },
-    '2004.8': { x: 51, y: 57.5 },
+    // Bottom diagonal - starting points
+    '2004': { x: 15, y: 30 },
+    '2006': { x: 10, y: 38 },
+    '2008': { x: 18, y: 42 },
     
-    // Continuing diagonal line to the right
-    '2010': { x: 43, y: 52 },
-    '2010.1': { x: 47, y: 53.5 },
-    '2011': { x: 51, y: 55 },
-    '2012': { x: 55, y: 56.5 },
-    '2013': { x: 59, y: 58 },
-    '2014': { x: 63, y: 59.5 },
-    '2015': { x: 67, y: 61 },
-    '2016': { x: 71, y: 62.5 },
-    '2017': { x: 75, y: 64 },
-    '2017.1': { x: 79, y: 65.5 },
-    '2018': { x: 83, y: 67 },
-    '2019': { x: 87, y: 68.5 },
-    '2020': { x: 91, y: 70 },
-    '2021': { x: 95, y: 71.5 },
-    '2022': { x: 99, y: 73 },
-    '2023': { x: 103, y: 74.5 },
-    
-    // Bottom-left corner cluster
-    '2006': { x: 12, y: 60 },
-    '2007': { x: 16, y: 61.5 },
-    '2007.1': { x: 20, y: 63 },
-    '2008': { x: 24, y: 64.5 },
-    '2009': { x: 36, y: 69.5 },
-    '2009.1': { x: 28, y: 66 },
-    '2009.2': { x: 32, y: 67.5 },
-    '2009.3': { x: 36, y: 69 },
-    '2009.4': { x: 40, y: 70.5 },
-    
-    // Additional visible signs from screenshot
-    '2026': { x: 51, y: 75 },
-    '2026.1': { x: 55, y: 76.5 },
-    '2026.2': { x: 59, y: 78 },
-    '2026.3': { x: 63, y: 79.5 },
+    // Right side of diagonal
+    '2010': { x: 35, y: 34 },
+    '2013': { x: 45, y: 38 },
   };
 
   useEffect(() => {
-    // Load calibrated hotspots
-    const newHotspots = calibratedData.extractedSigns.map((sign: any, index: number) => {
-      const calibration = manualCalibrations[sign.text];
-      
-      return {
-        id: `hotspot-${index}`,
-        signNumber: sign.text,
-        x: calibration?.x || sign.boundingBox.x_percentage,
-        y: calibration?.y || sign.boundingBox.y_percentage,
-        width: sign.boundingBox.width_percentage || 2,
-        height: sign.boundingBox.height_percentage || 1,
-        status: 'pending' as const,
-        confidence: sign.confidence || 0.95,
-        isFieldLocate: sign.isFieldLocate || false
-      };
-    });
+    // Load ONLY the calibrated signs we have positions for
+    const testSigns = ['2001', '2001.1', '2001.2', '2001.3', '2002.1', 
+                      '2004', '2006', '2008', '2010', '2013'];
+    
+    const newHotspots = calibratedData.extractedSigns
+      .filter((sign: any) => testSigns.includes(sign.text))
+      .map((sign: any, index: number) => {
+        const calibration = manualCalibrations[sign.text];
+        
+        return {
+          id: `hotspot-${index}`,
+          signNumber: sign.text,
+          x: calibration?.x || sign.boundingBox.x_percentage,
+          y: calibration?.y || sign.boundingBox.y_percentage,
+          width: sign.boundingBox.width_percentage || 2,
+          height: sign.boundingBox.height_percentage || 1,
+          status: 'pending' as const,
+          confidence: sign.confidence || 0.95,
+          isFieldLocate: sign.isFieldLocate || false
+        };
+      });
 
     setHotspots(newHotspots);
   }, []);
