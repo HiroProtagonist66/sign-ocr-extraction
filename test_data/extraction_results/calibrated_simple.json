@@ -1,0 +1,1417 @@
+{
+  "extractedSigns": [
+    {
+      "text": "1810-5.3",
+      "x": 80.05952380952381,
+      "y": 56.458333333333336,
+      "width": 1.669973544973545,
+      "height": 0.9259259259259258,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "1831-92",
+      "x": 80.0925925925926,
+      "y": 51.52777777777777,
+      "width": 1.6534391534391533,
+      "height": 1.0648148148148149,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "1881-82",
+      "x": 80.05952380952381,
+      "y": 51.57407407407407,
+      "width": 1.7416225749559082,
+      "height": 1.1111111111111112,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2001.1",
+      "x": 32,
+      "y": 48.5,
+      "width": 1.3558201058201058,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2001.2",
+      "x": 34,
+      "y": 49,
+      "width": 1.455026455026455,
+      "height": 0.6481481481481481,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2001.3",
+      "x": 42,
+      "y": 38,
+      "width": 1.3723544973544972,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2001",
+      "x": 30,
+      "y": 48,
+      "width": 0.958994708994709,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2002.1",
+      "x": 28,
+      "y": 50,
+      "width": 1.3888888888888888,
+      "height": 0.5555555555555556,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2002",
+      "x": 30,
+      "y": 52,
+      "width": 0.992063492063492,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2003",
+      "x": 30,
+      "y": 54,
+      "width": 0.992063492063492,
+      "height": 0.5092592592592593,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2004.3",
+      "x": 31,
+      "y": 59.5,
+      "width": 1.4219576719576719,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2004.4",
+      "x": 33,
+      "y": 60,
+      "width": 1.3888888888888888,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2004.7",
+      "x": 39,
+      "y": 61.5,
+      "width": 1.3392857142857142,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2004.8",
+      "x": 41,
+      "y": 62,
+      "width": 1.4219576719576719,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2004",
+      "x": 25,
+      "y": 58,
+      "width": 1.0085978835978835,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2004.1",
+      "x": 40,
+      "y": 56,
+      "width": 1.3558201058201058,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2004.6",
+      "x": 37,
+      "y": 61,
+      "width": 1.4384920634920635,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2005",
+      "x": 15,
+      "y": 75,
+      "width": 1.0085978835978835,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2006",
+      "x": 10,
+      "y": 74,
+      "width": 1.0416666666666665,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2007",
+      "x": 15,
+      "y": 76,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2007.1",
+      "x": 17,
+      "y": 76.5,
+      "width": 1.3558201058201058,
+      "height": 0.5092592592592593,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2008.1",
+      "x": 20,
+      "y": 78.5,
+      "width": 1.3723544973544972,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2008",
+      "x": 18,
+      "y": 78,
+      "width": 0.992063492063492,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2008.2",
+      "x": 22,
+      "y": 79,
+      "width": 1.3723544973544972,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2008.3",
+      "x": 24,
+      "y": 79.5,
+      "width": 1.4219576719576719,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2009.1",
+      "x": 37,
+      "y": 82.5,
+      "width": 1.3392857142857142,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2009.2",
+      "x": 39,
+      "y": 83,
+      "width": 1.4054232804232802,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2009.3",
+      "x": 41,
+      "y": 83.5,
+      "width": 1.4054232804232802,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2009.4",
+      "x": 43,
+      "y": 84,
+      "width": 1.3888888888888888,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2009",
+      "x": 35,
+      "y": 82,
+      "width": 1.0085978835978835,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2010",
+      "x": 38,
+      "y": 58.5,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2010.1",
+      "x": 38,
+      "y": 58.5,
+      "width": 1.3392857142857142,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2011",
+      "x": 40,
+      "y": 60,
+      "width": 0.958994708994709,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2012",
+      "x": 42,
+      "y": 61.5,
+      "width": 1.0085978835978835,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2013.1",
+      "x": 44,
+      "y": 63,
+      "width": 1.3558201058201058,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2013.2",
+      "x": 44,
+      "y": 63,
+      "width": 1.3888888888888888,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2013.3",
+      "x": 44,
+      "y": 63,
+      "width": 1.4054232804232802,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2013",
+      "x": 44,
+      "y": 63,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2014",
+      "x": 46,
+      "y": 64.5,
+      "width": 0.9755291005291005,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2014.1",
+      "x": 46,
+      "y": 64.5,
+      "width": 1.3558201058201058,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2015",
+      "x": 48,
+      "y": 66,
+      "width": 1.0251322751322751,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2016",
+      "x": 50,
+      "y": 67.5,
+      "width": 1.0085978835978835,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2017.2",
+      "x": 52,
+      "y": 69,
+      "width": 1.3723544973544972,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2017.3",
+      "x": 52,
+      "y": 69,
+      "width": 1.4219576719576719,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2017.9",
+      "x": 52,
+      "y": 69,
+      "width": 1.3723544973544972,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2017.1",
+      "x": 52,
+      "y": 69,
+      "width": 1.3558201058201058,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2017",
+      "x": 52,
+      "y": 69,
+      "width": 0.992063492063492,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2017.5",
+      "x": 52,
+      "y": 69,
+      "width": 1.3888888888888888,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2017.6",
+      "x": 52,
+      "y": 69,
+      "width": 1.4219576719576719,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2017.7",
+      "x": 52,
+      "y": 69,
+      "width": 1.3888888888888888,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2018",
+      "x": 54,
+      "y": 70.5,
+      "width": 0.992063492063492,
+      "height": 0.5324074074074074,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2019.1",
+      "x": 56,
+      "y": 72,
+      "width": 1.3723544973544972,
+      "height": 0.5324074074074074,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2019",
+      "x": 56,
+      "y": 72,
+      "width": 1.0251322751322751,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2020",
+      "x": 58,
+      "y": 73.5,
+      "width": 1.0582010582010581,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2021.1",
+      "x": 60,
+      "y": 75,
+      "width": 1.3392857142857142,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2021.2",
+      "x": 60,
+      "y": 75,
+      "width": 1.4054232804232802,
+      "height": 0.5324074074074074,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2021",
+      "x": 60,
+      "y": 75,
+      "width": 0.9424603174603174,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2022",
+      "x": 62,
+      "y": 76.5,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2023",
+      "x": 64,
+      "y": 78,
+      "width": 1.0251322751322751,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2024.1",
+      "x": 66,
+      "y": 79.5,
+      "width": 1.3723544973544972,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2024",
+      "x": 66,
+      "y": 79.5,
+      "width": 1.0085978835978835,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2025.1",
+      "x": 68,
+      "y": 81,
+      "width": 1.3392857142857142,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2025",
+      "x": 68,
+      "y": 81,
+      "width": 1.0251322751322751,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2026",
+      "x": 70,
+      "y": 82.5,
+      "width": 1.0085978835978835,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2026.1",
+      "x": 70,
+      "y": 82.5,
+      "width": 1.3723544973544972,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2026.5",
+      "x": 70,
+      "y": 82.5,
+      "width": 1.3888888888888888,
+      "height": 0.5092592592592593,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2026.3",
+      "x": 70,
+      "y": 82.5,
+      "width": 1.3723544973544972,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2026.4",
+      "x": 70,
+      "y": 82.5,
+      "width": 1.3723544973544972,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2026.2",
+      "x": 70,
+      "y": 82.5,
+      "width": 1.3888888888888888,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": false
+    },
+    {
+      "text": "2027",
+      "x": 72,
+      "y": 67,
+      "width": 0.9755291005291005,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2028",
+      "x": 71.8,
+      "y": 67,
+      "width": 1.0085978835978835,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2029",
+      "x": 72.6,
+      "y": 67,
+      "width": 1.0251322751322751,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2030",
+      "x": 73.4,
+      "y": 67,
+      "width": 0.992063492063492,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2031",
+      "x": 74.2,
+      "y": 67,
+      "width": 0.958994708994709,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2032",
+      "x": 75,
+      "y": 67,
+      "width": 0.9755291005291005,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2033",
+      "x": 75.8,
+      "y": 67,
+      "width": 1.0416666666666665,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2034",
+      "x": 76.6,
+      "y": 67,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2035",
+      "x": 77.4,
+      "y": 67,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2036",
+      "x": 78.2,
+      "y": 67,
+      "width": 0.992063492063492,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2037",
+      "x": 72,
+      "y": 68,
+      "width": 0.992063492063492,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2038",
+      "x": 71.8,
+      "y": 67.9,
+      "width": 1.0251322751322751,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2039",
+      "x": 72.6,
+      "y": 67.9,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2040",
+      "x": 73.4,
+      "y": 67.9,
+      "width": 1.0416666666666665,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2041",
+      "x": 74.2,
+      "y": 67.9,
+      "width": 0.9755291005291005,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2042",
+      "x": 75,
+      "y": 67.9,
+      "width": 1.0085978835978835,
+      "height": 0.5092592592592593,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2043",
+      "x": 75.8,
+      "y": 67.9,
+      "width": 0.992063492063492,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2044",
+      "x": 76.6,
+      "y": 67.9,
+      "width": 1.0085978835978835,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2045",
+      "x": 77.4,
+      "y": 67.9,
+      "width": 0.992063492063492,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2046",
+      "x": 78.2,
+      "y": 67.9,
+      "width": 1.0251322751322751,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2047",
+      "x": 72,
+      "y": 69,
+      "width": 0.992063492063492,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2048",
+      "x": 71.8,
+      "y": 68.8,
+      "width": 1.0251322751322751,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2049",
+      "x": 72.6,
+      "y": 68.8,
+      "width": 0.992063492063492,
+      "height": 0.5092592592592593,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2050",
+      "x": 73.4,
+      "y": 68.8,
+      "width": 1.0582010582010581,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2051",
+      "x": 74.2,
+      "y": 68.8,
+      "width": 0.958994708994709,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2052",
+      "x": 75,
+      "y": 68.8,
+      "width": 0.9755291005291005,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2053",
+      "x": 75.8,
+      "y": 68.8,
+      "width": 1.0251322751322751,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2054",
+      "x": 76.6,
+      "y": 68.8,
+      "width": 0.992063492063492,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2055",
+      "x": 77.4,
+      "y": 68.8,
+      "width": 0.992063492063492,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2056",
+      "x": 78.2,
+      "y": 68.8,
+      "width": 1.0251322751322751,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2057",
+      "x": 72,
+      "y": 70,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2058",
+      "x": 71.8,
+      "y": 69.7,
+      "width": 1.0416666666666665,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2059",
+      "x": 72.6,
+      "y": 69.7,
+      "width": 1.0251322751322751,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2060",
+      "x": 73.4,
+      "y": 69.7,
+      "width": 1.0416666666666665,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2061",
+      "x": 74.2,
+      "y": 69.7,
+      "width": 0.9755291005291005,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2062",
+      "x": 75,
+      "y": 69.7,
+      "width": 0.9755291005291005,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2063",
+      "x": 75.8,
+      "y": 69.7,
+      "width": 1.0416666666666665,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2064",
+      "x": 76.6,
+      "y": 69.7,
+      "width": 0.9755291005291005,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2065",
+      "x": 77.4,
+      "y": 69.7,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2066",
+      "x": 78.2,
+      "y": 69.7,
+      "width": 0.9755291005291005,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2067",
+      "x": 72,
+      "y": 71,
+      "width": 0.958994708994709,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2068",
+      "x": 71.8,
+      "y": 70.6,
+      "width": 1.0251322751322751,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2069",
+      "x": 72.6,
+      "y": 70.6,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2070",
+      "x": 73.4,
+      "y": 70.6,
+      "width": 1.0416666666666665,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2071",
+      "x": 74.2,
+      "y": 70.6,
+      "width": 0.9755291005291005,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2072",
+      "x": 75,
+      "y": 70.6,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2073",
+      "x": 75.8,
+      "y": 70.6,
+      "width": 1.0251322751322751,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2074",
+      "x": 76.6,
+      "y": 70.6,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2075",
+      "x": 77.4,
+      "y": 70.6,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2076",
+      "x": 78.2,
+      "y": 70.6,
+      "width": 1.0251322751322751,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2077",
+      "x": 72,
+      "y": 72,
+      "width": 0.9755291005291005,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2078",
+      "x": 71.8,
+      "y": 71.5,
+      "width": 1.0085978835978835,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2079",
+      "x": 72.6,
+      "y": 71.5,
+      "width": 1.0251322751322751,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2080",
+      "x": 73.4,
+      "y": 71.5,
+      "width": 0.9755291005291005,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2081",
+      "x": 74.2,
+      "y": 71.5,
+      "width": 0.9424603174603174,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2082",
+      "x": 75,
+      "y": 71.5,
+      "width": 0.958994708994709,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2083",
+      "x": 75.8,
+      "y": 71.5,
+      "width": 1.0085978835978835,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2084",
+      "x": 76.6,
+      "y": 71.5,
+      "width": 1.0085978835978835,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2085",
+      "x": 77.4,
+      "y": 71.5,
+      "width": 1.0085978835978835,
+      "height": 0.3703703703703704,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2086",
+      "x": 78.2,
+      "y": 71.5,
+      "width": 1.0251322751322751,
+      "height": 0.3703703703703704,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2087",
+      "x": 72,
+      "y": 73,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2088",
+      "x": 72,
+      "y": 76,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2089",
+      "x": 72.6,
+      "y": 72.4,
+      "width": 1.0085978835978835,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2090",
+      "x": 73.4,
+      "y": 72.4,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2091",
+      "x": 74.2,
+      "y": 72.4,
+      "width": 0.958994708994709,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2092",
+      "x": 75,
+      "y": 72.4,
+      "width": 0.9755291005291005,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2093",
+      "x": 75.8,
+      "y": 72.4,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2094",
+      "x": 76.6,
+      "y": 72.4,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2095",
+      "x": 77.4,
+      "y": 72.4,
+      "width": 0.992063492063492,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2096",
+      "x": 78.2,
+      "y": 72.4,
+      "width": 0.992063492063492,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2097",
+      "x": 71,
+      "y": 73.3,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2098",
+      "x": 72,
+      "y": 77,
+      "width": 0.9755291005291005,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2099",
+      "x": 72.6,
+      "y": 73.3,
+      "width": 1.0085978835978835,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2100",
+      "x": 73.4,
+      "y": 73.3,
+      "width": 1.0251322751322751,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2101",
+      "x": 74.2,
+      "y": 73.3,
+      "width": 0.992063492063492,
+      "height": 0.5092592592592593,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2102",
+      "x": 75,
+      "y": 73.3,
+      "width": 0.9755291005291005,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2103",
+      "x": 75.8,
+      "y": 73.3,
+      "width": 1.0085978835978835,
+      "height": 0.4166666666666667,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2104",
+      "x": 76.6,
+      "y": 73.3,
+      "width": 1.0251322751322751,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2105",
+      "x": 77.4,
+      "y": 73.3,
+      "width": 1.0085978835978835,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2106",
+      "x": 78.2,
+      "y": 73.3,
+      "width": 1.0251322751322751,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2107",
+      "x": 71,
+      "y": 74.2,
+      "width": 0.992063492063492,
+      "height": 0.4861111111111111,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2108",
+      "x": 72,
+      "y": 78,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2109",
+      "x": 72.6,
+      "y": 74.2,
+      "width": 1.0085978835978835,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2110",
+      "x": 73.4,
+      "y": 74.2,
+      "width": 1.0085978835978835,
+      "height": 0.5092592592592593,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2111",
+      "x": 74.2,
+      "y": 74.2,
+      "width": 0.992063492063492,
+      "height": 0.4629629629629629,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2112",
+      "x": 75,
+      "y": 74.2,
+      "width": 1.0416666666666665,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2113",
+      "x": 75.8,
+      "y": 74.2,
+      "width": 1.0416666666666665,
+      "height": 0.3935185185185185,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    },
+    {
+      "text": "2114",
+      "x": 76.6,
+      "y": 74.2,
+      "width": 0.992063492063492,
+      "height": 0.4398148148148148,
+      "confidence": 0.95,
+      "isFieldLocate": true
+    }
+  ]
+}
