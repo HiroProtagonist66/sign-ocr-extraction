@@ -88,6 +88,42 @@ export default function Home() {
           </Link>
         </div>
 
+        <div className="mt-8">
+          <h2 className="text-2xl font-semibold mb-4">Production Tools</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/validation" className="group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 border-2 border-purple-500">
+                <div className="flex items-center justify-between mb-2">
+                  <h2 className="text-xl font-semibold group-hover:text-blue-600">
+                    ✏️ Sign Validation Interface
+                  </h2>
+                  <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded font-bold">NEW</span>
+                </div>
+                <p className="text-gray-600">
+                  Review and correct extracted sign data with professional validation tools
+                </p>
+                <div className="mt-2 text-sm text-purple-600 font-medium">
+                  • Three-panel editor • Bulk operations • Export to SQL/CSV
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/plans/multi-pdf" className="group">
+              <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6">
+                <h2 className="text-xl font-semibold mb-2 group-hover:text-blue-600">
+                  📑 Multi-PDF Viewer
+                </h2>
+                <p className="text-gray-600">
+                  Compare signs across multiple floor plans
+                </p>
+                <div className="mt-2 text-sm text-blue-600 font-medium">
+                  • COLO 2 Admin • BC East Level 1
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+
         <div className="mt-12 bg-blue-50 rounded-lg p-6">
           <h2 className="text-2xl font-semibold mb-4">System Overview</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
