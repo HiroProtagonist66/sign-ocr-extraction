@@ -21,20 +21,20 @@ logger = logging.getLogger(__name__)
 
 # ============= CONFIGURATION =============
 # HSV color ranges for FILLED sign boxes with text inside
-# Looking for lighter, pastel orange/peach filled boxes that contain sign numbers
-# Based on the screenshot, these are the boxes with "2001", "2002" etc.
+# Based on analysis of the "2007" screenshot, the orange color is approximately:
+# RGB(230, 170, 110) which converts to HSV(15, 130, 230) in OpenCV scale
 
-# Light pastel orange/peach filled boxes (main sign boxes)
-HSV_LIGHT_ORANGE_LOWER = np.array([10, 20, 180])  # Low saturation, high value
-HSV_LIGHT_ORANGE_UPPER = np.array([25, 100, 255])  
+# Orange filled boxes (like the "2007" box in the screenshot)
+HSV_ORANGE_LOWER = np.array([12, 100, 180])  # Slightly wider range for robustness
+HSV_ORANGE_UPPER = np.array([20, 160, 255])  
 
 # Green/lime filled boxes (also contain sign numbers)
-HSV_GREEN_LOWER = np.array([40, 20, 180])  # Low saturation, high value
-HSV_GREEN_UPPER = np.array([80, 100, 255])
+HSV_GREEN_LOWER = np.array([45, 100, 180])  
+HSV_GREEN_UPPER = np.array([75, 160, 255])
 
-# Alternative light yellow/cream boxes
-HSV_YELLOW_LOWER = np.array([20, 20, 180])
-HSV_YELLOW_UPPER = np.array([35, 100, 255])
+# Light yellow/cream filled boxes
+HSV_YELLOW_LOWER = np.array([20, 100, 180])
+HSV_YELLOW_UPPER = np.array([35, 160, 255])
 
 # Standard sign box height for stacked detection (in pixels at 400 DPI)
 STANDARD_SIGN_HEIGHT_PIXELS = 40
@@ -123,15 +123,15 @@ class ColorBasedSignExtractor:
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
         
         # Create masks for different colored FILLED boxes
-        mask_light_orange = cv2.inRange(hsv, HSV_LIGHT_ORANGE_LOWER, HSV_LIGHT_ORANGE_UPPER)
+        mask_orange = cv2.inRange(hsv, HSV_ORANGE_LOWER, HSV_ORANGE_UPPER)
         mask_green = cv2.inRange(hsv, HSV_GREEN_LOWER, HSV_GREEN_UPPER)
         mask_yellow = cv2.inRange(hsv, HSV_YELLOW_LOWER, HSV_YELLOW_UPPER)
         
         # Combine masks
-        mask = mask_light_orange | mask_green | mask_yellow
+        mask = mask_orange | mask_green | mask_yellow
         
         if self.debug:
-            logger.info(f"Color mask stats - Light Orange: {np.sum(mask_light_orange > 0)}, "
+            logger.info(f"Color mask stats - Orange: {np.sum(mask_orange > 0)}, "
                        f"Green: {np.sum(mask_green > 0)}, Yellow: {np.sum(mask_yellow > 0)}")
         
         # Apply morphological operations to clean up the mask
