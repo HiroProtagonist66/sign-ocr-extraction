@@ -79,11 +79,13 @@ export default function ValidationPage() {
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [autoSaveTimer, setAutoSaveTimer] = useState<NodeJS.Timeout | null>(null);
   const [selectedPdf, setSelectedPdf] = useState('pdf13');
+  const [selectedAtl06Page, setSelectedAtl06Page] = useState(1);
   
   // Map PDF IDs to their corresponding full image paths with all text visible
   const pdfImagePaths: Record<string, string> = {
     'pdf13': '/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13_page_1_full.png',
-    'pdf14': '/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 14_page_1_full.png'
+    'pdf14': '/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 14_page_1_full.png',
+    'atl06': `/plans/ATL06/page_${String(selectedAtl06Page).padStart(2, '0')}_full.png`
   };
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
@@ -184,20 +186,36 @@ export default function ValidationPage() {
 
   const loadPdfData = async (pdfId: string) => {
     try {
-      const response = await fetch(`/extraction/${pdfId}_extraction_results.json`);
+      let url = '';
+      if (pdfId === 'atl06') {
+        url = '/extraction/ATL06/extraction_results.json';
+      } else {
+        url = `/extraction/${pdfId}_extraction_results.json`;
+      }
+      
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Failed to load PDF data: ${response.status}`);
       }
       const data = await response.json();
       
       // Initialize status for all signs and add image paths
+      let pdfName = data.pdf_name;
+      if (!pdfName) {
+        if (pdfId === 'pdf13') pdfName = 'COLO 2 - Admin Level 1';
+        else if (pdfId === 'pdf14') pdfName = 'BC East Level 1';
+        else if (pdfId === 'atl06') pdfName = 'ATL06 - Complete Site';
+      }
+      
       const initializedData = {
         ...data,
         pdf_id: pdfId,
-        pdf_name: data.pdf_name || (pdfId === 'pdf13' ? 'COLO 2 - Admin Level 1' : 'BC East Level 1'),
-        pages: data.pages.map((page: any) => ({
+        pdf_name: pdfName,
+        pages: data.pages.map((page: any, index: number) => ({
           ...page,
-          image_path: pdfImagePaths[pdfId],
+          image_path: pdfId === 'atl06' 
+            ? `/plans/ATL06/page_${String(page.page_number || index + 1).padStart(2, '0')}_full.png`
+            : pdfImagePaths[pdfId],
           signs: page.signs.map((sign: SignHotspot) => ({
             ...sign,
             status: sign.status || 'pending',
@@ -623,11 +641,18 @@ export default function ValidationPage() {
             <h1 className="text-xl font-bold">Sign Validation Interface</h1>
             <select
               value={selectedPdf}
-              onChange={(e) => setSelectedPdf(e.target.value)}
+              onChange={(e) => {
+                setSelectedPdf(e.target.value);
+                if (e.target.value === 'atl06') {
+                  setCurrentPage(0);
+                  setSelectedAtl06Page(1);
+                }
+              }}
               className="bg-gray-700 text-white px-3 py-1 rounded"
             >
-              <option value="pdf13">COLO 2 - Admin Level 1</option>
-              <option value="pdf14">BC East Level 1</option>
+              <option value="pdf13">FTY02 - COLO 2 Admin Level 1</option>
+              <option value="pdf14">FTY02 - BC East Level 1</option>
+              <option value="atl06">ATL06 - Complete Site (57 pages)</option>
             </select>
           </div>
           
@@ -738,23 +763,67 @@ export default function ValidationPage() {
               
               {/* Page Navigation */}
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 rounded-lg px-3 py-2 flex items-center space-x-2">
-                <button
-                  onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
-                  disabled={currentPage === 0}
-                  className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded disabled:opacity-50"
-                >
-                  ←
-                </button>
-                <span className="text-sm">
-                  Page {currentPage + 1} of {validationData.pages.length}
-                </span>
-                <button
-                  onClick={() => setCurrentPage(Math.min(validationData.pages.length - 1, currentPage + 1))}
-                  disabled={currentPage === validationData.pages.length - 1}
-                  className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded disabled:opacity-50"
-                >
-                  →
-                </button>
+                {selectedPdf === 'atl06' ? (
+                  <>
+                    <button
+                      onClick={() => {
+                        const newPage = Math.max(0, currentPage - 1);
+                        setCurrentPage(newPage);
+                        setSelectedAtl06Page(newPage + 1);
+                      }}
+                      disabled={currentPage === 0}
+                      className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded disabled:opacity-50"
+                    >
+                      ←
+                    </button>
+                    <input
+                      type="number"
+                      min="1"
+                      max={validationData.pages.length}
+                      value={selectedAtl06Page}
+                      onChange={(e) => {
+                        const page = Math.max(1, Math.min(validationData.pages.length, Number(e.target.value)));
+                        setSelectedAtl06Page(page);
+                        setCurrentPage(page - 1);
+                      }}
+                      className="w-16 px-2 py-1 bg-gray-800 border border-gray-700 rounded text-center"
+                    />
+                    <span className="text-sm">
+                      of {validationData.pages.length}
+                    </span>
+                    <button
+                      onClick={() => {
+                        const newPage = Math.min(validationData.pages.length - 1, currentPage + 1);
+                        setCurrentPage(newPage);
+                        setSelectedAtl06Page(newPage + 1);
+                      }}
+                      disabled={currentPage === validationData.pages.length - 1}
+                      className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded disabled:opacity-50"
+                    >
+                      →
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
+                      disabled={currentPage === 0}
+                      className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded disabled:opacity-50"
+                    >
+                      ←
+                    </button>
+                    <span className="text-sm">
+                      Page {currentPage + 1} of {validationData.pages.length}
+                    </span>
+                    <button
+                      onClick={() => setCurrentPage(Math.min(validationData.pages.length - 1, currentPage + 1))}
+                      disabled={currentPage === validationData.pages.length - 1}
+                      className="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded disabled:opacity-50"
+                    >
+                      →
+                    </button>
+                  </>
+                )}
               </div>
               
               {/* View Controls */}

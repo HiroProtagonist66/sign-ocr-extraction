@@ -1,0 +1,38 @@
+ATL06 Sign Extraction Summary
+========================================
+Date: 2025-08-31 15:39:25
+PDF: ATL06_slp.pdf
+Method: Embedded Text Extraction (PyMuPDF)
+
+Results:
+--------
+Total pages: 57
+Pages with signs: 57
+Total signs extracted: 4314
+
+Pages with signs: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20...
+
+Sign distribution:
+  0000s: 400 signs
+  1000s: 775 signs
+  2000s: 709 signs
+  3000s: 720 signs
+  4000s: 705 signs
+  5000s: 729 signs
+  6000s: 60 signs
+
+Pages that might need review:
+  - Page 1 (77 signs)
+  - Page 3 (3 signs)
+  - Page 6 (103 signs)
+  - Page 9 (211 signs)
+  - Page 10 (63 signs)
+  - Page 13 (195 signs)
+  - Page 14 (72 signs)
+  - Page 15 (112 signs)
+  - Page 16 (81 signs)
+  - Page 17 (122 signs)
+
+Extraction completed successfully!
+Results saved to: /Users/benjaminbegner/Documents/sign-ocr-extraction/extraction/output/ATL06/extraction_results.json
+PNG images saved to: /Users/benjaminbegner/Documents/sign-ocr-extraction/public/plans/ATL06
