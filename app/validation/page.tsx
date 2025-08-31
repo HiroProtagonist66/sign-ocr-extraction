@@ -35,8 +35,9 @@ interface ValidationData {
   extraction_method: string;
   total_signs_detected: number;
   pages: Array<{
-    page_number: number;
-    image_path: string;
+    page: number;
+    page_number?: number;
+    image_path?: string;
     signs_detected: number;
     signs: SignHotspot[];
   }>;
@@ -78,6 +79,12 @@ export default function ValidationPage() {
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [autoSaveTimer, setAutoSaveTimer] = useState<NodeJS.Timeout | null>(null);
   const [selectedPdf, setSelectedPdf] = useState('pdf13');
+  
+  // Map PDF IDs to their corresponding image paths
+  const pdfImagePaths: Record<string, string> = {
+    'pdf13': '/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13_page_1.png',
+    'pdf14': '/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 14_page_1.png'
+  };
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [dragEnd, setDragEnd] = useState({ x: 0, y: 0 });
@@ -183,11 +190,14 @@ export default function ValidationPage() {
       }
       const data = await response.json();
       
-      // Initialize status for all signs
+      // Initialize status for all signs and add image paths
       const initializedData = {
         ...data,
+        pdf_id: pdfId,
+        pdf_name: data.pdf_name || (pdfId === 'pdf13' ? 'COLO 2 - Admin Level 1' : 'BC East Level 1'),
         pages: data.pages.map((page: any) => ({
           ...page,
+          image_path: pdfImagePaths[pdfId],
           signs: page.signs.map((sign: SignHotspot) => ({
             ...sign,
             status: sign.status || 'pending',
@@ -197,6 +207,10 @@ export default function ValidationPage() {
           }))
         }))
       };
+      
+      console.log('Loaded validation data:', initializedData);
+      console.log('Image path for current page:', initializedData.pages[0]?.image_path);
+      console.log('Number of signs on first page:', initializedData.pages[0]?.signs?.length);
       
       setValidationData(initializedData);
       addToHistory(initializedData);
@@ -706,7 +720,7 @@ export default function ValidationPage() {
           {validationData && validationData.pages[currentPage] && (
             <div className="relative h-full">
               <PanZoomViewer
-                imagePath={validationData.pages[currentPage].image_path}
+                imagePath={validationData.pages[currentPage].image_path || pdfImagePaths[selectedPdf]}
                 signs={showHotspots ? validationData.pages[currentPage].signs : []}
                 selectedSigns={selectedSigns}
                 onSignClick={(signNumber) => {

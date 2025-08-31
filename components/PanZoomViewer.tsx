@@ -43,6 +43,8 @@ export default function PanZoomViewer({
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const [transform, setTransform] = useState({ x: 0, y: 0, scale: 1 });
   const [isPanning, setIsPanning] = useState(false);
   const [panStart, setPanStart] = useState({ x: 0, y: 0 });
@@ -51,9 +53,24 @@ export default function PanZoomViewer({
 
   // Load image and get dimensions
   useEffect(() => {
+    if (!imagePath) {
+      console.error('No image path provided to PanZoomViewer');
+      return;
+    }
+    
+    console.log('Loading image:', imagePath);
+    setImageLoaded(false);
+    setImageError(false);
+    
     const img = new window.Image();
     img.onload = () => {
+      console.log('Image loaded successfully:', img.width, 'x', img.height);
       setImageSize({ width: img.width, height: img.height });
+      setImageLoaded(true);
+    };
+    img.onerror = () => {
+      console.error('Failed to load image:', imagePath);
+      setImageError(true);
     };
     img.src = imagePath;
   }, [imagePath]);
@@ -174,6 +191,30 @@ export default function PanZoomViewer({
     setTransform({ x: 0, y: 0, scale });
   };
 
+  // Show error state if image fails to load
+  if (imageError) {
+    return (
+      <div className="relative w-full h-full overflow-hidden bg-gray-800 flex items-center justify-center">
+        <div className="text-center text-gray-400">
+          <p className="mb-2">Failed to load floor plan image</p>
+          <p className="text-sm">{imagePath}</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show loading state while image loads
+  if (!imageLoaded && imagePath) {
+    return (
+      <div className="relative w-full h-full overflow-hidden bg-gray-800 flex items-center justify-center">
+        <div className="text-center text-gray-400">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-2"></div>
+          <p>Loading floor plan...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative w-full h-full overflow-hidden bg-gray-800">
       {/* Zoom Controls */}
@@ -250,34 +291,52 @@ export default function PanZoomViewer({
                 alt="Floor Plan"
                 className="select-none"
                 draggable={false}
+                onLoad={() => console.log('Image element loaded in DOM')}
+                onError={() => console.error('Image element failed to load in DOM')}
                 style={{
                   width: imageSize.width || 'auto',
                   height: imageSize.height || 'auto',
+                  maxWidth: '100%',
+                  display: imageLoaded ? 'block' : 'none'
                 }}
               />
               
               {/* Sign Hotspots */}
-              {signs.map((sign) => (
-                <div
-                  key={sign.sign_number}
-                  className={`absolute border-2 cursor-pointer transition-all ${getHotspotColor(sign)}`}
-                  style={{
-                    left: `${sign.hotspot_bbox.x_percentage}%`,
-                    top: `${sign.hotspot_bbox.y_percentage}%`,
-                    width: `${sign.hotspot_bbox.width_percentage}%`,
-                    height: `${sign.hotspot_bbox.height_percentage}%`,
-                  }}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onSignClick(sign.sign_number);
-                  }}
-                  title={`${sign.sign_number} (${sign.confidence})`}
-                >
-                  <div className="absolute -top-5 left-0 text-xs bg-black bg-opacity-75 text-white px-1 rounded whitespace-nowrap">
-                    {sign.sign_number}
+              {imageLoaded && signs.map((sign) => {
+                // For pixel-perfect positioning when image size is known
+                const usePixels = imageSize.width > 0 && imageSize.height > 0;
+                const x = usePixels ? (sign.hotspot_bbox.x_percentage / 100) * imageSize.width : 0;
+                const y = usePixels ? (sign.hotspot_bbox.y_percentage / 100) * imageSize.height : 0;
+                const width = usePixels ? (sign.hotspot_bbox.width_percentage / 100) * imageSize.width : 0;
+                const height = usePixels ? (sign.hotspot_bbox.height_percentage / 100) * imageSize.height : 0;
+                
+                return (
+                  <div
+                    key={sign.sign_number}
+                    className={`absolute border-2 cursor-pointer transition-all ${getHotspotColor(sign)}`}
+                    style={usePixels ? {
+                      left: `${x}px`,
+                      top: `${y}px`,
+                      width: `${width}px`,
+                      height: `${height}px`,
+                    } : {
+                      left: `${sign.hotspot_bbox.x_percentage}%`,
+                      top: `${sign.hotspot_bbox.y_percentage}%`,
+                      width: `${sign.hotspot_bbox.width_percentage}%`,
+                      height: `${sign.hotspot_bbox.height_percentage}%`,
+                    }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSignClick(sign.sign_number);
+                    }}
+                    title={`${sign.sign_number} (${sign.confidence})`}
+                  >
+                    <div className="absolute -top-5 left-0 text-xs bg-black bg-opacity-75 text-white px-1 rounded whitespace-nowrap z-10">
+                      {sign.sign_number}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </>
           )}
           
