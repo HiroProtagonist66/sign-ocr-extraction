@@ -80,10 +80,10 @@ export default function ValidationPage() {
   const [autoSaveTimer, setAutoSaveTimer] = useState<NodeJS.Timeout | null>(null);
   const [selectedPdf, setSelectedPdf] = useState('pdf13');
   
-  // Map PDF IDs to their corresponding image paths
+  // Map PDF IDs to their corresponding full image paths with all text visible
   const pdfImagePaths: Record<string, string> = {
-    'pdf13': '/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13_page_1.png',
-    'pdf14': '/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 14_page_1.png'
+    'pdf13': '/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13_page_1_full.png',
+    'pdf14': '/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 14_page_1_full.png'
   };
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });

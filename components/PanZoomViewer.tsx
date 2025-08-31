@@ -163,18 +163,19 @@ export default function PanZoomViewer({
   };
 
   const getHotspotColor = (sign: SignHotspot) => {
+    // More transparent backgrounds so text underneath is readable
     if (selectedSigns.has(sign.sign_number)) {
-      return 'border-blue-500 bg-blue-500 bg-opacity-30';
+      return 'border-blue-500 bg-blue-500 bg-opacity-20 hover:bg-opacity-30';
     }
     
     switch (sign.status) {
       case 'verified':
-        return 'border-green-500 bg-green-500 bg-opacity-10';
+        return 'border-green-500 bg-green-500 bg-opacity-5 hover:bg-opacity-20';
       case 'error':
-        return 'border-red-500 bg-red-500 bg-opacity-10';
+        return 'border-red-500 bg-red-500 bg-opacity-5 hover:bg-opacity-20';
       case 'pending':
       default:
-        return 'border-yellow-500 bg-yellow-500 bg-opacity-10';
+        return 'border-yellow-500 bg-yellow-500 bg-opacity-5 hover:bg-opacity-20';
     }
   };
 
@@ -313,7 +314,7 @@ export default function PanZoomViewer({
                 return (
                   <div
                     key={sign.sign_number}
-                    className={`absolute border-2 cursor-pointer transition-all ${getHotspotColor(sign)}`}
+                    className={`absolute border-2 cursor-pointer transition-all duration-200 ${getHotspotColor(sign)}`}
                     style={usePixels ? {
                       left: `${x}px`,
                       top: `${y}px`,
@@ -331,7 +332,7 @@ export default function PanZoomViewer({
                     }}
                     title={`${sign.sign_number} (${sign.confidence})`}
                   >
-                    <div className="absolute -top-5 left-0 text-xs bg-black bg-opacity-75 text-white px-1 rounded whitespace-nowrap z-10">
+                    <div className="absolute -top-5 left-0 text-xs bg-black bg-opacity-60 text-white px-1 rounded whitespace-nowrap z-10 font-semibold">
                       {sign.sign_number}
                     </div>
                   </div>
