@@ -41,8 +41,8 @@ export default function PanZoomViewer({
   const [showCrosshair, setShowCrosshair] = useState(false);
   
   // Touch handling
-  const [touches, setTouches] = useState<TouchList | null>(null);
-  const [lastPinchDistance, setLastPinchDistance] = useState(0);
+  const [touchStartDistance, setTouchStartDistance] = useState(0);
+  const [isTouchPanning, setIsTouchPanning] = useState(false);
 
   // Update parent when transform changes
   useEffect(() => {
@@ -176,26 +176,26 @@ export default function PanZoomViewer({
 
   // Touch handling for mobile
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
-    setTouches(e.touches);
-    
     if (e.touches.length === 1) {
       // Single touch - pan
+      setIsTouchPanning(true);
       const touch = e.touches[0];
       setPanStart({ x: touch.clientX - transform.x, y: touch.clientY - transform.y });
     } else if (e.touches.length === 2) {
       // Two touches - pinch zoom
+      setIsTouchPanning(false);
       const distance = Math.hypot(
         e.touches[0].clientX - e.touches[1].clientX,
         e.touches[0].clientY - e.touches[1].clientY
       );
-      setLastPinchDistance(distance);
+      setTouchStartDistance(distance);
     }
   };
 
   const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
-    if (!touches) return;
+    e.preventDefault();
     
-    if (e.touches.length === 1 && touches.length === 1) {
+    if (e.touches.length === 1 && isTouchPanning) {
       // Pan
       const touch = e.touches[0];
       setTransform({
@@ -203,15 +203,15 @@ export default function PanZoomViewer({
         x: touch.clientX - panStart.x,
         y: touch.clientY - panStart.y
       });
-    } else if (e.touches.length === 2 && touches.length === 2) {
+    } else if (e.touches.length === 2) {
       // Pinch zoom
       const distance = Math.hypot(
         e.touches[0].clientX - e.touches[1].clientX,
         e.touches[0].clientY - e.touches[1].clientY
       );
       
-      if (lastPinchDistance > 0) {
-        const scale = distance / lastPinchDistance;
+      if (touchStartDistance > 0) {
+        const scale = distance / touchStartDistance;
         const newScale = transform.scale * scale;
         
         // Zoom to center of pinch
@@ -219,15 +219,14 @@ export default function PanZoomViewer({
         const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
         
         zoomTo(newScale, centerX, centerY);
+        setTouchStartDistance(distance);
       }
-      
-      setLastPinchDistance(distance);
     }
   };
 
   const handleTouchEnd = () => {
-    setTouches(null);
-    setLastPinchDistance(0);
+    setIsTouchPanning(false);
+    setTouchStartDistance(0);
   };
 
   // Keyboard shortcuts
