@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Hotspot Visualization</title>
+    <style>
+        body { margin: 0; padding: 20px; font-family: Arial; }
+        .container { position: relative; display: inline-block; }
+        img { max-width: 100%; height: auto; display: block; }
+        .hotspot {
+            position: absolute;
+            border: 2px solid red;
+            background: rgba(255, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .hotspot:hover {
+            background: rgba(255, 0, 0, 0.5);
+            border-color: darkred;
+        }
+        .hotspot-label {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            background: red;
+            color: white;
+            padding: 2px 5px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        .stats {
+            margin: 20px 0;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Hotspot Visualization (Embedded Text)</h1>
+    <div class="stats">
+        <strong>Extraction Method:</strong> PDF Embedded Text<br>
+        <strong>Total Signs Found:</strong> 78<br>
+        <strong>Confidence:</strong> 100% (text extracted directly from PDF)
+    </div>
+    <div class="container">
+        <img src="../public/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 14_page_1.png" id="floorplan">
+
+        <div class="hotspot" style="
+            left: 93.28%;
+            top: 27.5%;
+            width: 1.67%;
+            height: 1.31%;"
+            onclick="alert('Sign: 6155')">
+            <div class="hotspot-label">6155</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 90.93%;
+            top: 22.41%;
+            width: 2.03%;
+            height: 2.17%;"
+            onclick="alert('Sign: 0000')">
+            <div class="hotspot-label">0000</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.87%;
+            top: 12.05%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2132')">
+            <div class="hotspot-label">2132</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 48.93%;
+            top: 19.96%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2140')">
+            <div class="hotspot-label">2140</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 59.49%;
+            top: 19.96%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2195')">
+            <div class="hotspot-label">2195</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.87%;
+            top: 12.79%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2133')">
+            <div class="hotspot-label">2133</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.87%;
+            top: 13.54%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2134')">
+            <div class="hotspot-label">2134</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.61%;
+            top: 12.05%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2201')">
+            <div class="hotspot-label">2201</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.61%;
+            top: 12.79%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2202')">
+            <div class="hotspot-label">2202</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.61%;
+            top: 13.54%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2203')">
+            <div class="hotspot-label">2203</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.1%;
+            top: 29.51%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2142')">
+            <div class="hotspot-label">2142</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.1%;
+            top: 30.25%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2143')">
+            <div class="hotspot-label">2143</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.1%;
+            top: 30.99%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2144')">
+            <div class="hotspot-label">2144</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.1%;
+            top: 31.73%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2145')">
+            <div class="hotspot-label">2145</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.24%;
+            top: 29.51%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2191')">
+            <div class="hotspot-label">2191</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.1%;
+            top: 28.54%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2141')">
+            <div class="hotspot-label">2141</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.24%;
+            top: 28.77%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2190')">
+            <div class="hotspot-label">2190</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.24%;
+            top: 30.25%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2192')">
+            <div class="hotspot-label">2192</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.24%;
+            top: 30.99%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2193')">
+            <div class="hotspot-label">2193</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.24%;
+            top: 31.73%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2194')">
+            <div class="hotspot-label">2194</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.94%;
+            top: 44.21%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2147')">
+            <div class="hotspot-label">2147</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 50.82%;
+            top: 41.7%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2146')">
+            <div class="hotspot-label">2146</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 50.66%;
+            top: 50.42%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2153')">
+            <div class="hotspot-label">2153</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 57.51%;
+            top: 41.65%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2189')">
+            <div class="hotspot-label">2189</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 57.48%;
+            top: 50.42%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2182')">
+            <div class="hotspot-label">2182</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.94%;
+            top: 44.95%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2148')">
+            <div class="hotspot-label">2148</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.94%;
+            top: 45.69%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2149')">
+            <div class="hotspot-label">2149</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.94%;
+            top: 46.62%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2150')">
+            <div class="hotspot-label">2150</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.94%;
+            top: 47.36%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2151')">
+            <div class="hotspot-label">2151</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.94%;
+            top: 48.1%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2152')">
+            <div class="hotspot-label">2152</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.44%;
+            top: 44.21%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2186')">
+            <div class="hotspot-label">2186</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.44%;
+            top: 44.95%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2187')">
+            <div class="hotspot-label">2187</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.44%;
+            top: 45.69%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2188')">
+            <div class="hotspot-label">2188</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.44%;
+            top: 46.62%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2183')">
+            <div class="hotspot-label">2183</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.44%;
+            top: 47.36%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2184')">
+            <div class="hotspot-label">2184</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.44%;
+            top: 48.1%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2185')">
+            <div class="hotspot-label">2185</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 44.55%;
+            top: 15.62%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2138')">
+            <div class="hotspot-label">2138</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 44.55%;
+            top: 14.91%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2137')">
+            <div class="hotspot-label">2137</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 44.55%;
+            top: 14.19%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2136')">
+            <div class="hotspot-label">2136</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 44.55%;
+            top: 13.48%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2135')">
+            <div class="hotspot-label">2135</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 45.44%;
+            top: 19.09%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2139')">
+            <div class="hotspot-label">2139</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 62.94%;
+            top: 19.32%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2196')">
+            <div class="hotspot-label">2196</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 45.34%;
+            top: 73.08%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2160')">
+            <div class="hotspot-label">2160</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 48.84%;
+            top: 72.25%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2159')">
+            <div class="hotspot-label">2159</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 63.0%;
+            top: 73.15%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2175')">
+            <div class="hotspot-label">2175</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 59.54%;
+            top: 72.25%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2176')">
+            <div class="hotspot-label">2176</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 63.93%;
+            top: 14.19%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2198')">
+            <div class="hotspot-label">2198</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 63.93%;
+            top: 13.48%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2197')">
+            <div class="hotspot-label">2197</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 44.37%;
+            top: 78.81%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2164')">
+            <div class="hotspot-label">2164</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 44.37%;
+            top: 78.09%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2163')">
+            <div class="hotspot-label">2163</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 44.37%;
+            top: 77.38%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2162')">
+            <div class="hotspot-label">2162</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 44.37%;
+            top: 76.66%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2161')">
+            <div class="hotspot-label">2161</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 64.03%;
+            top: 77.34%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2172')">
+            <div class="hotspot-label">2172</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 64.03%;
+            top: 76.63%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2171')">
+            <div class="hotspot-label">2171</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.11%;
+            top: 60.5%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2154')">
+            <div class="hotspot-label">2154</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.11%;
+            top: 61.24%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2155')">
+            <div class="hotspot-label">2155</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.11%;
+            top: 61.98%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2156')">
+            <div class="hotspot-label">2156</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.11%;
+            top: 62.72%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2157')">
+            <div class="hotspot-label">2157</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.25%;
+            top: 60.5%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2177')">
+            <div class="hotspot-label">2177</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.25%;
+            top: 61.24%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2178')">
+            <div class="hotspot-label">2178</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.25%;
+            top: 61.98%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2179')">
+            <div class="hotspot-label">2179</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.25%;
+            top: 62.72%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2180')">
+            <div class="hotspot-label">2180</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 53.11%;
+            top: 63.69%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2158')">
+            <div class="hotspot-label">2158</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.25%;
+            top: 63.69%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2181')">
+            <div class="hotspot-label">2181</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.63%;
+            top: 78.66%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2165')">
+            <div class="hotspot-label">2165</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.63%;
+            top: 79.4%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2166')">
+            <div class="hotspot-label">2166</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 47.63%;
+            top: 80.14%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2167')">
+            <div class="hotspot-label">2167</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.7%;
+            top: 78.66%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2168')">
+            <div class="hotspot-label">2168</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.7%;
+            top: 79.4%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2169')">
+            <div class="hotspot-label">2169</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 60.7%;
+            top: 80.14%;
+            width: 1.65%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2170')">
+            <div class="hotspot-label">2170</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 51.95%;
+            top: 16.41%;
+            width: 2.27%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2134.1')">
+            <div class="hotspot-label">2134.1</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.87%;
+            top: 16.41%;
+            width: 2.27%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2203.1')">
+            <div class="hotspot-label">2203.1</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 52.04%;
+            top: 76.08%;
+            width: 2.27%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2167.1')">
+            <div class="hotspot-label">2167.1</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 55.5%;
+            top: 76.08%;
+            width: 2.27%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2170.1')">
+            <div class="hotspot-label">2170.1</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 48.74%;
+            top: 14.41%;
+            width: 2.27%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2138.1')">
+            <div class="hotspot-label">2138.1</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 59.03%;
+            top: 14.42%;
+            width: 2.27%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2200.1')">
+            <div class="hotspot-label">2200.1</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 49.27%;
+            top: 77.34%;
+            width: 2.27%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2164.1')">
+            <div class="hotspot-label">2164.1</div>
+        </div>
+
+        <div class="hotspot" style="
+            left: 58.39%;
+            top: 77.55%;
+            width: 2.27%;
+            height: 1.24%;"
+            onclick="alert('Sign: 2174.1')">
+            <div class="hotspot-label">2174.1</div>
+        </div>
+
+    </div>
+</body>
+</html>

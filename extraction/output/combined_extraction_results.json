@@ -1,0 +1,4089 @@
+{
+  "extraction_method": "embedded_text",
+  "pdfs": [
+    {
+      "pdf_id": "pdf13",
+      "pdf_name": "COLO 2 - PDF 13",
+      "total_signs": 156,
+      "results": {
+        "source_pdf": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13.pdf",
+        "total_signs_detected": 156,
+        "extraction_method": "embedded_text",
+        "pages": [
+          {
+            "page": 1,
+            "page_width": 3024,
+            "page_height": 2160,
+            "signs_detected": 156,
+            "signs": [
+              {
+                "sign_number": "6155",
+                "text_bbox": {
+                  "x": 2830.1,
+                  "y": 599.4,
+                  "width": 31.5,
+                  "height": 17.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 93.28,
+                  "y_percentage": 27.5,
+                  "width_percentage": 1.67,
+                  "height_percentage": 1.31
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "0000",
+                "text_bbox": {
+                  "x": 2761.2,
+                  "y": 492.9,
+                  "width": 38.3,
+                  "height": 29.3
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 90.93,
+                  "y_percentage": 22.41,
+                  "width_percentage": 2.03,
+                  "height_percentage": 2.17
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2027",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2028",
+                "text_bbox": {
+                  "x": 2222.6,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 73.19,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2029",
+                "text_bbox": {
+                  "x": 2276.7,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 74.98,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2030",
+                "text_bbox": {
+                  "x": 2331.1,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 76.78,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2031",
+                "text_bbox": {
+                  "x": 2385.1,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 78.56,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2032",
+                "text_bbox": {
+                  "x": 2439.4,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 80.36,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2033",
+                "text_bbox": {
+                  "x": 2493.5,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 82.15,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2034",
+                "text_bbox": {
+                  "x": 2547.8,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 83.94,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2035",
+                "text_bbox": {
+                  "x": 2601.8,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 85.73,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2036",
+                "text_bbox": {
+                  "x": 2656.1,
+                  "y": 1454.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 87.53,
+                  "y_percentage": 67.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2037",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2038",
+                "text_bbox": {
+                  "x": 2222.6,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 73.19,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2039",
+                "text_bbox": {
+                  "x": 2276.7,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 74.98,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2040",
+                "text_bbox": {
+                  "x": 2331.1,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 76.78,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2041",
+                "text_bbox": {
+                  "x": 2385.1,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 78.56,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2042",
+                "text_bbox": {
+                  "x": 2439.4,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 80.36,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2043",
+                "text_bbox": {
+                  "x": 2493.5,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 82.15,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2044",
+                "text_bbox": {
+                  "x": 2547.8,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 83.94,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2045",
+                "text_bbox": {
+                  "x": 2601.8,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 85.73,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2046",
+                "text_bbox": {
+                  "x": 2656.1,
+                  "y": 1473.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 87.53,
+                  "y_percentage": 67.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2047",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2048",
+                "text_bbox": {
+                  "x": 2222.6,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 73.19,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2049",
+                "text_bbox": {
+                  "x": 2276.7,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 74.98,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2050",
+                "text_bbox": {
+                  "x": 2331.1,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 76.78,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2051",
+                "text_bbox": {
+                  "x": 2385.1,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 78.56,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2052",
+                "text_bbox": {
+                  "x": 2439.4,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 80.36,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2053",
+                "text_bbox": {
+                  "x": 2493.5,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 82.15,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2088",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2089",
+                "text_bbox": {
+                  "x": 2222.6,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 73.19,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2090",
+                "text_bbox": {
+                  "x": 2276.7,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 74.98,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2091",
+                "text_bbox": {
+                  "x": 2331.1,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 76.78,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2092",
+                "text_bbox": {
+                  "x": 2385.1,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 78.56,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2093",
+                "text_bbox": {
+                  "x": 2439.4,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 80.36,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2094",
+                "text_bbox": {
+                  "x": 2493.5,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 82.15,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2095",
+                "text_bbox": {
+                  "x": 2547.8,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 83.94,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2096",
+                "text_bbox": {
+                  "x": 2601.8,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 85.73,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2097",
+                "text_bbox": {
+                  "x": 2656.1,
+                  "y": 1649.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 87.53,
+                  "y_percentage": 76.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2098",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2099",
+                "text_bbox": {
+                  "x": 2222.6,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 73.19,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2100",
+                "text_bbox": {
+                  "x": 2276.7,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 74.98,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2101",
+                "text_bbox": {
+                  "x": 2331.1,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 76.78,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2102",
+                "text_bbox": {
+                  "x": 2385.1,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 78.56,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2103",
+                "text_bbox": {
+                  "x": 2439.4,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 80.36,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2104",
+                "text_bbox": {
+                  "x": 2493.5,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 82.15,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2105",
+                "text_bbox": {
+                  "x": 2547.8,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 83.94,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2106",
+                "text_bbox": {
+                  "x": 2601.8,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 85.73,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2107",
+                "text_bbox": {
+                  "x": 2656.1,
+                  "y": 1668.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 87.53,
+                  "y_percentage": 77.01,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2108",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1686.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 77.87,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2109",
+                "text_bbox": {
+                  "x": 2222.6,
+                  "y": 1686.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 73.19,
+                  "y_percentage": 77.87,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2110",
+                "text_bbox": {
+                  "x": 2276.7,
+                  "y": 1686.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 74.98,
+                  "y_percentage": 77.87,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2111",
+                "text_bbox": {
+                  "x": 2331.1,
+                  "y": 1686.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 76.78,
+                  "y_percentage": 77.87,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2112",
+                "text_bbox": {
+                  "x": 2385.1,
+                  "y": 1686.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 78.56,
+                  "y_percentage": 77.87,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2113",
+                "text_bbox": {
+                  "x": 2439.4,
+                  "y": 1686.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 80.36,
+                  "y_percentage": 77.87,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2114",
+                "text_bbox": {
+                  "x": 2493.5,
+                  "y": 1686.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 82.15,
+                  "y_percentage": 77.87,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2054",
+                "text_bbox": {
+                  "x": 2547.8,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 83.94,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2055",
+                "text_bbox": {
+                  "x": 2601.8,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 85.73,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2056",
+                "text_bbox": {
+                  "x": 2656.1,
+                  "y": 1491.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 87.53,
+                  "y_percentage": 68.82,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2057",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2058",
+                "text_bbox": {
+                  "x": 2222.6,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 73.19,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2059",
+                "text_bbox": {
+                  "x": 2276.7,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 74.98,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2060",
+                "text_bbox": {
+                  "x": 2331.1,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 76.78,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2061",
+                "text_bbox": {
+                  "x": 2385.1,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 78.56,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2062",
+                "text_bbox": {
+                  "x": 2439.4,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 80.36,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2063",
+                "text_bbox": {
+                  "x": 2493.5,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 82.15,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2064",
+                "text_bbox": {
+                  "x": 2547.8,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 83.94,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2065",
+                "text_bbox": {
+                  "x": 2601.8,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 85.73,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2066",
+                "text_bbox": {
+                  "x": 2656.1,
+                  "y": 1510.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 87.53,
+                  "y_percentage": 69.68,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2067",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2068",
+                "text_bbox": {
+                  "x": 2222.6,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 73.19,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2069",
+                "text_bbox": {
+                  "x": 2276.7,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 74.98,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2070",
+                "text_bbox": {
+                  "x": 2331.1,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 76.78,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2071",
+                "text_bbox": {
+                  "x": 2385.1,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 78.56,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2072",
+                "text_bbox": {
+                  "x": 2439.4,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 80.36,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2073",
+                "text_bbox": {
+                  "x": 2493.5,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 82.15,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2074",
+                "text_bbox": {
+                  "x": 2547.8,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 83.94,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2075",
+                "text_bbox": {
+                  "x": 2601.8,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 85.73,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2076",
+                "text_bbox": {
+                  "x": 2656.1,
+                  "y": 1528.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 87.53,
+                  "y_percentage": 70.53,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2077",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2078",
+                "text_bbox": {
+                  "x": 2222.6,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 73.19,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2079",
+                "text_bbox": {
+                  "x": 2276.7,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 74.98,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2080",
+                "text_bbox": {
+                  "x": 2331.1,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 76.78,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2081",
+                "text_bbox": {
+                  "x": 2385.1,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 78.56,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2082",
+                "text_bbox": {
+                  "x": 2439.4,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 80.36,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2083",
+                "text_bbox": {
+                  "x": 2493.5,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 82.15,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2084",
+                "text_bbox": {
+                  "x": 2547.8,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 83.94,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2085",
+                "text_bbox": {
+                  "x": 2601.8,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 85.73,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2086",
+                "text_bbox": {
+                  "x": 2656.1,
+                  "y": 1547.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 87.53,
+                  "y_percentage": 71.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2087",
+                "text_bbox": {
+                  "x": 2168.3,
+                  "y": 1565.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 71.39,
+                  "y_percentage": 72.25,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2008",
+                "text_bbox": {
+                  "x": 441.6,
+                  "y": 1683.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 14.29,
+                  "y_percentage": 77.7,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2007",
+                "text_bbox": {
+                  "x": 390.5,
+                  "y": 1638.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 12.6,
+                  "y_percentage": 75.62,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2006",
+                "text_bbox": {
+                  "x": 299.1,
+                  "y": 1600.2,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 9.58,
+                  "y_percentage": 73.85,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2005",
+                "text_bbox": {
+                  "x": 390.5,
+                  "y": 1655.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 12.6,
+                  "y_percentage": 76.39,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2022",
+                "text_bbox": {
+                  "x": 1770.2,
+                  "y": 544.8,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 58.23,
+                  "y_percentage": 24.99,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2025",
+                "text_bbox": {
+                  "x": 1818.3,
+                  "y": 471.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 59.82,
+                  "y_percentage": 21.59,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2021",
+                "text_bbox": {
+                  "x": 1770.2,
+                  "y": 613.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 58.23,
+                  "y_percentage": 28.17,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2018",
+                "text_bbox": {
+                  "x": 1767.4,
+                  "y": 666.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 58.14,
+                  "y_percentage": 30.61,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2019",
+                "text_bbox": {
+                  "x": 1882.0,
+                  "y": 689.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 61.92,
+                  "y_percentage": 31.71,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2020",
+                "text_bbox": {
+                  "x": 1767.4,
+                  "y": 682.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 58.14,
+                  "y_percentage": 31.36,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2023",
+                "text_bbox": {
+                  "x": 1930.9,
+                  "y": 552.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 63.54,
+                  "y_percentage": 25.34,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2024",
+                "text_bbox": {
+                  "x": 1770.1,
+                  "y": 560.8,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 58.23,
+                  "y_percentage": 25.73,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2011",
+                "text_bbox": {
+                  "x": 1762.0,
+                  "y": 1746.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.96,
+                  "y_percentage": 80.62,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2010",
+                "text_bbox": {
+                  "x": 1812.6,
+                  "y": 1840.8,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 59.63,
+                  "y_percentage": 84.99,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2015",
+                "text_bbox": {
+                  "x": 1763.0,
+                  "y": 1635.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.99,
+                  "y_percentage": 75.49,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2016",
+                "text_bbox": {
+                  "x": 1874.4,
+                  "y": 1616.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 61.68,
+                  "y_percentage": 74.62,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2017",
+                "text_bbox": {
+                  "x": 1763.0,
+                  "y": 1651.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.99,
+                  "y_percentage": 76.22,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2014",
+                "text_bbox": {
+                  "x": 1763.0,
+                  "y": 1677.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.99,
+                  "y_percentage": 77.45,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2012",
+                "text_bbox": {
+                  "x": 1762.0,
+                  "y": 1762.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.96,
+                  "y_percentage": 81.36,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2013",
+                "text_bbox": {
+                  "x": 1762.0,
+                  "y": 1778.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.96,
+                  "y_percentage": 82.11,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2001",
+                "text_bbox": {
+                  "x": 401.8,
+                  "y": 620.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 12.98,
+                  "y_percentage": 28.48,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2004",
+                "text_bbox": {
+                  "x": 300.6,
+                  "y": 707.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 9.63,
+                  "y_percentage": 32.52,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2003",
+                "text_bbox": {
+                  "x": 401.8,
+                  "y": 674.7,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 12.98,
+                  "y_percentage": 31.0,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2002",
+                "text_bbox": {
+                  "x": 401.8,
+                  "y": 658.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 12.98,
+                  "y_percentage": 30.23,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2009",
+                "text_bbox": {
+                  "x": 971.3,
+                  "y": 1842.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 31.81,
+                  "y_percentage": 85.07,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2026",
+                "text_bbox": {
+                  "x": 1192.6,
+                  "y": 436.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 39.13,
+                  "y_percentage": 19.98,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2001.1",
+                "text_bbox": {
+                  "x": 374.9,
+                  "y": 563.8,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 11.97,
+                  "y_percentage": 25.87,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2001 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2001.2",
+                "text_bbox": {
+                  "x": 374.9,
+                  "y": 579.8,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 11.97,
+                  "y_percentage": 26.61,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2001 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2004.3",
+                "text_bbox": {
+                  "x": 368.8,
+                  "y": 1128.2,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 11.77,
+                  "y_percentage": 52.0,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2004 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2004.4",
+                "text_bbox": {
+                  "x": 368.8,
+                  "y": 1144.2,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 11.77,
+                  "y_percentage": 52.74,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2004 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2004.1",
+                "text_bbox": {
+                  "x": 641.7,
+                  "y": 691.0,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 20.8,
+                  "y_percentage": 31.76,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2017.9",
+                "text_bbox": {
+                  "x": 1520.6,
+                  "y": 691.0,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 49.86,
+                  "y_percentage": 31.76,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2024.1",
+                "text_bbox": {
+                  "x": 1622.4,
+                  "y": 545.8,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.23,
+                  "y_percentage": 25.04,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2025.1",
+                "text_bbox": {
+                  "x": 1865.6,
+                  "y": 428.2,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 61.27,
+                  "y_percentage": 19.59,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2017.5",
+                "text_bbox": {
+                  "x": 1780.5,
+                  "y": 1213.6,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 58.45,
+                  "y_percentage": 55.95,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2017 series (3 signs)",
+                "group_size": 3
+              },
+              {
+                "sign_number": "2004.7",
+                "text_bbox": {
+                  "x": 326.4,
+                  "y": 1259.5,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 10.37,
+                  "y_percentage": 58.08,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2004.8",
+                "text_bbox": {
+                  "x": 593.0,
+                  "y": 1621.1,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 19.19,
+                  "y_percentage": 74.82,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2008.3",
+                "text_bbox": {
+                  "x": 593.0,
+                  "y": 1733.1,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 19.19,
+                  "y_percentage": 80.0,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2017.1",
+                "text_bbox": {
+                  "x": 1566.2,
+                  "y": 1621.1,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 51.37,
+                  "y_percentage": 74.82,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2013.1",
+                "text_bbox": {
+                  "x": 1566.2,
+                  "y": 1733.1,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 51.37,
+                  "y_percentage": 80.0,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2010.1",
+                "text_bbox": {
+                  "x": 1871.6,
+                  "y": 1841.8,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 61.47,
+                  "y_percentage": 85.04,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2009.4",
+                "text_bbox": {
+                  "x": 1049.8,
+                  "y": 1705.3,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 34.29,
+                  "y_percentage": 78.72,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2017.2",
+                "text_bbox": {
+                  "x": 1235.6,
+                  "y": 1630.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 40.43,
+                  "y_percentage": 75.27,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2004.6",
+                "text_bbox": {
+                  "x": 855.9,
+                  "y": 1202.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 27.88,
+                  "y_percentage": 55.46,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2017.3",
+                "text_bbox": {
+                  "x": 1306.7,
+                  "y": 1202.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 42.79,
+                  "y_percentage": 55.46,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2001.3",
+                "text_bbox": {
+                  "x": 641.7,
+                  "y": 541.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 20.8,
+                  "y_percentage": 24.86,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2026.5",
+                "text_bbox": {
+                  "x": 1021.9,
+                  "y": 537.0,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 33.37,
+                  "y_percentage": 24.63,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2026 series (4 signs)",
+                "group_size": 4
+              },
+              {
+                "sign_number": "2026.1",
+                "text_bbox": {
+                  "x": 1175.5,
+                  "y": 521.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 38.45,
+                  "y_percentage": 23.93,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2026 series (4 signs)",
+                "group_size": 4
+              },
+              {
+                "sign_number": "2026.2",
+                "text_bbox": {
+                  "x": 1280.2,
+                  "y": 552.4,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 41.91,
+                  "y_percentage": 25.34,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2008.1",
+                "text_bbox": {
+                  "x": 320.6,
+                  "y": 1695.4,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 10.18,
+                  "y_percentage": 78.26,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2008 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2008.2",
+                "text_bbox": {
+                  "x": 321.1,
+                  "y": 1742.5,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 10.19,
+                  "y_percentage": 80.44,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2008 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2009.1",
+                "text_bbox": {
+                  "x": 845.6,
+                  "y": 1746.8,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 27.54,
+                  "y_percentage": 80.64,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2009 series (3 signs)",
+                "group_size": 3
+              },
+              {
+                "sign_number": "2009.2",
+                "text_bbox": {
+                  "x": 845.6,
+                  "y": 1762.8,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 27.54,
+                  "y_percentage": 81.38,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2009 series (3 signs)",
+                "group_size": 3
+              },
+              {
+                "sign_number": "2009.3",
+                "text_bbox": {
+                  "x": 845.6,
+                  "y": 1778.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 27.54,
+                  "y_percentage": 82.12,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2009 series (3 signs)",
+                "group_size": 3
+              },
+              {
+                "sign_number": "2026.3",
+                "text_bbox": {
+                  "x": 1061.0,
+                  "y": 577.3,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 34.66,
+                  "y_percentage": 26.49,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2026 series (4 signs)",
+                "group_size": 4
+              },
+              {
+                "sign_number": "2026.4",
+                "text_bbox": {
+                  "x": 1061.0,
+                  "y": 593.3,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 34.66,
+                  "y_percentage": 27.24,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2026 series (4 signs)",
+                "group_size": 4
+              },
+              {
+                "sign_number": "2021.1",
+                "text_bbox": {
+                  "x": 1656.1,
+                  "y": 582.2,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 54.34,
+                  "y_percentage": 26.72,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2021 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2021.2",
+                "text_bbox": {
+                  "x": 1656.1,
+                  "y": 598.3,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 54.34,
+                  "y_percentage": 27.47,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2021 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2017.6",
+                "text_bbox": {
+                  "x": 1794.7,
+                  "y": 1127.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 58.92,
+                  "y_percentage": 51.99,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2017 series (3 signs)",
+                "group_size": 3
+              },
+              {
+                "sign_number": "2017.7",
+                "text_bbox": {
+                  "x": 1794.7,
+                  "y": 1144.0,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 58.92,
+                  "y_percentage": 52.73,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2017 series (3 signs)",
+                "group_size": 3
+              },
+              {
+                "sign_number": "2013.2",
+                "text_bbox": {
+                  "x": 1915.0,
+                  "y": 1701.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 62.9,
+                  "y_percentage": 78.56,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2013 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2013.3",
+                "text_bbox": {
+                  "x": 1810.3,
+                  "y": 1717.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 59.44,
+                  "y_percentage": 79.3,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded",
+                "group": "2013 series (2 signs)",
+                "group_size": 2
+              },
+              {
+                "sign_number": "2002.1",
+                "text_bbox": {
+                  "x": 394.3,
+                  "y": 604.0,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 12.61,
+                  "y_percentage": 27.73,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2007.1",
+                "text_bbox": {
+                  "x": 435.8,
+                  "y": 1699.4,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 13.99,
+                  "y_percentage": 78.44,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2014.1",
+                "text_bbox": {
+                  "x": 1756.2,
+                  "y": 1693.7,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.65,
+                  "y_percentage": 78.18,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2019.1",
+                "text_bbox": {
+                  "x": 1764.2,
+                  "y": 597.9,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.92,
+                  "y_percentage": 27.45,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              }
+            ]
+          }
+        ],
+        "pdf_id": "pdf13",
+        "pdf_name": "COLO 2 - PDF 13",
+        "pdf_description": "Floor Plan Page 13"
+      }
+    },
+    {
+      "pdf_id": "pdf14",
+      "pdf_name": "COLO 2 - PDF 14",
+      "total_signs": 78,
+      "results": {
+        "source_pdf": "000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 14.pdf",
+        "total_signs_detected": 78,
+        "extraction_method": "embedded_text",
+        "pages": [
+          {
+            "page": 1,
+            "page_width": 3024,
+            "page_height": 2160,
+            "signs_detected": 78,
+            "signs": [
+              {
+                "sign_number": "6155",
+                "text_bbox": {
+                  "x": 2830.1,
+                  "y": 599.4,
+                  "width": 31.5,
+                  "height": 17.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 93.28,
+                  "y_percentage": 27.5,
+                  "width_percentage": 1.67,
+                  "height_percentage": 1.31
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "0000",
+                "text_bbox": {
+                  "x": 2761.2,
+                  "y": 492.9,
+                  "width": 38.3,
+                  "height": 29.3
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 90.93,
+                  "y_percentage": 22.41,
+                  "width_percentage": 2.03,
+                  "height_percentage": 2.17
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2132",
+                "text_bbox": {
+                  "x": 1457.0,
+                  "y": 265.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.87,
+                  "y_percentage": 12.05,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2140",
+                "text_bbox": {
+                  "x": 1489.0,
+                  "y": 436.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 48.93,
+                  "y_percentage": 19.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2195",
+                "text_bbox": {
+                  "x": 1808.5,
+                  "y": 436.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 59.49,
+                  "y_percentage": 19.96,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2133",
+                "text_bbox": {
+                  "x": 1457.0,
+                  "y": 281.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.87,
+                  "y_percentage": 12.79,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2134",
+                "text_bbox": {
+                  "x": 1457.0,
+                  "y": 297.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.87,
+                  "y_percentage": 13.54,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2201",
+                "text_bbox": {
+                  "x": 1842.2,
+                  "y": 265.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.61,
+                  "y_percentage": 12.05,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2202",
+                "text_bbox": {
+                  "x": 1842.2,
+                  "y": 281.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.61,
+                  "y_percentage": 12.79,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2203",
+                "text_bbox": {
+                  "x": 1842.2,
+                  "y": 297.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.61,
+                  "y_percentage": 13.54,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2142",
+                "text_bbox": {
+                  "x": 1615.1,
+                  "y": 642.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.1,
+                  "y_percentage": 29.51,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2143",
+                "text_bbox": {
+                  "x": 1615.1,
+                  "y": 658.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.1,
+                  "y_percentage": 30.25,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2144",
+                "text_bbox": {
+                  "x": 1615.1,
+                  "y": 674.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.1,
+                  "y_percentage": 30.99,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2145",
+                "text_bbox": {
+                  "x": 1615.1,
+                  "y": 690.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.1,
+                  "y_percentage": 31.73,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2191",
+                "text_bbox": {
+                  "x": 1679.7,
+                  "y": 642.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.24,
+                  "y_percentage": 29.51,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2141",
+                "text_bbox": {
+                  "x": 1615.1,
+                  "y": 621.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.1,
+                  "y_percentage": 28.54,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2190",
+                "text_bbox": {
+                  "x": 1679.7,
+                  "y": 626.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.24,
+                  "y_percentage": 28.77,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2192",
+                "text_bbox": {
+                  "x": 1679.7,
+                  "y": 658.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.24,
+                  "y_percentage": 30.25,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2193",
+                "text_bbox": {
+                  "x": 1679.7,
+                  "y": 674.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.24,
+                  "y_percentage": 30.99,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2194",
+                "text_bbox": {
+                  "x": 1679.7,
+                  "y": 690.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.24,
+                  "y_percentage": 31.73,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2147",
+                "text_bbox": {
+                  "x": 1459.2,
+                  "y": 959.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.94,
+                  "y_percentage": 44.21,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2146",
+                "text_bbox": {
+                  "x": 1546.3,
+                  "y": 905.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 50.82,
+                  "y_percentage": 41.7,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2153",
+                "text_bbox": {
+                  "x": 1541.2,
+                  "y": 1094.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 50.66,
+                  "y_percentage": 50.42,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2189",
+                "text_bbox": {
+                  "x": 1748.6,
+                  "y": 904.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.51,
+                  "y_percentage": 41.65,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2182",
+                "text_bbox": {
+                  "x": 1747.6,
+                  "y": 1094.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 57.48,
+                  "y_percentage": 50.42,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2148",
+                "text_bbox": {
+                  "x": 1459.2,
+                  "y": 975.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.94,
+                  "y_percentage": 44.95,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2149",
+                "text_bbox": {
+                  "x": 1459.2,
+                  "y": 991.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.94,
+                  "y_percentage": 45.69,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2150",
+                "text_bbox": {
+                  "x": 1459.2,
+                  "y": 1011.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.94,
+                  "y_percentage": 46.62,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2151",
+                "text_bbox": {
+                  "x": 1459.2,
+                  "y": 1027.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.94,
+                  "y_percentage": 47.36,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2152",
+                "text_bbox": {
+                  "x": 1459.2,
+                  "y": 1043.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.94,
+                  "y_percentage": 48.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2186",
+                "text_bbox": {
+                  "x": 1837.0,
+                  "y": 959.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.44,
+                  "y_percentage": 44.21,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2187",
+                "text_bbox": {
+                  "x": 1837.0,
+                  "y": 975.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.44,
+                  "y_percentage": 44.95,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2188",
+                "text_bbox": {
+                  "x": 1837.0,
+                  "y": 991.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.44,
+                  "y_percentage": 45.69,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2183",
+                "text_bbox": {
+                  "x": 1837.0,
+                  "y": 1011.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.44,
+                  "y_percentage": 46.62,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2184",
+                "text_bbox": {
+                  "x": 1837.0,
+                  "y": 1027.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.44,
+                  "y_percentage": 47.36,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2185",
+                "text_bbox": {
+                  "x": 1837.0,
+                  "y": 1043.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.44,
+                  "y_percentage": 48.1,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2138",
+                "text_bbox": {
+                  "x": 1356.6,
+                  "y": 342.4,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 44.55,
+                  "y_percentage": 15.62,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2137",
+                "text_bbox": {
+                  "x": 1356.6,
+                  "y": 327.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 44.55,
+                  "y_percentage": 14.91,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2136",
+                "text_bbox": {
+                  "x": 1356.6,
+                  "y": 311.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 44.55,
+                  "y_percentage": 14.19,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2135",
+                "text_bbox": {
+                  "x": 1356.6,
+                  "y": 296.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 44.55,
+                  "y_percentage": 13.48,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2139",
+                "text_bbox": {
+                  "x": 1383.4,
+                  "y": 417.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 45.44,
+                  "y_percentage": 19.09,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2196",
+                "text_bbox": {
+                  "x": 1912.6,
+                  "y": 422.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 62.94,
+                  "y_percentage": 19.32,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2160",
+                "text_bbox": {
+                  "x": 1380.4,
+                  "y": 1583.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 45.34,
+                  "y_percentage": 73.08,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2159",
+                "text_bbox": {
+                  "x": 1486.4,
+                  "y": 1565.7,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 48.84,
+                  "y_percentage": 72.25,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2175",
+                "text_bbox": {
+                  "x": 1914.6,
+                  "y": 1585.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 63.0,
+                  "y_percentage": 73.15,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2176",
+                "text_bbox": {
+                  "x": 1809.7,
+                  "y": 1565.7,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 59.54,
+                  "y_percentage": 72.25,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2198",
+                "text_bbox": {
+                  "x": 1942.6,
+                  "y": 311.5,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 63.93,
+                  "y_percentage": 14.19,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2197",
+                "text_bbox": {
+                  "x": 1942.6,
+                  "y": 296.1,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 63.93,
+                  "y_percentage": 13.48,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2164",
+                "text_bbox": {
+                  "x": 1351.0,
+                  "y": 1707.2,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 44.37,
+                  "y_percentage": 78.81,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2163",
+                "text_bbox": {
+                  "x": 1351.0,
+                  "y": 1691.8,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 44.37,
+                  "y_percentage": 78.09,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2162",
+                "text_bbox": {
+                  "x": 1351.0,
+                  "y": 1676.3,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 44.37,
+                  "y_percentage": 77.38,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2161",
+                "text_bbox": {
+                  "x": 1351.0,
+                  "y": 1660.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 44.37,
+                  "y_percentage": 76.66,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2172",
+                "text_bbox": {
+                  "x": 1945.7,
+                  "y": 1675.6,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 64.03,
+                  "y_percentage": 77.34,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2171",
+                "text_bbox": {
+                  "x": 1945.7,
+                  "y": 1660.2,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 64.03,
+                  "y_percentage": 76.63,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2154",
+                "text_bbox": {
+                  "x": 1615.5,
+                  "y": 1311.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.11,
+                  "y_percentage": 60.5,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2155",
+                "text_bbox": {
+                  "x": 1615.5,
+                  "y": 1327.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.11,
+                  "y_percentage": 61.24,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2156",
+                "text_bbox": {
+                  "x": 1615.5,
+                  "y": 1343.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.11,
+                  "y_percentage": 61.98,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2157",
+                "text_bbox": {
+                  "x": 1615.5,
+                  "y": 1359.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.11,
+                  "y_percentage": 62.72,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2177",
+                "text_bbox": {
+                  "x": 1680.2,
+                  "y": 1311.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.25,
+                  "y_percentage": 60.5,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2178",
+                "text_bbox": {
+                  "x": 1680.2,
+                  "y": 1327.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.25,
+                  "y_percentage": 61.24,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2179",
+                "text_bbox": {
+                  "x": 1680.2,
+                  "y": 1343.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.25,
+                  "y_percentage": 61.98,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2180",
+                "text_bbox": {
+                  "x": 1680.2,
+                  "y": 1359.9,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.25,
+                  "y_percentage": 62.72,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2158",
+                "text_bbox": {
+                  "x": 1615.5,
+                  "y": 1380.7,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 53.11,
+                  "y_percentage": 63.69,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2181",
+                "text_bbox": {
+                  "x": 1680.2,
+                  "y": 1380.7,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.25,
+                  "y_percentage": 63.69,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2165",
+                "text_bbox": {
+                  "x": 1449.5,
+                  "y": 1704.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.63,
+                  "y_percentage": 78.66,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2166",
+                "text_bbox": {
+                  "x": 1449.5,
+                  "y": 1720.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.63,
+                  "y_percentage": 79.4,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2167",
+                "text_bbox": {
+                  "x": 1449.5,
+                  "y": 1736.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 47.63,
+                  "y_percentage": 80.14,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2168",
+                "text_bbox": {
+                  "x": 1844.9,
+                  "y": 1704.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.7,
+                  "y_percentage": 78.66,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2169",
+                "text_bbox": {
+                  "x": 1844.9,
+                  "y": 1720.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.7,
+                  "y_percentage": 79.4,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2170",
+                "text_bbox": {
+                  "x": 1844.9,
+                  "y": 1736.0,
+                  "width": 31.1,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 60.7,
+                  "y_percentage": 80.14,
+                  "width_percentage": 1.65,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2134.1",
+                "text_bbox": {
+                  "x": 1583.8,
+                  "y": 359.4,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 51.95,
+                  "y_percentage": 16.41,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2203.1",
+                "text_bbox": {
+                  "x": 1702.3,
+                  "y": 359.4,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.87,
+                  "y_percentage": 16.41,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2167.1",
+                "text_bbox": {
+                  "x": 1586.4,
+                  "y": 1648.3,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 52.04,
+                  "y_percentage": 76.08,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2170.1",
+                "text_bbox": {
+                  "x": 1691.0,
+                  "y": 1648.3,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 55.5,
+                  "y_percentage": 76.08,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2138.1",
+                "text_bbox": {
+                  "x": 1486.9,
+                  "y": 316.2,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 48.74,
+                  "y_percentage": 14.41,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2200.1",
+                "text_bbox": {
+                  "x": 1798.0,
+                  "y": 316.5,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 59.03,
+                  "y_percentage": 14.42,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2164.1",
+                "text_bbox": {
+                  "x": 1502.8,
+                  "y": 1675.6,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 49.27,
+                  "y_percentage": 77.34,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              },
+              {
+                "sign_number": "2174.1",
+                "text_bbox": {
+                  "x": 1778.7,
+                  "y": 1680.0,
+                  "width": 42.8,
+                  "height": 16.7
+                },
+                "hotspot_bbox": {
+                  "x_percentage": 58.39,
+                  "y_percentage": 77.55,
+                  "width_percentage": 2.27,
+                  "height_percentage": 1.24
+                },
+                "confidence": "embedded"
+              }
+            ]
+          }
+        ],
+        "pdf_id": "pdf14",
+        "pdf_name": "COLO 2 - PDF 14",
+        "pdf_description": "Floor Plan Page 14"
+      }
+    }
+  ],
+  "total_signs_all_pdfs": 234,
+  "comparison": {
+    "common_signs": [
+      "0000",
+      "6155"
+    ],
+    "common_count": 2,
+    "unique_signs": {
+      "pdf13": [
+        "2001",
+        "2001.1",
+        "2001.2",
+        "2001.3",
+        "2002",
+        "2002.1",
+        "2003",
+        "2004",
+        "2004.1",
+        "2004.3",
+        "2004.4",
+        "2004.6",
+        "2004.7",
+        "2004.8",
+        "2005",
+        "2006",
+        "2007",
+        "2007.1",
+        "2008",
+        "2008.1",
+        "2008.2",
+        "2008.3",
+        "2009",
+        "2009.1",
+        "2009.2",
+        "2009.3",
+        "2009.4",
+        "2010",
+        "2010.1",
+        "2011",
+        "2012",
+        "2013",
+        "2013.1",
+        "2013.2",
+        "2013.3",
+        "2014",
+        "2014.1",
+        "2015",
+        "2016",
+        "2017",
+        "2017.1",
+        "2017.2",
+        "2017.3",
+        "2017.5",
+        "2017.6",
+        "2017.7",
+        "2017.9",
+        "2018",
+        "2019",
+        "2019.1",
+        "2020",
+        "2021",
+        "2021.1",
+        "2021.2",
+        "2022",
+        "2023",
+        "2024",
+        "2024.1",
+        "2025",
+        "2025.1",
+        "2026",
+        "2026.1",
+        "2026.2",
+        "2026.3",
+        "2026.4",
+        "2026.5",
+        "2027",
+        "2028",
+        "2029",
+        "2030",
+        "2031",
+        "2032",
+        "2033",
+        "2034",
+        "2035",
+        "2036",
+        "2037",
+        "2038",
+        "2039",
+        "2040",
+        "2041",
+        "2042",
+        "2043",
+        "2044",
+        "2045",
+        "2046",
+        "2047",
+        "2048",
+        "2049",
+        "2050",
+        "2051",
+        "2052",
+        "2053",
+        "2054",
+        "2055",
+        "2056",
+        "2057",
+        "2058",
+        "2059",
+        "2060",
+        "2061",
+        "2062",
+        "2063",
+        "2064",
+        "2065",
+        "2066",
+        "2067",
+        "2068",
+        "2069",
+        "2070",
+        "2071",
+        "2072",
+        "2073",
+        "2074",
+        "2075",
+        "2076",
+        "2077",
+        "2078",
+        "2079",
+        "2080",
+        "2081",
+        "2082",
+        "2083",
+        "2084",
+        "2085",
+        "2086",
+        "2087",
+        "2088",
+        "2089",
+        "2090",
+        "2091",
+        "2092",
+        "2093",
+        "2094",
+        "2095",
+        "2096",
+        "2097",
+        "2098",
+        "2099",
+        "2100",
+        "2101",
+        "2102",
+        "2103",
+        "2104",
+        "2105",
+        "2106",
+        "2107",
+        "2108",
+        "2109",
+        "2110",
+        "2111",
+        "2112",
+        "2113",
+        "2114"
+      ],
+      "pdf14": [
+        "2132",
+        "2133",
+        "2134",
+        "2134.1",
+        "2135",
+        "2136",
+        "2137",
+        "2138",
+        "2138.1",
+        "2139",
+        "2140",
+        "2141",
+        "2142",
+        "2143",
+        "2144",
+        "2145",
+        "2146",
+        "2147",
+        "2148",
+        "2149",
+        "2150",
+        "2151",
+        "2152",
+        "2153",
+        "2154",
+        "2155",
+        "2156",
+        "2157",
+        "2158",
+        "2159",
+        "2160",
+        "2161",
+        "2162",
+        "2163",
+        "2164",
+        "2164.1",
+        "2165",
+        "2166",
+        "2167",
+        "2167.1",
+        "2168",
+        "2169",
+        "2170",
+        "2170.1",
+        "2171",
+        "2172",
+        "2174.1",
+        "2175",
+        "2176",
+        "2177",
+        "2178",
+        "2179",
+        "2180",
+        "2181",
+        "2182",
+        "2183",
+        "2184",
+        "2185",
+        "2186",
+        "2187",
+        "2188",
+        "2189",
+        "2190",
+        "2191",
+        "2192",
+        "2193",
+        "2194",
+        "2195",
+        "2196",
+        "2197",
+        "2198",
+        "2200.1",
+        "2201",
+        "2202",
+        "2203",
+        "2203.1"
+      ]
+    },
+    "summary": {
+      "pdf13": {
+        "total": 156,
+        "unique": 154
+      },
+      "pdf14": {
+        "total": 78,
+        "unique": 76
+      }
+    }
+  }
+}
