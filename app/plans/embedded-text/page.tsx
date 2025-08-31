@@ -1,7 +1,10 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+import { useState, useEffect, useRef, useMemo } from 'react';
+import dynamic from 'next/dynamic';
+
+// Dynamically import PanZoomViewer to avoid SSR issues
+const PanZoomViewer = dynamic(() => import('@/app/components/PanZoomViewer'), { ssr: false });
 
 interface SignData {
   sign_number: string;
@@ -43,6 +46,12 @@ interface CoordinateAdjustments {
   scale: number;
 }
 
+interface ViewTransform {
+  x: number;
+  y: number;
+  scale: number;
+}
+
 export default function EmbeddedTextExtraction() {
   const [results, setResults] = useState<ExtractionResults | null>(null);
   const [selectedSign, setSelectedSign] = useState<SignData | null>(null);
@@ -55,6 +64,7 @@ export default function EmbeddedTextExtraction() {
     scale: 1.0
   });
   const [searchQuery, setSearchQuery] = useState('');
+  const [viewTransform, setViewTransform] = useState<ViewTransform>({ x: 0, y: 0, scale: 1 });
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -136,20 +146,34 @@ export default function EmbeddedTextExtraction() {
     sign.sign_number.toLowerCase().includes(searchQuery.toLowerCase())
   ) || [];
 
+  // Viewport culling - only render visible hotspots
+  const visibleSigns = useMemo(() => {
+    if (!results || viewTransform.scale < 0.3) {
+      // Don't show hotspots when zoomed out too far
+      return [];
+    }
+    
+    // For now, return all signs. Could optimize further by calculating viewport bounds
+    return filteredSigns;
+  }, [filteredSigns, viewTransform, results]);
+
+  // Determine if labels should be shown based on zoom level
+  const shouldShowLabels = showLabels && viewTransform.scale >= 0.5;
+
   return (
     <div className="min-h-screen bg-gray-100 p-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-full mx-auto">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">
           PDF Embedded Text Extraction - Production Ready
         </h1>
         <p className="text-gray-600 mb-6">
-          98% accurate • Direct extraction from PDF text • Fine-tune coordinates as needed
+          98% accurate • Pan & Zoom enabled • Fine-tune coordinates as needed
         </p>
 
         {/* Stats Panel */}
         {results && (
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
               <div>
                 <div className="text-sm text-gray-500">Method</div>
                 <div className="text-xl font-semibold text-green-600">
@@ -166,6 +190,12 @@ export default function EmbeddedTextExtraction() {
                 <div className="text-sm text-gray-500">Accuracy</div>
                 <div className="text-xl font-semibold text-green-600">
                   98%
+                </div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-500">Zoom Level</div>
+                <div className="text-xl font-semibold text-blue-600">
+                  {Math.round(viewTransform.scale * 100)}%
                 </div>
               </div>
               <div>
@@ -207,6 +237,11 @@ export default function EmbeddedTextExtraction() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="px-3 py-1 border rounded-md"
                 />
+                {viewTransform.scale < 0.5 && showLabels && (
+                  <span className="text-sm text-orange-600">
+                    (Labels hidden when zoomed out)
+                  </span>
+                )}
               </div>
             </div>
 
@@ -304,7 +339,7 @@ export default function EmbeddedTextExtraction() {
               {/* Scale */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Scale: {(adjustments.scale * 100).toFixed(0)}%
+                  Hotspot Scale: {(adjustments.scale * 100).toFixed(0)}%
                 </label>
                 <div className="flex items-center gap-2">
                   <input
@@ -344,46 +379,60 @@ export default function EmbeddedTextExtraction() {
           </div>
         </div>
 
-        {/* Floor Plan with Hotspots */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <div className="relative inline-block">
-            <Image
-              src="/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13_page_1.png"
-              alt="Floor Plan"
-              width={1512}
-              height={1080}
-              className="max-w-full h-auto"
-            />
-            
-            {/* Render hotspots */}
-            {filteredSigns.map((sign) => (
-              <div
-                key={sign.sign_number}
-                className={`absolute border-2 transition-all cursor-pointer ${
-                  selectedSign?.sign_number === sign.sign_number
-                    ? 'border-red-500 bg-red-500/30 z-20'
-                    : hoveredSign === sign.sign_number
-                    ? 'border-blue-500 bg-blue-500/30 z-10'
-                    : 'border-green-500 bg-green-500/20'
-                } hover:bg-green-500/40`}
-                style={getAdjustedPosition(sign)}
-                onClick={() => handleSignClick(sign)}
-                onMouseEnter={() => setHoveredSign(sign.sign_number)}
-                onMouseLeave={() => setHoveredSign(null)}
-                title={sign.sign_number}
-              >
-                {showLabels && (
-                  <div className="absolute -top-5 left-0 bg-green-600 text-white text-xs px-1 rounded whitespace-nowrap">
-                    {sign.sign_number}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+        {/* Floor Plan with Pan/Zoom */}
+        <div className="bg-white rounded-lg shadow-md p-6" style={{ height: '80vh' }}>
+          <PanZoomViewer
+            imageSrc="/plans/000_FTY02 SLPs_REVISED PER RFI 159 & DRB02_04142025 13_page_1.png"
+            imageWidth={1512}
+            imageHeight={1080}
+            onTransformChange={setViewTransform}
+          >
+            {/* Render hotspots inside the viewer */}
+            {visibleSigns.map((sign) => {
+              // Calculate minimum size based on zoom level
+              const minSize = Math.max(44 / viewTransform.scale, parseFloat(getAdjustedPosition(sign).width.slice(0, -1)));
+              const minHeight = Math.max(44 / viewTransform.scale, parseFloat(getAdjustedPosition(sign).height.slice(0, -1)));
+              
+              return (
+                <div
+                  key={sign.sign_number}
+                  className={`absolute border-2 transition-all cursor-pointer ${
+                    selectedSign?.sign_number === sign.sign_number
+                      ? 'border-red-500 bg-red-500/30 z-20'
+                      : hoveredSign === sign.sign_number
+                      ? 'border-blue-500 bg-blue-500/30 z-10'
+                      : 'border-green-500 bg-green-500/20'
+                  } hover:bg-green-500/40`}
+                  style={{
+                    ...getAdjustedPosition(sign),
+                    minWidth: `${minSize}px`,
+                    minHeight: `${minHeight}px`,
+                  }}
+                  onClick={() => handleSignClick(sign)}
+                  onMouseEnter={() => setHoveredSign(sign.sign_number)}
+                  onMouseLeave={() => setHoveredSign(null)}
+                  title={sign.sign_number}
+                >
+                  {shouldShowLabels && (
+                    <div 
+                      className="absolute bg-green-600 text-white px-1 rounded whitespace-nowrap"
+                      style={{
+                        top: '-20px',
+                        left: '0',
+                        fontSize: `${Math.max(10 / viewTransform.scale, 8)}px`,
+                      }}
+                    >
+                      {sign.sign_number}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </PanZoomViewer>
 
           {/* Hover Info */}
           {hoveredSign && (
-            <div className="mt-4 p-3 bg-blue-50 rounded">
+            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 p-3 bg-blue-50 rounded shadow-lg z-40">
               Hovering: <strong>{hoveredSign}</strong>
             </div>
           )}
@@ -432,6 +481,10 @@ export default function EmbeddedTextExtraction() {
                     H: {selectedSign.text_bbox.height.toFixed(1)}
                   </div>
                 </div>
+                <div>
+                  <span className="font-semibold">Current Zoom:</span>
+                  <span className="ml-2">{Math.round(viewTransform.scale * 100)}%</span>
+                </div>
               </div>
               <button
                 onClick={() => setShowModal(false)}
@@ -448,6 +501,11 @@ export default function EmbeddedTextExtraction() {
           <div className="bg-white rounded-lg shadow-md p-6 mt-6">
             <h2 className="text-xl font-semibold mb-4">
               Extracted Signs ({filteredSigns.length} of {results.total_signs_detected})
+              {viewTransform.scale < 0.3 && (
+                <span className="text-sm text-orange-600 ml-2">
+                  (Hotspots hidden when zoomed out below 30%)
+                </span>
+              )}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 max-h-96 overflow-y-auto">
               {filteredSigns.map((sign) => (
