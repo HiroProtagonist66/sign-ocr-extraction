@@ -18,6 +18,13 @@ React/Next.js web interface for visualizing and verifying extracted sign data. P
 - **zoom/**: Advanced zoom testing interface
 - **demo/**: Public demonstration interface
 
+### Validation Interface (`/validation/`)
+- **page.tsx**: Three-panel professional validation interface
+- **layout.tsx**: Metadata and SEO for validation pages
+- **Features**: Multi-select, bulk operations, export to JSON/SQL/CSV
+- **Sites**: FTY02 (2 PDFs), ATL06 (57 pages with 4,314 signs)
+- **Last Updated**: August 31, 2025
+
 ## Component Patterns
 
 ### PanZoomViewer Component

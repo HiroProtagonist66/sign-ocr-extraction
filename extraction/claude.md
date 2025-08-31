@@ -9,6 +9,7 @@ Python-based extraction pipeline for detecting and extracting sign numbers from 
 - **pdf_text_extraction.py**: Primary extraction method using PyMuPDF to extract embedded text directly from PDFs. Achieves 98% accuracy when text is embedded.
 - **color_based_extraction.py**: Fallback method using OpenCV HSV color detection to find sign boxes when embedded text fails.
 - **extract_multiple_pdfs.py**: Batch processing coordinator that runs extraction on multiple PDFs and combines results.
+- **extract_atl06.py**: ATL06-specific extractor for 57-page site (4,314 signs), uses embedded text only.
 
 ### Utilities & Debugging
 - **tune_colors.py**: Interactive HSV color range tuner with trackbars for calibrating detection ranges.
@@ -28,11 +29,14 @@ Python-based extraction pipeline for detecting and extracting sign numbers from 
 ### 1. Embedded Text Extraction (98% Accuracy)
 ```python
 # Primary method - direct text extraction from PDF
+# Pattern matches ALL 4-digit numbers (0001-9999)
+SIGN_PATTERN = re.compile(r'^(\d{4})(?:\.\d+)?$')
+
 doc = fitz.open(pdf_path)
 for page in doc:
     text_instances = page.get_text("dict")
     for block in text_instances["blocks"]:
-        if SIGN_PATTERN.match(text):
+        if SIGN_PATTERN.match(text) and text != "0000":
             signs.append(create_hotspot(text, bbox))
 ```
 

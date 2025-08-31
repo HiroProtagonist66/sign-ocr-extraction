@@ -64,6 +64,17 @@ A high-accuracy system for extracting sign locations and numbers from Microsoft 
 └──────────────────────────────────────────────────────────┘
 ```
 
+## Production Tools
+
+### Validation Interface (/validation)
+Professional three-panel interface for reviewing and correcting extracted sign data:
+- **Left Panel**: Interactive PDF viewer with transparent hotspots
+- **Center Panel**: Filterable sign list with search and bulk operations  
+- **Right Panel**: Detail editor for single or batch editing
+- **Features**: Auto-save, undo/redo, keyboard shortcuts, export to JSON/SQL/CSV
+- **Multi-site Support**: FTY02 (2 PDFs), ATL06 (57 pages)
+- **Live URL**: https://sign-ocr-extraction.vercel.app/validation
+
 ## Key Design Patterns
 
 ### 1. Hybrid Extraction Strategy
@@ -200,9 +211,10 @@ psm_configs = {
 ### Current Performance (August 31, 2025)
 - **Detection Rate**: 98% (embedded text), 84% (color boxes)
 - **Extraction Accuracy**: 98% (embedded), 0% (OCR - needs work)
-- **Processing Speed**: ~5 seconds per PDF page
+- **Processing Speed**: ~2 seconds per PDF page
 - **False Positive Rate**: <1%
-- **Supported Formats**: PDF (native), PNG (converted at 400 DPI)
+- **Supported Formats**: PDF (native), PNG (converted at 200-400 DPI)
+- **Sites Processed**: FTY02 (156 signs), ATL06 (4,314 signs across 57 pages)
 
 ### Target Metrics
 - Detection Rate: >95% across all methods
