@@ -20,30 +20,21 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # ============= CONFIGURATION =============
-# HSV color ranges for different colored sign boxes
-# Orange/brown outlines
-HSV_ORANGE_LOWER = np.array([8, 80, 80])
-HSV_ORANGE_UPPER = np.array([25, 255, 220])
+# HSV color ranges for FILLED sign boxes with text inside
+# Looking for lighter, pastel orange/peach filled boxes that contain sign numbers
+# Based on the screenshot, these are the boxes with "2001", "2002" etc.
 
-# Alternative darker browns
-HSV_BROWN_LOWER = np.array([5, 50, 50])
-HSV_BROWN_UPPER = np.array([30, 200, 200])
+# Light pastel orange/peach filled boxes (main sign boxes)
+HSV_LIGHT_ORANGE_LOWER = np.array([10, 20, 180])  # Low saturation, high value
+HSV_LIGHT_ORANGE_UPPER = np.array([25, 100, 255])  
 
-# Blue outlines (expanded range)
-HSV_BLUE_LOWER = np.array([90, 30, 30])
-HSV_BLUE_UPPER = np.array([140, 255, 255])
+# Green/lime filled boxes (also contain sign numbers)
+HSV_GREEN_LOWER = np.array([40, 20, 180])  # Low saturation, high value
+HSV_GREEN_UPPER = np.array([80, 100, 255])
 
-# Teal/cyan outlines (expanded range)
-HSV_TEAL_LOWER = np.array([150, 30, 30])
-HSV_TEAL_UPPER = np.array([200, 255, 255])
-
-# Green outlines (expanded range)
-HSV_GREEN_LOWER = np.array([35, 30, 30])
-HSV_GREEN_UPPER = np.array([85, 255, 255])
-
-# Purple/magenta outlines
-HSV_PURPLE_LOWER = np.array([140, 30, 30])
-HSV_PURPLE_UPPER = np.array([170, 255, 255])
+# Alternative light yellow/cream boxes
+HSV_YELLOW_LOWER = np.array([20, 20, 180])
+HSV_YELLOW_UPPER = np.array([35, 100, 255])
 
 # Standard sign box height for stacked detection (in pixels at 400 DPI)
 STANDARD_SIGN_HEIGHT_PIXELS = 40
@@ -125,26 +116,23 @@ class ColorBasedSignExtractor:
             raise
             
     def detect_color_boxes(self, image: np.ndarray) -> List[Tuple[int, int, int, int]]:
-        """Detect colored boxes in the image (orange, brown, blue, teal, green)"""
+        """Detect FILLED boxes with sign numbers (orange, green, yellow)"""
         height, width = image.shape[:2]
         
         # Convert BGR to HSV
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
         
-        # Create masks for all color ranges
-        mask_orange = cv2.inRange(hsv, HSV_ORANGE_LOWER, HSV_ORANGE_UPPER)
-        mask_brown = cv2.inRange(hsv, HSV_BROWN_LOWER, HSV_BROWN_UPPER)
-        mask_blue = cv2.inRange(hsv, HSV_BLUE_LOWER, HSV_BLUE_UPPER)
-        mask_teal = cv2.inRange(hsv, HSV_TEAL_LOWER, HSV_TEAL_UPPER)
+        # Create masks for different colored FILLED boxes
+        mask_light_orange = cv2.inRange(hsv, HSV_LIGHT_ORANGE_LOWER, HSV_LIGHT_ORANGE_UPPER)
         mask_green = cv2.inRange(hsv, HSV_GREEN_LOWER, HSV_GREEN_UPPER)
-        mask_purple = cv2.inRange(hsv, HSV_PURPLE_LOWER, HSV_PURPLE_UPPER)
+        mask_yellow = cv2.inRange(hsv, HSV_YELLOW_LOWER, HSV_YELLOW_UPPER)
         
-        # Combine all masks
-        mask = mask_orange | mask_brown | mask_blue | mask_teal | mask_green | mask_purple
+        # Combine masks
+        mask = mask_light_orange | mask_green | mask_yellow
         
         if self.debug:
-            logger.info(f"Color mask stats - Orange: {np.sum(mask_orange > 0)}, Blue: {np.sum(mask_blue > 0)}, "
-                       f"Teal: {np.sum(mask_teal > 0)}, Green: {np.sum(mask_green > 0)}, Purple: {np.sum(mask_purple > 0)}")
+            logger.info(f"Color mask stats - Light Orange: {np.sum(mask_light_orange > 0)}, "
+                       f"Green: {np.sum(mask_green > 0)}, Yellow: {np.sum(mask_yellow > 0)}")
         
         # Apply morphological operations to clean up the mask
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, MORPH_KERNEL_SIZE)
@@ -207,20 +195,18 @@ class ColorBasedSignExtractor:
         return [box]
         
     def extract_sign_number(self, image: np.ndarray, bbox: Tuple[int, int, int, int]) -> Optional[Dict]:
-        """Extract sign number from around a detected box using OCR"""
+        """Extract sign number from INSIDE a detected filled box using OCR"""
         x, y, w, h = bbox
         
-        # Look for text ABOVE the box (sign numbers are typically above the boxes)
-        # Expand region significantly upward to capture text
-        vertical_padding = 50  # Look 50 pixels above the box
-        horizontal_padding = 20  # Some horizontal padding
+        # Extract text from INSIDE the box with small padding
+        padding = 5  # Small padding to avoid edge artifacts
         
-        x_start = max(0, x - horizontal_padding)
-        y_start = max(0, y - vertical_padding)  # Extend upward
-        x_end = min(image.shape[1], x + w + horizontal_padding)
-        y_end = min(image.shape[0], y + h + 10)  # Include box top edge
+        x_start = max(0, x + padding)
+        y_start = max(0, y + padding)
+        x_end = min(image.shape[1], x + w - padding)
+        y_end = min(image.shape[0], y + h - padding)
         
-        # Crop the region ABOVE the box
+        # Crop the region INSIDE the box
         roi = image[y_start:y_end, x_start:x_end]
         
         # Scale up the image for better OCR (2x size)
@@ -230,26 +216,29 @@ class ColorBasedSignExtractor:
         # Convert to grayscale
         gray = cv2.cvtColor(scaled_roi, cv2.COLOR_BGR2GRAY)
         
-        # Try multiple preprocessing approaches but more efficiently
+        # Try multiple preprocessing approaches for filled boxes with white text
         results = []
         
-        # Approach 1: OTSU threshold (usually works well)
-        _, thresh1 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        # Since we have filled boxes with WHITE text, we need to extract the white text
+        # Approach 1: Simple threshold to get white text
+        _, thresh1 = cv2.threshold(gray, 180, 255, cv2.THRESH_BINARY)
         
-        # Approach 2: Enhanced contrast + threshold
-        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
-        enhanced = clahe.apply(gray)
-        _, thresh2 = cv2.threshold(enhanced, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        # Approach 2: OTSU threshold
+        _, thresh2 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        
+        # Approach 3: Inverse threshold for dark text on light background
+        _, thresh3 = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV)
         
         # Only test the most promising combinations
         preprocessed_images = [
-            (thresh1, "otsu"),
-            (cv2.bitwise_not(thresh1), "otsu_inv"),
-            (thresh2, "clahe"),
-            (cv2.bitwise_not(thresh2), "clahe_inv")
+            (thresh1, "white_text"),
+            (cv2.bitwise_not(thresh1), "white_text_inv"),
+            (thresh2, "otsu"),
+            (cv2.bitwise_not(thresh2), "otsu_inv"),
+            (thresh3, "dark_text")
         ]
         
-        psm_modes = [8, 11]  # Focus on single word and sparse text modes
+        psm_modes = [8, 7, 11]  # Single word, single line, sparse text
         
         for img, preprocess_name in preprocessed_images:
             for psm in psm_modes:
