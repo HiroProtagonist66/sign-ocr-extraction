@@ -55,18 +55,34 @@ export default function Home() {
           </Link>
 
           <Link href="/plans/color-extraction" className="group">
-            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 border-2 border-green-500">
+            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6">
               <div className="flex items-center justify-between mb-2">
                 <h2 className="text-xl font-semibold group-hover:text-blue-600">
                   Color Extraction
                 </h2>
-                <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">NEW</span>
               </div>
               <p className="text-gray-600">
-                Color-based detection with 99 boxes found
+                Color-based detection with 30 filled boxes
               </p>
-              <div className="mt-2 text-sm text-green-600 font-medium">
+              <div className="mt-2 text-sm text-orange-600 font-medium">
                 ✓ Detection Working • OCR In Progress
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/plans/embedded-text" className="group">
+            <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 border-2 border-emerald-500">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-xl font-semibold group-hover:text-blue-600">
+                  PDF Embedded Text
+                </h2>
+                <span className="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-bold">BEST</span>
+              </div>
+              <p className="text-gray-600">
+                Direct PDF text extraction - 100% accurate
+              </p>
+              <div className="mt-2 text-sm text-emerald-600 font-medium">
+                ✓ 156 Signs Extracted • No OCR Needed
               </div>
             </div>
           </Link>
