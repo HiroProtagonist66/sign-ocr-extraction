@@ -56,8 +56,8 @@ export default function PanZoomViewer({
   signStatuses,
   viewMode = 'validation'
 }: PanZoomViewerProps) {
-  const MIN_ZOOM = 0.5;
   const MAX_ZOOM = 10;
+  const [minScale, setMinScale] = useState(0.5);
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
@@ -107,12 +107,12 @@ export default function PanZoomViewer({
     
     const delta = e.deltaY * -0.001;
     const unclamped = transform.scale * (1 + delta);
-    const newScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, unclamped));
+    const newScale = Math.max(minScale, Math.min(MAX_ZOOM, unclamped));
     console.log('WHEEL ZOOM:', { 
       currentScale: transform.scale,
       delta,
       newScale,
-      MIN_ZOOM
+      MIN_ZOOM: minScale
     });
     
     if (!containerRef.current) return;
@@ -243,12 +243,12 @@ export default function PanZoomViewer({
 
       // New scale (clamped)
       const unclamped = initialTouchZoom * (currentDistance / touchStartDistance);
-      const newScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, unclamped));
+      const newScale = Math.max(minScale, Math.min(MAX_ZOOM, unclamped));
       console.log('PINCH ZOOM:', { 
         currentScale: transform.scale,
         newScale,
-        MIN_ZOOM,
-        clamped: Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale))
+        MIN_ZOOM: minScale,
+        clamped: Math.max(minScale, Math.min(MAX_ZOOM, newScale))
       });
 
       // Pinch center in container coordinates
@@ -328,7 +328,7 @@ export default function PanZoomViewer({
   };
 
   const zoomIn = () => setTransform(t => ({ ...t, scale: Math.min(MAX_ZOOM, t.scale * 1.2) }));
-  const zoomOut = () => setTransform(t => ({ ...t, scale: Math.max(MIN_ZOOM, t.scale / 1.2) }));
+  const zoomOut = () => setTransform(t => ({ ...t, scale: Math.max(minScale, t.scale / 1.2) }));
   const resetZoom = () => setTransform({ x: 0, y: 0, scale: 1 });
   
   const fitToScreen = () => {
@@ -346,9 +346,41 @@ export default function PanZoomViewer({
     setTransform({ x: 0, y: 0, scale });
   };
 
+  // Dynamically compute minimum scale based on fit-to-screen
   useEffect(() => {
-    console.log('ZOOM CONSTANTS:', { MIN_ZOOM, MAX_ZOOM });
-  }, []);
+    if (!containerRef.current || imageSize.width === 0 || imageSize.height === 0) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const scaleX = rect.width / imageSize.width;
+    const scaleY = rect.height / imageSize.height;
+    const fit = Math.min(scaleX, scaleY) * 0.9; // match Fit padding
+    const computed = Math.min(fit, 1);
+    setMinScale(computed);
+    console.log('COMPUTED MIN SCALE:', {
+      container: { width: rect.width, height: rect.height },
+      imageSize,
+      fitScale: fit,
+      minScale: computed,
+    });
+  }, [imageSize.width, imageSize.height]);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (!containerRef.current || imageSize.width === 0 || imageSize.height === 0) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const scaleX = rect.width / imageSize.width;
+      const scaleY = rect.height / imageSize.height;
+      const fit = Math.min(scaleX, scaleY) * 0.9;
+      const computed = Math.min(fit, 1);
+      setMinScale(computed);
+      console.log('RESIZE -> MIN SCALE:', { fitScale: fit, minScale: computed });
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [imageSize.width, imageSize.height]);
+
+  useEffect(() => {
+    console.log('ZOOM CONSTANTS:', { MIN_ZOOM: minScale, MAX_ZOOM });
+  }, [minScale]);
 
   // Show error state if image fails to load
   if (imageError) {

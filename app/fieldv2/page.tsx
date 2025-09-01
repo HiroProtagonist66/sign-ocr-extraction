@@ -183,9 +183,9 @@ export default function FieldInterface() {
 
   return (
     <div className="h-screen flex flex-col bg-gray-50">
-      {/* VERSION BANNER - COMPLETE TOUCH HANDLERS v2.3 */}
+      {/* VERSION BANNER - DYNAMIC MIN_ZOOM v2.4 */}
       <div className="bg-green-600 text-white text-center p-2 font-bold">
-        ✋ FIELD V2.3 - TOUCH HANDLERS - Complete pan & zoom - Fingers control floor plan - {new Date().toISOString()}
+        📐 FIELD V2.4 - DYNAMIC MIN_ZOOM - Fits to screen or 100% (smaller) - {new Date().toISOString()}
       </div>
       
       {/* Header */}
