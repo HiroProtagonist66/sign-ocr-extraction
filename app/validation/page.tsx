@@ -748,7 +748,11 @@ export default function ValidationPage() {
                 imagePath={validationData.pages[currentPage].image_path || pdfImagePaths[selectedPdf]}
                 signs={showHotspots ? validationData.pages[currentPage].signs : []}
                 selectedSigns={selectedSigns}
-                onSignClick={(signNumber) => {
+                onSignClick={(signNumberOrObj) => {
+                  const signNumber = typeof signNumberOrObj === 'string' 
+                    ? signNumberOrObj 
+                    : signNumberOrObj.sign_number;
+                  
                   if (selectedSigns.has(signNumber)) {
                     const newSelected = new Set(selectedSigns);
                     newSelected.delete(signNumber);

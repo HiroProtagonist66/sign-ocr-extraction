@@ -25,13 +25,15 @@ interface SignData {
     width_percentage: number;
     height_percentage: number;
   };
-  text_bbox?: {
+  text_bbox: {
     x: number;
     y: number;
     width: number;
     height: number;
   };
-  confidence?: string;
+  confidence: string;
+  status?: 'verified' | 'pending' | 'error';
+  notes?: string;
 }
 
 export default function FieldInterface() {
@@ -128,8 +130,13 @@ export default function FieldInterface() {
     });
   };
 
-  const handleSignClick = (sign: SignData) => {
-    setSelectedSign(sign);
+  const handleSignClick = (signOrNumber: string | SignData) => {
+    if (typeof signOrNumber === 'string') {
+      const sign = signs.find(s => s.sign_number === signOrNumber);
+      if (sign) setSelectedSign(sign);
+    } else {
+      setSelectedSign(signOrNumber);
+    }
   };
 
   const markSignStatus = (signNumber: string, status: 'installed' | 'missing' | 'damaged') => {

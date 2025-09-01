@@ -25,13 +25,15 @@ interface SignData {
     width_percentage: number;
     height_percentage: number;
   };
-  text_bbox?: {
+  text_bbox: {
     x: number;
     y: number;
     width: number;
     height: number;
   };
-  confidence?: string;
+  confidence: string;
+  status?: 'verified' | 'pending' | 'error';
+  notes?: string;
 }
 
 interface StatusChange {
@@ -67,7 +69,7 @@ export default function FieldProInterface() {
   const touchStartTime = useRef(0);
   const touchStartPos = useRef({ x: 0, y: 0 });
   const lastTouchDistance = useRef(0);
-  const twoFingerTapTimeout = useRef<NodeJS.Timeout>();
+  const twoFingerTapTimeout = useRef<NodeJS.Timeout | undefined>(undefined);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Monitor online status
@@ -378,7 +380,14 @@ export default function FieldProInterface() {
               imageWidth={3300}
               imageHeight={2550}
               signs={getFilteredSigns()}
-              onSignClick={handleSignClick}
+              onSignClick={(signOrNumber) => {
+                if (typeof signOrNumber === 'string') {
+                  const sign = signs.find(s => s.sign_number === signOrNumber);
+                  if (sign) handleSignClick(sign);
+                } else {
+                  handleSignClick(signOrNumber as SignData);
+                }
+              }}
               selectedSigns={selectedSign ? new Set([selectedSign.sign_number]) : new Set()}
               signStatuses={signStatuses}
               viewMode="field"
