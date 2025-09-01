@@ -33,6 +33,15 @@ export default function PanZoomViewer({
   const imageRef = useRef<HTMLDivElement>(null);
   const minimapRef = useRef<HTMLCanvasElement>(null);
   
+  // DEBUG INFO - Version 2.0 with MIN_ZOOM = 1
+  useEffect(() => {
+    console.log('🔍 PanZoomViewer Version: 2.0');
+    console.log('MIN_ZOOM:', MIN_ZOOM, '(should be 1)');
+    console.log('MAX_ZOOM:', MAX_ZOOM, '(should be 5)');
+    console.log('ZOOM_LEVELS:', ZOOM_LEVELS);
+    console.log('Touch handling enabled');
+  }, []);
+  
   const [transform, setTransform] = useState<ViewTransform>({ x: 0, y: 0, scale: 1 });
   const [isPanning, setIsPanning] = useState(false);
   const [panStart, setPanStart] = useState({ x: 0, y: 0 });
@@ -292,6 +301,10 @@ export default function PanZoomViewer({
 
   return (
     <div className="relative w-full h-full">
+      {/* DEBUG INDICATOR - Version 2.0 */}
+      <div className="absolute top-0 left-0 bg-purple-600 text-white text-xs p-1 z-50 font-mono">
+        v2.0 | Zoom: {transform.scale.toFixed(2)}x | Min: {MIN_ZOOM} | Max: {MAX_ZOOM}
+      </div>
       {/* Mobile-friendly Zoom Controls */}
       {isMobile ? (
         <div className="absolute bottom-20 right-4 z-40 flex flex-col gap-2">
