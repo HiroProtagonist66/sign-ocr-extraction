@@ -139,6 +139,23 @@ export default function Home() {
               </div>
             </Link>
 
+            <Link href="/fieldv2" className="group">
+              <div className="bg-red-600 text-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 hover:bg-red-700 border-4 border-yellow-400">
+                <div className="flex items-center justify-between mb-2">
+                  <h2 className="text-xl font-semibold flex items-center gap-2">
+                    🚀 Field V2 (Debug)
+                  </h2>
+                  <span className="text-xs bg-yellow-400 text-red-600 px-2 py-1 rounded font-bold animate-pulse">DEBUG</span>
+                </div>
+                <p className="text-red-100">
+                  NEW ROUTE - Bypasses browser cache - MIN_ZOOM=1 verified
+                </p>
+                <div className="mt-2 text-sm text-yellow-200 font-medium">
+                  • Fresh code load • Debug indicators • Version 2.0
+                </div>
+              </div>
+            </Link>
+
             <Link href="/field-pro" className="group">
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 hover:from-purple-700 hover:to-pink-700">
                 <div className="flex items-center justify-between mb-2">
