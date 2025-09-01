@@ -40,6 +40,15 @@ export default function ManagerClient() {
   const [signTypeGroups, setSignTypeGroups] = useState<SignTypeGroup | null>(null);
   const [isProcessingPDF, setIsProcessingPDF] = useState(false);
   const [selectedSignType, setSelectedSignType] = useState<string>('all');
+  
+  // Configure PDF.js worker on component mount
+  useEffect(() => {
+    import('pdfjs-dist').then((pdfjsLib) => {
+      // Use a specific version that's known to work
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.269/pdf.worker.min.js';
+    });
+  }, []);
 
   // Extract sign types from PDF pages
   const extractSignTypesFromPages = async (pdfFile: File): Promise<PageSignType[]> => {
@@ -47,8 +56,9 @@ export default function ManagerClient() {
       // Dynamically import PDF.js only on client side
       const pdfjsLib = await import('pdfjs-dist');
       
-      // Configure worker
-      pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+      // Configure worker with fixed version URL
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.269/pdf.worker.min.js';
       
       const arrayBuffer = await pdfFile.arrayBuffer();
       const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
