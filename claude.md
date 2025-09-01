@@ -72,8 +72,26 @@ Professional three-panel interface for reviewing and correcting extracted sign d
 - **Center Panel**: Filterable sign list with search and bulk operations  
 - **Right Panel**: Detail editor for single or batch editing
 - **Features**: Auto-save, undo/redo, keyboard shortcuts, export to JSON/SQL/CSV
-- **Multi-site Support**: FTY02 (2 PDFs), ATL06 (57 pages)
+- **Multi-site Support**: FTY02 (2 PDFs), ATL06 (57 pages with 4,314 signs)
 - **Live URL**: https://sign-ocr-extraction.vercel.app/validation
+
+### Field Interface (/field) - *Added September 1, 2025*
+Mobile-first interface for installers to mark sign installation status in the field:
+- **Touch Optimized**: Large buttons, thumb-reachable controls
+- **Status Tracking**: Mark signs as installed/missing/damaged
+- **Offline Support**: Works without internet, syncs when reconnected
+- **Progress Tracking**: Real-time completion percentage per page
+- **Multi-page Navigation**: Support for ATL06's 57 pages
+- **Live URL**: https://sign-ocr-extraction.vercel.app/field
+
+### Field Interface Pro (/field-pro) - *Added September 1, 2025*
+Procreate-inspired premium tablet interface with advanced gestures:
+- **Touch Gestures**: Two-finger undo, pinch zoom, edge swipe navigation
+- **Spring Animations**: Floating action button with physics-based animations
+- **Page Scrubber**: Thumbnail navigation strip like Procreate gallery
+- **Dark Theme**: Professional dark UI with glass morphism
+- **History Tracking**: Full undo/redo stack with gesture controls
+- **Live URL**: https://sign-ocr-extraction.vercel.app/field-pro
 
 ## Key Design Patterns
 
@@ -208,13 +226,14 @@ psm_configs = {
 
 ## Performance Metrics
 
-### Current Performance (August 31, 2025)
+### Current Performance (September 1, 2025)
 - **Detection Rate**: 98% (embedded text), 84% (color boxes)
 - **Extraction Accuracy**: 98% (embedded), 0% (OCR - needs work)
 - **Processing Speed**: ~2 seconds per PDF page
 - **False Positive Rate**: <1%
 - **Supported Formats**: PDF (native), PNG (converted at 200-400 DPI)
-- **Sites Processed**: FTY02 (156 signs), ATL06 (4,314 signs across 57 pages)
+- **Sites Processed**: FTY02 (234 signs across 2 PDFs), ATL06 (4,314 signs across 57 pages)
+- **Field Interface**: Mobile-ready with offline support and touch gestures
 
 ### Target Metrics
 - Detection Rate: >95% across all methods
@@ -436,5 +455,5 @@ Track important changes in `/chat_summaries/`:
 - **Status**: Active Development (98% accuracy achieved)
 
 ---
-*Last Updated: August 31, 2025*
-*Next Milestone: Achieve 50% OCR extraction rate*
+*Last Updated: September 1, 2025*
+*Next Milestone: Supabase integration for field data sync*

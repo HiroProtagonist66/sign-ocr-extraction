@@ -17,9 +17,9 @@ interface PanZoomViewerProps {
   onTransformChange?: (transform: ViewTransform) => void;
 }
 
-const ZOOM_LEVELS = [0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 6, 8];
-const MIN_ZOOM = 0.1;
-const MAX_ZOOM = 10;
+const ZOOM_LEVELS = [1, 1.5, 2, 3, 4, 5];
+const MIN_ZOOM = 1;  // Can't zoom out past 100% (viewport size)
+const MAX_ZOOM = 5;  // Maximum 500% zoom
 const ZOOM_STEP = 0.1;
 
 export default function PanZoomViewer({
@@ -122,21 +122,19 @@ export default function PanZoomViewer({
     setTransform({ x: 0, y: 0, scale });
   };
 
-  // Mouse wheel zoom
+  // Mouse wheel zoom - simple and direct
   const handleWheel = useCallback((e: WheelEvent<HTMLDivElement>) => {
     e.preventDefault();
     
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
+    // Simple zoom step: scroll up = zoom in, scroll down = zoom out
+    const delta = e.deltaY > 0 ? -0.1 : 0.1;
+    const newScale = transform.scale + delta;
     
-    const delta = e.deltaY * -0.001;
-    const newScale = transform.scale * (1 + delta);
+    // Clamp to limits and apply
+    const clampedScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale));
     
     // Zoom to mouse position
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    
-    zoomTo(newScale, e.clientX, e.clientY);
+    zoomTo(clampedScale, e.clientX, e.clientY);
   }, [transform, zoomTo]);
 
   // Pan handling
@@ -204,7 +202,7 @@ export default function PanZoomViewer({
         y: touch.clientY - panStart.y
       });
     } else if (e.touches.length === 2) {
-      // Pinch zoom
+      // Simple pinch zoom - direct mapping, no momentum
       const distance = Math.hypot(
         e.touches[0].clientX - e.touches[1].clientX,
         e.touches[0].clientY - e.touches[1].clientY
@@ -214,11 +212,14 @@ export default function PanZoomViewer({
         const scale = distance / touchStartDistance;
         const newScale = transform.scale * scale;
         
+        // Clamp to limits
+        const clampedScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale));
+        
         // Zoom to center of pinch
         const centerX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
         const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
         
-        zoomTo(newScale, centerX, centerY);
+        zoomTo(clampedScale, centerX, centerY);
         setTouchStartDistance(distance);
       }
     }
@@ -276,6 +277,17 @@ export default function PanZoomViewer({
 
   return (
     <div className="relative w-full h-full">
+      {/* Fit to Screen Button - Top Right Corner */}
+      <button
+        onClick={() => {
+          setTransform({ x: 0, y: 0, scale: 1 });
+        }}
+        className="absolute top-4 right-4 z-40 bg-white px-4 py-2 rounded-lg shadow-lg hover:bg-gray-50 transition font-medium text-sm"
+        title="Reset view to fit screen"
+      >
+        Fit to Screen
+      </button>
+
       {/* Zoom Controls */}
       <div className="absolute top-4 left-4 z-30 bg-white rounded-lg shadow-lg p-2 space-y-2">
         <button
@@ -333,8 +345,8 @@ export default function PanZoomViewer({
         </button>
       </div>
 
-      {/* View Options */}
-      <div className="absolute top-4 right-4 z-30 bg-white rounded-lg shadow-lg p-2 space-y-2">
+      {/* View Options - Moved down to avoid overlap with Fit button */}
+      <div className="absolute top-20 right-4 z-30 bg-white rounded-lg shadow-lg p-2 space-y-2">
         <label className="flex items-center gap-2 text-sm">
           <input
             type="checkbox"
