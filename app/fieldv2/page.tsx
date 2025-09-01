@@ -183,9 +183,9 @@ export default function FieldInterface() {
 
   return (
     <div className="h-screen flex flex-col bg-gray-50">
-      {/* VERSION BANNER - REMOVE AFTER TESTING */}
-      <div className="bg-red-600 text-white text-center p-2 font-bold animate-pulse">
-        🚀 FIELD V2 - NEW ROUTE - MIN_ZOOM=1 - Cache Bypass - {new Date().toISOString()}
+      {/* VERSION BANNER - MOBILE FIX v2.1 */}
+      <div className="bg-green-600 text-white text-center p-2 font-bold">
+        ✅ FIELD V2.1 - MOBILE FIX - Touch-action: pan-x pan-y - MIN_ZOOM=1 ENFORCED - {new Date().toISOString()}
       </div>
       
       {/* Header */}

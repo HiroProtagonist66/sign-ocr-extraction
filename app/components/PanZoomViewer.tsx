@@ -33,14 +33,14 @@ export default function PanZoomViewer({
   const imageRef = useRef<HTMLDivElement>(null);
   const minimapRef = useRef<HTMLCanvasElement>(null);
   
-  // DEBUG INFO - Version 2.0 with MIN_ZOOM = 1
+  // DEBUG INFO - Version 2.1 MOBILE FIX
   useEffect(() => {
-    console.log('🔍 PanZoomViewer Version: 2.0');
-    console.log('MIN_ZOOM:', MIN_ZOOM, '(should be 1)');
-    console.log('MAX_ZOOM:', MAX_ZOOM, '(should be 5)');
-    console.log('ZOOM_LEVELS:', ZOOM_LEVELS);
-    console.log('Touch handling enabled');
-  }, []);
+    console.log('🔍 PanZoomViewer Version: 2.1-MOBILE-FIX');
+    console.log('MIN_ZOOM:', MIN_ZOOM, '(enforced at 1)');
+    console.log('MAX_ZOOM:', MAX_ZOOM, '(enforced at 5)');
+    console.log('Touch-action: pan-x pan-y (prevents browser zoom)');
+    console.log('Mobile detection:', isMobile ? 'YES' : 'NO');
+  }, [isMobile]);
   
   const [transform, setTransform] = useState<ViewTransform>({ x: 0, y: 0, scale: 1 });
   const [isPanning, setIsPanning] = useState(false);
@@ -212,10 +212,9 @@ export default function PanZoomViewer({
   };
 
   const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
-    // Only prevent default for multi-touch (pinch)
-    if (e.touches.length > 1) {
-      e.preventDefault();
-    }
+    // Always prevent default to override browser zoom
+    e.preventDefault();
+    e.stopPropagation();
     
     if (e.touches.length === 1 && isTouchPanning) {
       // Pan with single touch
@@ -236,8 +235,11 @@ export default function PanZoomViewer({
         const scale = distance / touchStartDistance;
         const newScale = transform.scale * scale;
         
-        // Clamp to limits
+        // Strongly enforce zoom limits
         const clampedScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale));
+        
+        // Double-check constraint
+        if (clampedScale < MIN_ZOOM) return;
         
         // Zoom to center of pinch
         const centerX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
@@ -301,37 +303,51 @@ export default function PanZoomViewer({
 
   return (
     <div className="relative w-full h-full">
-      {/* DEBUG INDICATOR - Version 2.0 */}
+      {/* DEBUG INDICATOR - Version 2.1 MOBILE FIX */}
       <div className="absolute top-0 left-0 bg-purple-600 text-white text-xs p-1 z-50 font-mono">
-        v2.0 | Zoom: {transform.scale.toFixed(2)}x | Min: {MIN_ZOOM} | Max: {MAX_ZOOM}
+        v2.1-MOBILE-FIX | Zoom: {transform.scale.toFixed(2)}x | Min: {MIN_ZOOM} | Max: {MAX_ZOOM} | {isMobile ? '📱' : '💻'}
       </div>
-      {/* Mobile-friendly Zoom Controls */}
+      {/* Mobile-friendly Zoom Controls with Reset Button */}
       {isMobile ? (
-        <div className="absolute bottom-20 right-4 z-40 flex flex-col gap-2">
+        <>
+          {/* Prominent Reset View Button at Top */}
           <button
-            onClick={zoomIn}
-            className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-2xl font-bold hover:bg-gray-50 active:bg-gray-100"
-            aria-label="Zoom in"
+            onClick={() => {
+              setTransform({ x: 0, y: 0, scale: 1 });
+              console.log('Reset View: zoom=1, pan=(0,0)');
+            }}
+            className="absolute top-16 right-4 z-40 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg font-semibold active:bg-blue-700"
           >
-            +
+            Reset View
           </button>
-          <button
-            onClick={() => setTransform({ x: 0, y: 0, scale: 1 })}
-            className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 active:bg-gray-100"
-            aria-label="Reset zoom"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-            </svg>
-          </button>
-          <button
-            onClick={zoomOut}
-            className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-2xl font-bold hover:bg-gray-50 active:bg-gray-100"
-            aria-label="Zoom out"
-          >
-            −
-          </button>
-        </div>
+          
+          {/* Zoom Controls at Bottom */}
+          <div className="absolute bottom-20 right-4 z-40 flex flex-col gap-2">
+            <button
+              onClick={zoomIn}
+              className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-2xl font-bold hover:bg-gray-50 active:bg-gray-100"
+              aria-label="Zoom in"
+            >
+              +
+            </button>
+            <button
+              onClick={() => setTransform({ x: 0, y: 0, scale: 1 })}
+              className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 active:bg-gray-100"
+              aria-label="Reset zoom"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+              </svg>
+            </button>
+            <button
+              onClick={zoomOut}
+              className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-2xl font-bold hover:bg-gray-50 active:bg-gray-100"
+              aria-label="Zoom out"
+            >
+              −
+            </button>
+          </div>
+        </>
       ) : (
         <button
           onClick={() => {
@@ -452,10 +468,13 @@ export default function PanZoomViewer({
         className="relative w-full h-full overflow-hidden bg-gray-200"
         style={{ 
           cursor: isPanning ? 'grabbing' : 'grab',
-          // Allow native scrolling and pinch on mobile
-          touchAction: isMobile ? 'manipulation' : 'none',
+          // Prevent browser zoom but allow panning
+          touchAction: 'pan-x pan-y',
           WebkitUserSelect: 'none',
-          userSelect: 'none'
+          userSelect: 'none',
+          // Prevent iOS elastic bounce
+          overscrollBehavior: 'none',
+          WebkitOverflowScrolling: 'touch'
         }}
         onWheel={handleWheel}
         onMouseDown={!isMobile ? handleMouseDown : undefined}
