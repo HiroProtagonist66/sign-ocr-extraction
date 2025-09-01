@@ -43,11 +43,23 @@ export default function PanZoomViewer({
   // Touch handling
   const [touchStartDistance, setTouchStartDistance] = useState(0);
   const [isTouchPanning, setIsTouchPanning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Update parent when transform changes
   useEffect(() => {
     onTransformChange?.(transform);
   }, [transform, onTransformChange]);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || 
+                  ('ontouchstart' in window));
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Draw minimap
   useEffect(() => {
@@ -191,10 +203,13 @@ export default function PanZoomViewer({
   };
 
   const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
-    e.preventDefault();
+    // Only prevent default for multi-touch (pinch)
+    if (e.touches.length > 1) {
+      e.preventDefault();
+    }
     
     if (e.touches.length === 1 && isTouchPanning) {
-      // Pan
+      // Pan with single touch
       const touch = e.touches[0];
       setTransform({
         ...transform,
@@ -202,7 +217,7 @@ export default function PanZoomViewer({
         y: touch.clientY - panStart.y
       });
     } else if (e.touches.length === 2) {
-      // Simple pinch zoom - direct mapping, no momentum
+      // Pinch zoom
       const distance = Math.hypot(
         e.touches[0].clientX - e.touches[1].clientX,
         e.touches[0].clientY - e.touches[1].clientY
@@ -277,18 +292,47 @@ export default function PanZoomViewer({
 
   return (
     <div className="relative w-full h-full">
-      {/* Fit to Screen Button - Top Right Corner */}
-      <button
-        onClick={() => {
-          setTransform({ x: 0, y: 0, scale: 1 });
-        }}
-        className="absolute top-4 right-4 z-40 bg-white px-4 py-2 rounded-lg shadow-lg hover:bg-gray-50 transition font-medium text-sm"
-        title="Reset view to fit screen"
-      >
-        Fit to Screen
-      </button>
+      {/* Mobile-friendly Zoom Controls */}
+      {isMobile ? (
+        <div className="absolute bottom-20 right-4 z-40 flex flex-col gap-2">
+          <button
+            onClick={zoomIn}
+            className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-2xl font-bold hover:bg-gray-50 active:bg-gray-100"
+            aria-label="Zoom in"
+          >
+            +
+          </button>
+          <button
+            onClick={() => setTransform({ x: 0, y: 0, scale: 1 })}
+            className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 active:bg-gray-100"
+            aria-label="Reset zoom"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+            </svg>
+          </button>
+          <button
+            onClick={zoomOut}
+            className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-2xl font-bold hover:bg-gray-50 active:bg-gray-100"
+            aria-label="Zoom out"
+          >
+            −
+          </button>
+        </div>
+      ) : (
+        <button
+          onClick={() => {
+            setTransform({ x: 0, y: 0, scale: 1 });
+          }}
+          className="absolute top-4 right-4 z-40 bg-white px-4 py-2 rounded-lg shadow-lg hover:bg-gray-50 transition font-medium text-sm"
+          title="Reset view to fit screen"
+        >
+          Fit to Screen
+        </button>
+      )}
 
-      {/* Zoom Controls */}
+      {/* Desktop Zoom Controls */}
+      {!isMobile && (
       <div className="absolute top-4 left-4 z-30 bg-white rounded-lg shadow-lg p-2 space-y-2">
         <button
           onClick={zoomIn}
@@ -344,6 +388,7 @@ export default function PanZoomViewer({
           100%
         </button>
       </div>
+      )}
 
       {/* View Options - Moved down to avoid overlap with Fit button */}
       <div className="absolute top-20 right-4 z-30 bg-white rounded-lg shadow-lg p-2 space-y-2">
@@ -392,13 +437,19 @@ export default function PanZoomViewer({
       <div
         ref={containerRef}
         className="relative w-full h-full overflow-hidden bg-gray-200"
-        style={{ cursor: isPanning ? 'grabbing' : 'grab' }}
+        style={{ 
+          cursor: isPanning ? 'grabbing' : 'grab',
+          // Allow native scrolling and pinch on mobile
+          touchAction: isMobile ? 'manipulation' : 'none',
+          WebkitUserSelect: 'none',
+          userSelect: 'none'
+        }}
         onWheel={handleWheel}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
-        onDoubleClick={handleDoubleClick}
+        onMouseDown={!isMobile ? handleMouseDown : undefined}
+        onMouseMove={!isMobile ? handleMouseMove : undefined}
+        onMouseUp={!isMobile ? handleMouseUp : undefined}
+        onMouseLeave={!isMobile ? handleMouseLeave : undefined}
+        onDoubleClick={!isMobile ? handleDoubleClick : undefined}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -434,6 +485,9 @@ export default function PanZoomViewer({
             transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.scale})`,
             width: imageWidth,
             height: imageHeight,
+            // Smooth transitions on mobile
+            transition: isMobile && !isTouchPanning ? 'transform 0.2s ease-out' : 'none',
+            willChange: 'transform'
           }}
         >
           <Image
@@ -449,7 +503,8 @@ export default function PanZoomViewer({
         </div>
       </div>
 
-      {/* Keyboard Shortcuts Help */}
+      {/* Keyboard Shortcuts Help - Desktop Only */}
+      {!isMobile && (
       <div className="absolute bottom-4 left-4 z-30 bg-white/90 rounded-lg shadow-lg p-2 text-xs">
         <div className="font-semibold mb-1">Shortcuts:</div>
         <div className="space-y-0.5 text-gray-600">
@@ -461,6 +516,7 @@ export default function PanZoomViewer({
           <div>Shift+Double-click: Zoom out</div>
         </div>
       </div>
+      )}
     </div>
   );
 }
