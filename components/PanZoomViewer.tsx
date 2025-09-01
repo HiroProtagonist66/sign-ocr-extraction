@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect, useCallback, MouseEvent } from 'react';
+import React, { useState, useRef, useEffect, useCallback, MouseEvent, TouchEvent } from 'react';
 import Image from 'next/image';
 
 interface SignHotspot {
@@ -66,6 +66,12 @@ export default function PanZoomViewer({
   const [panStart, setPanStart] = useState({ x: 0, y: 0 });
   const [isSelecting, setIsSelecting] = useState(false);
   const [selectionBox, setSelectionBox] = useState({ startX: 0, startY: 0, endX: 0, endY: 0 });
+  
+  // Touch handling state
+  const [isTouchPanning, setIsTouchPanning] = useState(false);
+  const [touchPanStart, setTouchPanStart] = useState({ x: 0, y: 0 });
+  const [touchStartDistance, setTouchStartDistance] = useState(0);
+  const [initialTouchZoom, setInitialTouchZoom] = useState(1);
 
   // Load image and get dimensions
   useEffect(() => {
@@ -176,6 +182,41 @@ export default function PanZoomViewer({
     setIsPanning(false);
     setIsSelecting(false);
     setSelectionBox({ startX: 0, startY: 0, endX: 0, endY: 0 });
+  };
+
+  // Touch handlers (single-finger pan, two-finger pinch-zoom)
+  const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
+    if (e.touches.length === 1) {
+      setIsTouchPanning(true);
+      const t = e.touches[0];
+      setTouchPanStart({ x: t.clientX - transform.x, y: t.clientY - transform.y });
+    } else if (e.touches.length === 2) {
+      setIsTouchPanning(false);
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      const dist = Math.hypot(dx, dy);
+      setTouchStartDistance(dist);
+      setInitialTouchZoom(transform.scale);
+    }
+  };
+
+  const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
+    if (e.touches.length === 1 && isTouchPanning) {
+      const t = e.touches[0];
+      setTransform(prev => ({ ...prev, x: t.clientX - touchPanStart.x, y: t.clientY - touchPanStart.y }));
+    } else if (e.touches.length === 2 && touchStartDistance > 0) {
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      const dist = Math.hypot(dx, dy);
+      const scaleChange = dist / touchStartDistance;
+      const newScale = Math.max(0.1, Math.min(10, initialTouchZoom * scaleChange));
+      setTransform(prev => ({ ...prev, scale: newScale }));
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsTouchPanning(false);
+    setTouchStartDistance(0);
   };
 
   const getHotspotColor = (sign: SignHotspot) => {
@@ -292,6 +333,17 @@ export default function PanZoomViewer({
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
         onWheel={handleWheel}
+        // Disable browser touch gestures so we can handle them
+        style={{
+          touchAction: 'none',
+          WebkitUserSelect: 'none',
+          userSelect: 'none',
+          overscrollBehavior: 'none',
+          WebkitOverflowScrolling: 'touch',
+        }}
+        onTouchStart={(e) => { e.preventDefault(); handleTouchStart(e); }}
+        onTouchMove={(e) => { e.preventDefault(); handleTouchMove(e); }}
+        onTouchEnd={(e) => { e.preventDefault(); handleTouchEnd(); }}
       >
         {/* Grid Overlay */}
         {showGrid && (
