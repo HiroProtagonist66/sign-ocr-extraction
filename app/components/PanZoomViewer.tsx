@@ -46,12 +46,12 @@ export default function PanZoomViewer({
   const [isTouchPanning, setIsTouchPanning] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   
-  // DEBUG INFO - Version 2.1 MOBILE FIX
+  // DEBUG INFO - Version 2.2 TOUCH FIX
   useEffect(() => {
-    console.log('🔍 PanZoomViewer Version: 2.1-MOBILE-FIX');
+    console.log('🔍 PanZoomViewer Version: 2.2-TOUCH-FIX');
     console.log('MIN_ZOOM:', MIN_ZOOM, '(enforced at 1)');
     console.log('MAX_ZOOM:', MAX_ZOOM, '(enforced at 5)');
-    console.log('Touch-action: pan-x pan-y (prevents browser zoom)');
+    console.log('Touch-action: none (custom touch handling)');
     console.log('Mobile detection:', isMobile ? 'YES' : 'NO');
   }, [isMobile]);
 
@@ -194,7 +194,7 @@ export default function PanZoomViewer({
     zoomTo(newScale, e.clientX, e.clientY);
   };
 
-  // Touch handling for mobile
+  // Touch handling for mobile - custom implementation
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
     if (e.touches.length === 1) {
       // Single touch - pan
@@ -213,9 +213,7 @@ export default function PanZoomViewer({
   };
 
   const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
-    // Always prevent default to override browser zoom
-    e.preventDefault();
-    e.stopPropagation();
+    // Touch move is already prevented in the onTouchMove prop
     
     if (e.touches.length === 1 && isTouchPanning) {
       // Pan with single touch
@@ -239,8 +237,11 @@ export default function PanZoomViewer({
         // Strongly enforce zoom limits
         const clampedScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale));
         
-        // Double-check constraint
-        if (clampedScale < MIN_ZOOM) return;
+        // Double-check constraint - ensure we never go below MIN_ZOOM
+        if (clampedScale < MIN_ZOOM) {
+          setTransform({ ...transform, scale: MIN_ZOOM });
+          return;
+        }
         
         // Zoom to center of pinch
         const centerX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
@@ -304,9 +305,9 @@ export default function PanZoomViewer({
 
   return (
     <div className="relative w-full h-full">
-      {/* DEBUG INDICATOR - Version 2.1 MOBILE FIX */}
+      {/* DEBUG INDICATOR - Version 2.2 TOUCH FIX */}
       <div className="absolute top-0 left-0 bg-purple-600 text-white text-xs p-1 z-50 font-mono">
-        v2.1-MOBILE-FIX | Zoom: {transform.scale.toFixed(2)}x | Min: {MIN_ZOOM} | Max: {MAX_ZOOM} | {isMobile ? '📱' : '💻'}
+        v2.2-TOUCH-FIX | Zoom: {transform.scale.toFixed(2)}x | Min: {MIN_ZOOM} | Max: {MAX_ZOOM} | {isMobile ? '📱' : '💻'}
       </div>
       {/* Mobile-friendly Zoom Controls with Reset Button */}
       {isMobile ? (
@@ -469,8 +470,8 @@ export default function PanZoomViewer({
         className="relative w-full h-full overflow-hidden bg-gray-200"
         style={{ 
           cursor: isPanning ? 'grabbing' : 'grab',
-          // Prevent browser zoom but allow panning
-          touchAction: 'pan-x pan-y',
+          // Disable ALL browser touch handling - we handle it ourselves
+          touchAction: 'none',
           WebkitUserSelect: 'none',
           userSelect: 'none',
           // Prevent iOS elastic bounce
@@ -483,9 +484,18 @@ export default function PanZoomViewer({
         onMouseUp={!isMobile ? handleMouseUp : undefined}
         onMouseLeave={!isMobile ? handleMouseLeave : undefined}
         onDoubleClick={!isMobile ? handleDoubleClick : undefined}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        onTouchStart={(e) => {
+          e.preventDefault();
+          handleTouchStart(e);
+        }}
+        onTouchMove={(e) => {
+          e.preventDefault();
+          handleTouchMove(e);
+        }}
+        onTouchEnd={(e) => {
+          e.preventDefault();
+          handleTouchEnd();
+        }}
       >
         {/* Grid Overlay */}
         {showGrid && (

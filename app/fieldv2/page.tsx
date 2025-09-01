@@ -183,9 +183,9 @@ export default function FieldInterface() {
 
   return (
     <div className="h-screen flex flex-col bg-gray-50">
-      {/* VERSION BANNER - MOBILE FIX v2.1 */}
-      <div className="bg-green-600 text-white text-center p-2 font-bold">
-        ✅ FIELD V2.1 - MOBILE FIX - Touch-action: pan-x pan-y - MIN_ZOOM=1 ENFORCED - {new Date().toISOString()}
+      {/* VERSION BANNER - TOUCH FIX v2.2 */}
+      <div className="bg-blue-600 text-white text-center p-2 font-bold">
+        👆 FIELD V2.2 - TOUCH FIX - Touch-action: none (custom handling) - Fingers work on floor plan - {new Date().toISOString()}
       </div>
       
       {/* Header */}
