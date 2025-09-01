@@ -156,6 +156,23 @@ export default function Home() {
               </div>
             </Link>
 
+            <Link href="/manager" className="group">
+              <div className="bg-indigo-600 text-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 hover:bg-indigo-700">
+                <div className="flex items-center justify-between mb-2">
+                  <h2 className="text-xl font-semibold flex items-center gap-2">
+                    📋 Release Manager
+                  </h2>
+                  <span className="text-xs bg-white text-indigo-600 px-2 py-1 rounded font-bold">NEW</span>
+                </div>
+                <p className="text-indigo-100">
+                  Organize ATL06 sign releases by areas and track installation progress
+                </p>
+                <div className="mt-2 text-sm text-indigo-100 font-medium">
+                  • CSV import • Filter by area/level • Export reports
+                </div>
+              </div>
+            </Link>
+
             <Link href="/field-pro" className="group">
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 hover:from-purple-700 hover:to-pink-700">
                 <div className="flex items-center justify-between mb-2">
