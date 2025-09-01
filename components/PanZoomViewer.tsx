@@ -72,6 +72,8 @@ export default function PanZoomViewer({
   const [touchPanStart, setTouchPanStart] = useState({ x: 0, y: 0 });
   const [touchStartDistance, setTouchStartDistance] = useState(0);
   const [initialTouchZoom, setInitialTouchZoom] = useState(1);
+  const [pinchCenter, setPinchCenter] = useState({ x: 0, y: 0 });
+  const [showPinchDebug, setShowPinchDebug] = useState(false); // Debug visualization
 
   // Load image and get dimensions
   useEffect(() => {
@@ -192,8 +194,27 @@ export default function PanZoomViewer({
       setTouchPanStart({ x: t.clientX - transform.x, y: t.clientY - transform.y });
     } else if (e.touches.length === 2) {
       setIsTouchPanning(false);
-      const dx = e.touches[0].clientX - e.touches[1].clientX;
-      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      
+      // Calculate center point between two fingers
+      const touch1 = e.touches[0];
+      const touch2 = e.touches[1];
+      
+      const centerX = (touch1.clientX + touch2.clientX) / 2;
+      const centerY = (touch1.clientY + touch2.clientY) / 2;
+      
+      // Get container position to convert to relative coordinates
+      const rect = containerRef.current?.getBoundingClientRect();
+      if (rect) {
+        const relativeCenterX = (centerX - rect.left - transform.x) / transform.scale;
+        const relativeCenterY = (centerY - rect.top - transform.y) / transform.scale;
+        
+        setPinchCenter({ x: relativeCenterX, y: relativeCenterY });
+        setShowPinchDebug(true); // Enable debug visualization
+      }
+      
+      // Calculate initial distance between fingers
+      const dx = touch2.clientX - touch1.clientX;
+      const dy = touch2.clientY - touch1.clientY;
       const dist = Math.hypot(dx, dy);
       setTouchStartDistance(dist);
       setInitialTouchZoom(transform.scale);
@@ -205,18 +226,39 @@ export default function PanZoomViewer({
       const t = e.touches[0];
       setTransform(prev => ({ ...prev, x: t.clientX - touchPanStart.x, y: t.clientY - touchPanStart.y }));
     } else if (e.touches.length === 2 && touchStartDistance > 0) {
-      const dx = e.touches[0].clientX - e.touches[1].clientX;
-      const dy = e.touches[0].clientY - e.touches[1].clientY;
-      const dist = Math.hypot(dx, dy);
-      const scaleChange = dist / touchStartDistance;
-      const newScale = Math.max(0.1, Math.min(10, initialTouchZoom * scaleChange));
-      setTransform(prev => ({ ...prev, scale: newScale }));
+      const touch1 = e.touches[0];
+      const touch2 = e.touches[1];
+      
+      // Calculate new distance
+      const dx = touch2.clientX - touch1.clientX;
+      const dy = touch2.clientY - touch1.clientY;
+      const currentDistance = Math.hypot(dx, dy);
+      
+      const scaleChange = currentDistance / touchStartDistance;
+      let newScale = initialTouchZoom * scaleChange;
+      
+      // Enforce zoom limits (MIN_ZOOM = 1)
+      newScale = Math.max(1, Math.min(10, newScale));
+      
+      // Calculate scale delta
+      const scaleDelta = newScale / transform.scale;
+      
+      // Adjust pan to zoom toward pinch center
+      const newX = pinchCenter.x + (transform.x - pinchCenter.x) * scaleDelta;
+      const newY = pinchCenter.y + (transform.y - pinchCenter.y) * scaleDelta;
+      
+      setTransform({
+        x: newX,
+        y: newY,
+        scale: newScale
+      });
     }
   };
 
   const handleTouchEnd = () => {
     setIsTouchPanning(false);
     setTouchStartDistance(0);
+    setShowPinchDebug(false); // Hide debug visualization
   };
 
   const getHotspotColor = (sign: SignHotspot) => {
@@ -458,6 +500,20 @@ export default function PanZoomViewer({
         <div>Scroll: Zoom</div>
         <div>Drag: Pan</div>
       </div>
+      
+      {/* Debug visualization for pinch center (red dot) */}
+      {showPinchDebug && pinchCenter.x !== 0 && (
+        <div
+          className="absolute w-6 h-6 bg-red-500 rounded-full z-50 pointer-events-none animate-pulse"
+          style={{
+            left: `${pinchCenter.x * transform.scale + transform.x}px`,
+            top: `${pinchCenter.y * transform.scale + transform.y}px`,
+            transform: 'translate(-50%, -50%)'
+          }}
+        >
+          <div className="absolute inset-0 bg-red-500 rounded-full animate-ping"></div>
+        </div>
+      )}
     </div>
   );
 }
