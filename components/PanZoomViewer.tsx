@@ -56,6 +56,8 @@ export default function PanZoomViewer({
   signStatuses,
   viewMode = 'validation'
 }: PanZoomViewerProps) {
+  const MIN_ZOOM = 0.5;
+  const MAX_ZOOM = 10;
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
@@ -104,7 +106,7 @@ export default function PanZoomViewer({
     e.preventDefault();
     
     const delta = e.deltaY * -0.001;
-    const newScale = Math.max(0.1, Math.min(10, transform.scale * (1 + delta)));
+    const newScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, transform.scale * (1 + delta)));
     
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -226,31 +228,47 @@ export default function PanZoomViewer({
       const t = e.touches[0];
       setTransform(prev => ({ ...prev, x: t.clientX - touchPanStart.x, y: t.clientY - touchPanStart.y }));
     } else if (e.touches.length === 2 && touchStartDistance > 0) {
-      const touch1 = e.touches[0];
-      const touch2 = e.touches[1];
-      
-      // Calculate new distance
-      const dx = touch2.clientX - touch1.clientX;
-      const dy = touch2.clientY - touch1.clientY;
+      const t0 = e.touches[0];
+      const t1 = e.touches[1];
+      const dx = t1.clientX - t0.clientX;
+      const dy = t1.clientY - t0.clientY;
       const currentDistance = Math.hypot(dx, dy);
-      
-      const scaleChange = currentDistance / touchStartDistance;
-      let newScale = initialTouchZoom * scaleChange;
-      
-      // Enforce zoom limits (MIN_ZOOM = 1)
-      newScale = Math.max(1, Math.min(10, newScale));
-      
-      // Calculate scale delta
-      const scaleDelta = newScale / transform.scale;
-      
-      // Adjust pan to zoom toward pinch center
-      const newX = pinchCenter.x + (transform.x - pinchCenter.x) * scaleDelta;
-      const newY = pinchCenter.y + (transform.y - pinchCenter.y) * scaleDelta;
-      
-      setTransform({
-        x: newX,
-        y: newY,
-        scale: newScale
+
+      // New scale (clamped)
+      const unclamped = initialTouchZoom * (currentDistance / touchStartDistance);
+      const newScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, unclamped));
+
+      // Pinch center in container coordinates
+      const rect = containerRef.current?.getBoundingClientRect();
+      const centerClientX = (t0.clientX + t1.clientX) / 2;
+      const centerClientY = (t0.clientY + t1.clientY) / 2;
+      const pinchCenterContainer = {
+        x: rect ? centerClientX - rect.left : centerClientX,
+        y: rect ? centerClientY - rect.top : centerClientY,
+      };
+
+      // Update transform relative to pinch center so it stays anchored
+      setTransform(prev => {
+        const scaleDelta = newScale / prev.scale;
+        const newX = prev.x - pinchCenterContainer.x * (scaleDelta - 1);
+        const newY = prev.y - pinchCenterContainer.y * (scaleDelta - 1);
+
+        // Update debug pinch center (content coords), optional overlay
+        const contentCenter = {
+          x: (pinchCenterContainer.x - newX) / newScale,
+          y: (pinchCenterContainer.y - newY) / newScale,
+        };
+        setPinchCenter(contentCenter);
+        setShowPinchDebug(true);
+
+        const next = { x: newX, y: newY, scale: newScale };
+        console.log('PINCH:', {
+          scaleDelta,
+          pinchCenter: pinchCenterContainer,
+          oldTransform: prev,
+          newTransform: next,
+        });
+        return next;
       });
     }
   };
@@ -296,8 +314,8 @@ export default function PanZoomViewer({
     }
   };
 
-  const zoomIn = () => setTransform(t => ({ ...t, scale: Math.min(10, t.scale * 1.2) }));
-  const zoomOut = () => setTransform(t => ({ ...t, scale: Math.max(0.1, t.scale / 1.2) }));
+  const zoomIn = () => setTransform(t => ({ ...t, scale: Math.min(MAX_ZOOM, t.scale * 1.2) }));
+  const zoomOut = () => setTransform(t => ({ ...t, scale: Math.max(MIN_ZOOM, t.scale / 1.2) }));
   const resetZoom = () => setTransform({ x: 0, y: 0, scale: 1 });
   
   const fitToScreen = () => {
