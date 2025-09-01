@@ -1,3 +1,120 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Procreate-inspired touch interactions */
+.touch-pan {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.smooth-transform {
+  will-change: transform;
+  transform: translateZ(0); /* Force GPU acceleration */
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Spring animations */
+@keyframes spring-in {
+  0% { 
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  50% { 
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% { 
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spring-out {
+  0% { 
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+  100% { 
+    transform: scale(0) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.animate-spring-in {
+  animation: spring-in 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.animate-spring-out {
+  animation: spring-out 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Custom scrollbar hide */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth transitions for touch interactions */
+.touch-transition {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s ease-out,
+              background-color 0.2s ease-out;
+}
+
+/* Haptic-like visual feedback */
+.haptic-tap {
+  position: relative;
+}
+
+.haptic-tap:active::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 2px solid currentColor;
+  border-radius: inherit;
+  opacity: 0.3;
+  animation: haptic-pulse 0.3s ease-out;
+}
+
+@keyframes haptic-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Smooth momentum scrolling */
+.momentum-scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Page preview gradient overlays */
+.edge-gradient-left {
+  background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+}
+
+.edge-gradient-right {
+  background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+}
+
+/* Backdrop blur support */
+.backdrop-blur-support {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}

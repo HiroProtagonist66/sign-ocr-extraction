@@ -121,6 +121,40 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
+            <Link href="/field" className="group">
+              <div className="bg-green-600 text-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 hover:bg-green-700">
+                <div className="flex items-center justify-between mb-2">
+                  <h2 className="text-xl font-semibold flex items-center gap-2">
+                    📱 Field Tracker
+                  </h2>
+                  <span className="text-xs bg-white text-green-600 px-2 py-1 rounded font-bold">MOBILE</span>
+                </div>
+                <p className="text-green-100">
+                  Mobile-first interface for installers to mark sign installation status
+                </p>
+                <div className="mt-2 text-sm text-green-100 font-medium">
+                  • Offline support • Touch optimized • Real-time progress
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/field-pro" className="group">
+              <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 hover:from-purple-700 hover:to-pink-700">
+                <div className="flex items-center justify-between mb-2">
+                  <h2 className="text-xl font-semibold flex items-center gap-2">
+                    ✨ Field Tracker Pro
+                  </h2>
+                  <span className="text-xs bg-white text-purple-600 px-2 py-1 rounded font-bold">PRO</span>
+                </div>
+                <p className="text-purple-100">
+                  Procreate-inspired interface with advanced gestures and animations
+                </p>
+                <div className="mt-2 text-sm text-purple-100 font-medium">
+                  • Two-finger undo • Edge swipe • Spring animations • Page scrubber
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
 

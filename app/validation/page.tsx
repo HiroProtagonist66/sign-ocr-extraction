@@ -650,9 +650,9 @@ export default function ValidationPage() {
               }}
               className="bg-gray-700 text-white px-3 py-1 rounded"
             >
-              <option value="pdf13">FTY02 - COLO 2 Admin Level 1</option>
-              <option value="pdf14">FTY02 - BC East Level 1</option>
-              <option value="atl06">ATL06 - Complete Site (57 pages)</option>
+              <option value="pdf13">FTY02 - COLO 2 Admin Level 1 (156 signs)</option>
+              <option value="pdf14">FTY02 - BC East Level 1 (78 signs)</option>
+              <option value="atl06">ATL06 - Complete Site (57 pages, 4,314 signs)</option>
             </select>
           </div>
           

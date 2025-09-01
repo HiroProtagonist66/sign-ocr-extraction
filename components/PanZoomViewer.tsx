@@ -23,22 +23,38 @@ interface SignHotspot {
   notes?: string;
 }
 
+interface SignStatus {
+  status: 'installed' | 'missing' | 'damaged';
+  timestamp: string;
+  installer?: string;
+}
+
 interface PanZoomViewerProps {
-  imagePath: string;
+  imagePath?: string;
+  imageSrc?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   signs: SignHotspot[];
   selectedSigns: Set<string>;
-  onSignClick: (signNumber: string) => void;
+  onSignClick: (signNumber: string | SignHotspot) => void;
   onMultiSelect?: (signNumbers: string[]) => void;
   showGrid?: boolean;
+  signStatuses?: Record<string, SignStatus>;
+  viewMode?: 'validation' | 'field';
 }
 
 export default function PanZoomViewer({
   imagePath,
+  imageSrc,
+  imageWidth,
+  imageHeight,
   signs,
   selectedSigns,
   onSignClick,
   onMultiSelect,
-  showGrid = false
+  showGrid = false,
+  signStatuses,
+  viewMode = 'validation'
 }: PanZoomViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
@@ -163,7 +179,25 @@ export default function PanZoomViewer({
   };
 
   const getHotspotColor = (sign: SignHotspot) => {
-    // More transparent backgrounds so text underneath is readable
+    // Field mode status colors
+    if (viewMode === 'field' && signStatuses) {
+      const status = signStatuses[sign.sign_number];
+      if (selectedSigns.has(sign.sign_number)) {
+        return 'border-blue-600 bg-blue-500 bg-opacity-40 border-4';
+      }
+      switch (status?.status) {
+        case 'installed':
+          return 'border-green-500 bg-green-200 bg-opacity-40 border-3';
+        case 'missing':
+          return 'border-red-500 bg-red-200 bg-opacity-40 border-3';
+        case 'damaged':
+          return 'border-orange-500 bg-orange-200 bg-opacity-40 border-3';
+        default:
+          return 'border-gray-400 bg-gray-200 bg-opacity-20 border-2';
+      }
+    }
+    
+    // Validation mode colors
     if (selectedSigns.has(sign.sign_number)) {
       return 'border-blue-500 bg-blue-500 bg-opacity-20 hover:bg-opacity-30';
     }
@@ -284,11 +318,11 @@ export default function PanZoomViewer({
           }}
           className="absolute"
         >
-          {imagePath && (
+          {(imagePath || imageSrc) && (
             <>
               <img
                 ref={imageRef}
-                src={imagePath}
+                src={imageSrc || imagePath}
                 alt="Floor Plan"
                 className="select-none"
                 draggable={false}
@@ -303,7 +337,7 @@ export default function PanZoomViewer({
               />
               
               {/* Sign Hotspots */}
-              {imageLoaded && signs.map((sign) => {
+              {imageLoaded && signs.map((sign, index) => {
                 // For pixel-perfect positioning when image size is known
                 const usePixels = imageSize.width > 0 && imageSize.height > 0;
                 const x = usePixels ? (sign.hotspot_bbox.x_percentage / 100) * imageSize.width : 0;
@@ -313,7 +347,7 @@ export default function PanZoomViewer({
                 
                 return (
                   <div
-                    key={sign.sign_number}
+                    key={`${sign.sign_number}-${index}`}
                     className={`absolute border-2 cursor-pointer transition-all duration-200 ${getHotspotColor(sign)}`}
                     style={usePixels ? {
                       left: `${x}px`,
@@ -328,13 +362,22 @@ export default function PanZoomViewer({
                     }}
                     onClick={(e) => {
                       e.stopPropagation();
-                      onSignClick(sign.sign_number);
+                      // Support both string and full sign object
+                      onSignClick(viewMode === 'field' ? sign : sign.sign_number);
                     }}
                     title={`${sign.sign_number} (${sign.confidence})`}
                   >
                     <div className="absolute -top-5 left-0 text-xs bg-black bg-opacity-60 text-white px-1 rounded whitespace-nowrap z-10 font-semibold">
                       {sign.sign_number}
                     </div>
+                    {/* Status icon for field mode */}
+                    {viewMode === 'field' && signStatuses && signStatuses[sign.sign_number] && (
+                      <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center text-sm font-bold">
+                        {signStatuses[sign.sign_number].status === 'installed' && <span className="text-green-600">✓</span>}
+                        {signStatuses[sign.sign_number].status === 'missing' && <span className="text-red-600">✗</span>}
+                        {signStatuses[sign.sign_number].status === 'damaged' && <span className="text-orange-600">⚠</span>}
+                      </div>
+                    )}
                   </div>
                 );
               })}
