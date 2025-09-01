@@ -33,6 +33,19 @@ export default function PanZoomViewer({
   const imageRef = useRef<HTMLDivElement>(null);
   const minimapRef = useRef<HTMLCanvasElement>(null);
   
+  // State declarations
+  const [transform, setTransform] = useState<ViewTransform>({ x: 0, y: 0, scale: 1 });
+  const [isPanning, setIsPanning] = useState(false);
+  const [panStart, setPanStart] = useState({ x: 0, y: 0 });
+  const [showMinimap, setShowMinimap] = useState(true);
+  const [showGrid, setShowGrid] = useState(false);
+  const [showCrosshair, setShowCrosshair] = useState(false);
+  
+  // Touch handling and mobile detection
+  const [touchStartDistance, setTouchStartDistance] = useState(0);
+  const [isTouchPanning, setIsTouchPanning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  
   // DEBUG INFO - Version 2.1 MOBILE FIX
   useEffect(() => {
     console.log('🔍 PanZoomViewer Version: 2.1-MOBILE-FIX');
@@ -41,18 +54,6 @@ export default function PanZoomViewer({
     console.log('Touch-action: pan-x pan-y (prevents browser zoom)');
     console.log('Mobile detection:', isMobile ? 'YES' : 'NO');
   }, [isMobile]);
-  
-  const [transform, setTransform] = useState<ViewTransform>({ x: 0, y: 0, scale: 1 });
-  const [isPanning, setIsPanning] = useState(false);
-  const [panStart, setPanStart] = useState({ x: 0, y: 0 });
-  const [showMinimap, setShowMinimap] = useState(true);
-  const [showGrid, setShowGrid] = useState(false);
-  const [showCrosshair, setShowCrosshair] = useState(false);
-  
-  // Touch handling
-  const [touchStartDistance, setTouchStartDistance] = useState(0);
-  const [isTouchPanning, setIsTouchPanning] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   // Update parent when transform changes
   useEffect(() => {
