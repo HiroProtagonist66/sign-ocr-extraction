@@ -43,15 +43,16 @@ export default function PanZoomViewer({
   
   // Touch handling and mobile detection
   const [touchStartDistance, setTouchStartDistance] = useState(0);
+  const [initialTouchZoom, setInitialTouchZoom] = useState(1);
   const [isTouchPanning, setIsTouchPanning] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   
-  // DEBUG INFO - Version 2.2 TOUCH FIX
+  // DEBUG INFO - Version 2.3 TOUCH HANDLERS
   useEffect(() => {
-    console.log('🔍 PanZoomViewer Version: 2.2-TOUCH-FIX');
+    console.log('🔍 PanZoomViewer Version: 2.3-TOUCH-HANDLERS');
     console.log('MIN_ZOOM:', MIN_ZOOM, '(enforced at 1)');
     console.log('MAX_ZOOM:', MAX_ZOOM, '(enforced at 5)');
-    console.log('Touch-action: none (custom touch handling)');
+    console.log('Touch handlers: COMPLETE (pan + zoom)');
     console.log('Mobile detection:', isMobile ? 'YES' : 'NO');
   }, [isMobile]);
 
@@ -194,7 +195,7 @@ export default function PanZoomViewer({
     zoomTo(newScale, e.clientX, e.clientY);
   };
 
-  // Touch handling for mobile - custom implementation
+  // Touch handling for mobile - complete implementation
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
     if (e.touches.length === 1) {
       // Single touch - pan
@@ -209,6 +210,7 @@ export default function PanZoomViewer({
         e.touches[0].clientY - e.touches[1].clientY
       );
       setTouchStartDistance(distance);
+      setInitialTouchZoom(transform.scale); // Store initial zoom level
     }
   };
 
@@ -223,39 +225,29 @@ export default function PanZoomViewer({
         x: touch.clientX - panStart.x,
         y: touch.clientY - panStart.y
       });
-    } else if (e.touches.length === 2) {
-      // Pinch zoom
-      const distance = Math.hypot(
+    } else if (e.touches.length === 2 && touchStartDistance > 0) {
+      // Pinch zoom with proper initial scale tracking
+      const currentDistance = Math.hypot(
         e.touches[0].clientX - e.touches[1].clientX,
         e.touches[0].clientY - e.touches[1].clientY
       );
       
-      if (touchStartDistance > 0) {
-        const scale = distance / touchStartDistance;
-        const newScale = transform.scale * scale;
-        
-        // Strongly enforce zoom limits
-        const clampedScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale));
-        
-        // Double-check constraint - ensure we never go below MIN_ZOOM
-        if (clampedScale < MIN_ZOOM) {
-          setTransform({ ...transform, scale: MIN_ZOOM });
-          return;
-        }
-        
-        // Zoom to center of pinch
-        const centerX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
-        const centerY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
-        
-        zoomTo(clampedScale, centerX, centerY);
-        setTouchStartDistance(distance);
-      }
+      // Calculate scale change from initial touch distance
+      const scaleChange = currentDistance / touchStartDistance;
+      let newScale = initialTouchZoom * scaleChange;
+      
+      // Strongly enforce zoom limits (MIN=1, MAX=5)
+      newScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale));
+      
+      // Apply the new scale directly
+      setTransform(prev => ({ ...prev, scale: newScale }));
     }
   };
 
   const handleTouchEnd = () => {
     setIsTouchPanning(false);
     setTouchStartDistance(0);
+    setInitialTouchZoom(1);
   };
 
   // Keyboard shortcuts
@@ -305,9 +297,9 @@ export default function PanZoomViewer({
 
   return (
     <div className="relative w-full h-full">
-      {/* DEBUG INDICATOR - Version 2.2 TOUCH FIX */}
+      {/* DEBUG INDICATOR - Version 2.3 TOUCH HANDLERS */}
       <div className="absolute top-0 left-0 bg-purple-600 text-white text-xs p-1 z-50 font-mono">
-        v2.2-TOUCH-FIX | Zoom: {transform.scale.toFixed(2)}x | Min: {MIN_ZOOM} | Max: {MAX_ZOOM} | {isMobile ? '📱' : '💻'}
+        v2.3-TOUCH-HANDLERS | Zoom: {transform.scale.toFixed(2)}x | Min: {MIN_ZOOM} | Max: {MAX_ZOOM} | {isMobile ? '📱' : '💻'}
       </div>
       {/* Mobile-friendly Zoom Controls with Reset Button */}
       {isMobile ? (
