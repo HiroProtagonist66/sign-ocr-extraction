@@ -1,10 +1,11 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 
-// Dynamically import the client component to avoid SSR issues with PDF.js
+// Dynamic import without ssr: false (not needed in client components)
 const ManagerClient = dynamic(
   () => import('./manager-client'),
-  { 
-    ssr: false,
+  {
     loading: () => (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
