@@ -75,14 +75,18 @@ Professional three-panel interface for reviewing and correcting extracted sign d
 - **Multi-site Support**: FTY02 (2 PDFs), ATL06 (57 pages with 4,314 signs)
 - **Live URL**: https://sign-ocr-extraction.vercel.app/validation
 
-### Field Interface (/field) - *Added September 1, 2025*
+### Field Interface (/field and /fieldv2) - *Updated September 1, 2025*
 Mobile-first interface for installers to mark sign installation status in the field:
-- **Touch Optimized**: Large buttons, thumb-reachable controls
+- **Touch Optimized**: Complete custom touch handling with pinch zoom centering
 - **Status Tracking**: Mark signs as installed/missing/damaged
 - **Offline Support**: Works without internet, syncs when reconnected
 - **Progress Tracking**: Real-time completion percentage per page
 - **Multi-page Navigation**: Support for ATL06's 57 pages
-- **Live URL**: https://sign-ocr-extraction.vercel.app/field
+- **Zoom Controls**: MIN_ZOOM=1 (no zooming out past 100%), MAX_ZOOM=5
+- **Touch Gestures**: Single finger pan, two finger pinch zoom from center
+- **Live URLs**: 
+  - https://sign-ocr-extraction.vercel.app/field
+  - https://sign-ocr-extraction.vercel.app/fieldv2 (cache-bypass version)
 
 ### Field Interface Pro (/field-pro) - *Added September 1, 2025*
 Procreate-inspired premium tablet interface with advanced gestures:
@@ -233,13 +237,40 @@ psm_configs = {
 - **False Positive Rate**: <1%
 - **Supported Formats**: PDF (native), PNG (converted at 200-400 DPI)
 - **Sites Processed**: FTY02 (234 signs across 2 PDFs), ATL06 (4,314 signs across 57 pages)
-- **Field Interface**: Mobile-ready with offline support and touch gestures
+- **Field Interface**: Mobile-ready with complete custom touch handling
+- **Touch Controls**: Pinch zoom centers on fingers, MIN_ZOOM=1 enforced
 
 ### Target Metrics
 - Detection Rate: >95% across all methods
 - Extraction Accuracy: >90% including OCR fallback
 - Processing Speed: <10 seconds per page
 - Batch Processing: 7 PDFs in <2 minutes
+
+## Mobile Touch Implementation
+
+### PanZoomViewer Component (v2.3)
+Complete custom touch handling for tablets and mobile devices:
+```typescript
+// Touch state management
+const [touchStartDistance, setTouchStartDistance] = useState(0);
+const [initialTouchZoom, setInitialTouchZoom] = useState(1);
+const [pinchCenter, setPinchCenter] = useState({ x: 0, y: 0 });
+
+// CSS to disable browser gestures
+style={{ touchAction: 'none' }}
+
+// Event handlers with preventDefault
+onTouchStart={(e) => { e.preventDefault(); handleTouchStart(e); }}
+onTouchMove={(e) => { e.preventDefault(); handleTouchMove(e); }}
+onTouchEnd={(e) => { e.preventDefault(); handleTouchEnd(); }}
+```
+
+### Touch Gesture Support
+- **Single Finger**: Pans the floor plan
+- **Two Fingers**: Pinch zoom centered on pinch point
+- **MIN_ZOOM=1**: Cannot zoom out smaller than viewport
+- **MAX_ZOOM=5**: Maximum 500% zoom
+- **Debug Mode**: Red dot shows pinch center (for testing)
 
 ## Known Issues & Solutions
 
@@ -455,5 +486,6 @@ Track important changes in `/chat_summaries/`:
 - **Status**: Active Development (98% accuracy achieved)
 
 ---
-*Last Updated: September 1, 2025*
+*Last Updated: September 1, 2025 (Evening)*
+*Mobile Touch: v2.3 with pinch zoom centering deployed*
 *Next Milestone: Supabase integration for field data sync*
