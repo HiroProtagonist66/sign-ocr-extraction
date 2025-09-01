@@ -106,7 +106,14 @@ export default function PanZoomViewer({
     e.preventDefault();
     
     const delta = e.deltaY * -0.001;
-    const newScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, transform.scale * (1 + delta)));
+    const unclamped = transform.scale * (1 + delta);
+    const newScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, unclamped));
+    console.log('WHEEL ZOOM:', { 
+      currentScale: transform.scale,
+      delta,
+      newScale,
+      MIN_ZOOM
+    });
     
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -237,6 +244,12 @@ export default function PanZoomViewer({
       // New scale (clamped)
       const unclamped = initialTouchZoom * (currentDistance / touchStartDistance);
       const newScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, unclamped));
+      console.log('PINCH ZOOM:', { 
+        currentScale: transform.scale,
+        newScale,
+        MIN_ZOOM,
+        clamped: Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale))
+      });
 
       // Pinch center in container coordinates
       const rect = containerRef.current?.getBoundingClientRect();
@@ -324,8 +337,18 @@ export default function PanZoomViewer({
     const scaleX = rect.width / imageSize.width;
     const scaleY = rect.height / imageSize.height;
     const scale = Math.min(scaleX, scaleY) * 0.9;
+    console.log('FIT BUTTON:', {
+      containerSize: { width: rect.width, height: rect.height },
+      imageSize,
+      calculatedScale: scale,
+      finalScale: scale
+    });
     setTransform({ x: 0, y: 0, scale });
   };
+
+  useEffect(() => {
+    console.log('ZOOM CONSTANTS:', { MIN_ZOOM, MAX_ZOOM });
+  }, []);
 
   // Show error state if image fails to load
   if (imageError) {
