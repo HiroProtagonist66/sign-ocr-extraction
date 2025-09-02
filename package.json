@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup:local": "vercel env pull .env.local && echo '✅ Environment variables synced from Vercel'",
+    "dev:fresh": "npm run setup:local && npm run dev",
+    "dev:port": "next dev -p 3004"
   },
   "dependencies": {
     "@google-cloud/vision": "^5.3.3",

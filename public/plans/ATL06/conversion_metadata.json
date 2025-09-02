@@ -1,0 +1,960 @@
+{
+  "source_pdf": "ATL06_1756773756104.pdf",
+  "total_pages": 119,
+  "conversion_dpi": 150,
+  "conversion_date": "2025-09-01T20:42:36.321617",
+  "pages": [
+    {
+      "page_number": 1,
+      "filename": "page_01.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 2,
+      "filename": "page_02.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 3,
+      "filename": "page_03.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 4,
+      "filename": "page_04.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 5,
+      "filename": "page_05.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 6,
+      "filename": "page_06.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 7,
+      "filename": "page_07.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 8,
+      "filename": "page_08.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 9,
+      "filename": "page_09.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 10,
+      "filename": "page_10.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 11,
+      "filename": "page_11.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 12,
+      "filename": "page_12.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 13,
+      "filename": "page_13.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 14,
+      "filename": "page_14.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 15,
+      "filename": "page_15.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 16,
+      "filename": "page_16.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 17,
+      "filename": "page_17.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 18,
+      "filename": "page_18.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 19,
+      "filename": "page_19.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 20,
+      "filename": "page_20.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 21,
+      "filename": "page_21.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 22,
+      "filename": "page_22.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 23,
+      "filename": "page_23.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 24,
+      "filename": "page_24.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 25,
+      "filename": "page_25.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 26,
+      "filename": "page_26.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 27,
+      "filename": "page_27.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 28,
+      "filename": "page_28.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 29,
+      "filename": "page_29.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 30,
+      "filename": "page_30.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 31,
+      "filename": "page_31.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 32,
+      "filename": "page_32.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 33,
+      "filename": "page_33.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 34,
+      "filename": "page_34.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 35,
+      "filename": "page_35.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 36,
+      "filename": "page_36.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 37,
+      "filename": "page_37.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 38,
+      "filename": "page_38.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 39,
+      "filename": "page_39.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 40,
+      "filename": "page_40.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 41,
+      "filename": "page_41.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 42,
+      "filename": "page_42.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 43,
+      "filename": "page_43.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 44,
+      "filename": "page_44.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 45,
+      "filename": "page_45.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 46,
+      "filename": "page_46.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 47,
+      "filename": "page_47.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 48,
+      "filename": "page_48.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 49,
+      "filename": "page_49.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 50,
+      "filename": "page_50.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 51,
+      "filename": "page_51.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 52,
+      "filename": "page_52.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 53,
+      "filename": "page_53.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 54,
+      "filename": "page_54.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 55,
+      "filename": "page_55.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 56,
+      "filename": "page_56.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 57,
+      "filename": "page_57.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 58,
+      "filename": "page_58.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 59,
+      "filename": "page_59.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 60,
+      "filename": "page_60.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 61,
+      "filename": "page_61.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 62,
+      "filename": "page_62.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 63,
+      "filename": "page_63.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 64,
+      "filename": "page_64.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 65,
+      "filename": "page_65.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 66,
+      "filename": "page_66.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 67,
+      "filename": "page_67.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 68,
+      "filename": "page_68.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 69,
+      "filename": "page_69.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 70,
+      "filename": "page_70.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 71,
+      "filename": "page_71.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 72,
+      "filename": "page_72.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 73,
+      "filename": "page_73.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 74,
+      "filename": "page_74.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 75,
+      "filename": "page_75.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 76,
+      "filename": "page_76.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 77,
+      "filename": "page_77.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 78,
+      "filename": "page_78.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 79,
+      "filename": "page_79.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 80,
+      "filename": "page_80.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 81,
+      "filename": "page_81.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 82,
+      "filename": "page_82.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 83,
+      "filename": "page_83.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 84,
+      "filename": "page_84.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 85,
+      "filename": "page_85.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 86,
+      "filename": "page_86.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 87,
+      "filename": "page_87.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 88,
+      "filename": "page_88.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 89,
+      "filename": "page_89.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 90,
+      "filename": "page_90.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 91,
+      "filename": "page_91.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 92,
+      "filename": "page_92.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 93,
+      "filename": "page_93.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 94,
+      "filename": "page_94.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 95,
+      "filename": "page_95.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 96,
+      "filename": "page_96.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 97,
+      "filename": "page_97.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 98,
+      "filename": "page_98.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 99,
+      "filename": "page_99.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 100,
+      "filename": "page_100.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 101,
+      "filename": "page_101.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 102,
+      "filename": "page_102.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 103,
+      "filename": "page_103.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 104,
+      "filename": "page_104.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 105,
+      "filename": "page_105.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 106,
+      "filename": "page_106.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 107,
+      "filename": "page_107.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 108,
+      "filename": "page_108.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 109,
+      "filename": "page_109.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 110,
+      "filename": "page_110.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 111,
+      "filename": "page_111.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 112,
+      "filename": "page_112.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 113,
+      "filename": "page_113.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 114,
+      "filename": "page_114.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 115,
+      "filename": "page_115.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 116,
+      "filename": "page_116.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 117,
+      "filename": "page_117.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 118,
+      "filename": "page_118.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    },
+    {
+      "page_number": 119,
+      "filename": "page_119.png",
+      "width": 2550,
+      "height": 1650,
+      "original_width": 1224.0,
+      "original_height": 792.0
+    }
+  ]
+}
